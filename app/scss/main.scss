@@ -1,0 +1,22 @@
+// fonts
+// @import "../fonts/OpenSans";
+// @import "../fonts/geometria";
+
+@import "../fonts/geometria/stylesheet.css";
+@import "../fonts/open-sans/stylesheet.css";
+
+
+
+// bootstrap
+@import "variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/grid";
+
+//main
+@import "layout"; 
+@import "header";
+@import "footer";
+
+// pages
