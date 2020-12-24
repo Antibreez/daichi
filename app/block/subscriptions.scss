@@ -1,0 +1,132 @@
+.subscriptions {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  // &__mobile-title {
+  //   display: none;
+  // }
+
+  // &__to-all {
+  //   @include h31;
+  //   position: relative;
+  //   padding-right: 34px;
+  //   color: $text-main;
+  //   border-bottom: none;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 8px;
+  //     right: 0;
+
+  //     width: 24px;
+  //     height: 24px;
+  //     background-image: url("../img/nav-arrow2_default.svg");
+  //     background-size: cover;
+  //     transition: all .2s ease;
+  //   }
+
+  //   &:hover {
+  //     color: $primary;
+  //   }
+
+  //   &:hover::after {
+  //     background-image: url("../img/nav-arrow2_hover-link.svg");
+  //   }
+
+  //   & span:last-child {
+  //     display: none;
+  //   }
+  // }
+
+  &__nav-block {
+    display: flex;
+  }
+
+  &__nav-prev,
+  &__nav-next {
+    position: static;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+
+    background-image: url("../img/nav-arrow_default.svg");
+    transition: all 0.3s;
+
+    &::after {
+      display: none;
+    }
+
+    &:not(.swiper-button-disabled):hover {
+      background-image: url("../img/nav-arrow_hover.svg");
+    }
+  }
+
+  &__nav-prev {
+    margin-right: 10px;
+    transform: rotate(180deg);
+  }
+
+  &__container {
+    width: 100%;
+  }
+
+  &__item {
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+// @include desktop {
+  .subscriptions {
+    &__top {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    // &__mobile-title {
+    //   @include h31;
+
+    //   display: block;
+    //   color: $text-main;
+    // }
+
+    // &__to-all {
+    //   padding-right: 0;
+
+    //   & span:first-child {
+    //     display: none;
+    //   }
+
+    //   &::after {
+    //     display: none;
+    //   }
+
+    //   & span:last-child {
+    //     @include h15;
+
+    //     display: inline;
+    //     color: $primary;
+    //   }
+    // }
+
+    &__item {
+      &:first-child {
+        margin-left: 30px;
+      }
+
+      &:last-child {
+        margin-right: 30px !important;
+      }
+    }
+
+    &__nav-block {
+      display: none;
+    }
+  }
+// }

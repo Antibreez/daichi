@@ -1,0 +1,58 @@
+.button {
+  height: 48px;
+  display: block;
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 5px;
+  min-width: 130px;
+  max-width: 100%;
+  outline: transparent;
+  box-sizing: border-box;
+  background-color: $primary;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  color: $light-text;
+
+  &:hover {
+    background-color: $primary-btn-hover;
+    color: $light-text;
+    text-decoration: none;
+  }
+  &:active {
+    background-color: $primary-btn-active;
+    outline: transparent;
+  }
+
+  &.disabled {
+    background-color: $disabled;
+    pointer-events: none;
+  }
+}
+
+.button_secondary {
+  color: $lead;
+  background-color: $light-text;
+  border: 1px solid $stroke;
+
+  &:hover {
+    color: $primary;
+    border-color: $primary;
+    background-color: $light-text;
+  }
+
+  &:active {
+    background-color: $primary-btn-active;
+    border-color: $primary-btn-active;
+    background-color: $light-text;
+  }
+
+  &.disabled {
+    background-color: $light-text;
+    color: $disabled;
+    border-color: $disabled;
+  }
+}

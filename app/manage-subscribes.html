@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/manage-subscribes/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="page-title h1">Управление подписками</h1>
+            <!-- mini tile -->
+            <div class="mini-tile subscribe__mini-tile">
+              <div class="tile-item">
+                <div
+                  class="item-pic"
+                  style="background-image: url(images/mini-tile/cloud-buy.svg)"
+                ></div>
+                <div class="item-title h5">Купить облачный кондиционер</div>
+              </div>
+              <div class="tile-item">
+                <div
+                  class="item-pic"
+                  style="
+                    background-image: url(images/mini-tile/add-subscribtion.svg);
+                  "
+                ></div>
+                <div class="item-title h5">Оформить подписку</div>
+              </div>
+            </div>
+            <!-- mini tile - end -->
+            <!-- search-form-container -->
+            <form class="subscribe-search search-bar">
+              <div class="search-field-wrp input-container">
+                <input
+                  class="search-field b1"
+                  type="search"
+                  placeholder="Поиск по номеру договора и названию программы"
+                  name="subscribes_search"
+                  id="subscribes_search"
+                />
+                <span class="search-pic"></span>
+                <input value="" type="reset" class="search-clear" />
+              </div>
+              <div class="search-dropdown active">
+                <div class="prompts-box">
+                  <div class="h5 search-prompt">Daichi FTXB-C</div>
+                  <div class="h5 search-prompt">Daichi DA20EVQ1</div>
+                  <div class="h5 search-prompt">Daichi DA70DQ1-B</div>
+                </div>
+              </div>
+            </form>
+            <!-- search-form-container end-->
+            <!-- tabs-block-->
+            <div class="tabs-container">
+              <div class="tabs-control-box">
+                <button
+                  class="btn tab-item b1 active"
+                  data-list-of="active subscribes"
+                >
+                  Активные (<span class="active_subscribes_counter">5</span>)
+                </button>
+
+                <button
+                  class="btn tab-item b1"
+                  data-list-of="overdue subscribes"
+                >
+                  Просроченные (<span class="overdue_subscribes_counter">1</span
+                  >)
+                </button>
+              </div>
+              <div class="tabs-content">
+                <!-- component - card-box -->
+                <div class="subscribe-cards-box">
+                  <!-- component - card -->
+                  <div class="subscribe-card sbcr_comfort active">
+                    <div class="card-head">
+                      <div class="profile-logo">
+                        <img
+                          src="images/subscribe-card/my-comfort-plus.svg"
+                          alt="plus"
+                        />
+                      </div>
+                      <div class="subscribe-status">
+                        <div class="subscribe-indicator"></div>
+                        <div class="status-description h6">Активна</div>
+                      </div>
+                    </div>
+                    <div class="card-data">
+                      <div class="card-data-item b2">
+                        <div class="data-property">Номер договора</div>
+                        <div class="data-value" data-contract-id="DA-2020-11">
+                          DA-2020-11
+                        </div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Кондиционер</div>
+                        <div class="data-value" data-machine-count="3">3</div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Действует до</div>
+                        <div class="data-value" data-due-till="-">-</div>
+                      </div>
+                    </div>
+                    <div class="card-controls">
+                      <a
+                        href="#"
+                        class="card-button card-manage button button_secondary"
+                        >Управлять</a
+                      >
+                      <a href="#" class="card-button card-pay button"
+                        >Оплатить</a
+                      >
+                    </div>
+                  </div>
+                  <!-- component - card end-->
+                  <!-- component - card -->
+                  <div class="subscribe-card sbcr_comfort expires">
+                    <div class="card-head">
+                      <div class="profile-logo">
+                        <img
+                          src="images/subscribe-card/my-comfort-plus.svg"
+                          alt="plus"
+                        />
+                      </div>
+                      <div class="subscribe-status">
+                        <div class="subscribe-indicator"></div>
+                        <div class="status-description h6">Истекает</div>
+                      </div>
+                    </div>
+                    <div class="card-data">
+                      <div class="card-data-item b2">
+                        <div class="data-property">Номер договора</div>
+                        <div class="data-value" data-contract-id="DA-2020-11">
+                          DA-2020-11
+                        </div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Кондиционер</div>
+                        <div class="data-value" data-machine-count="3">3</div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Действует до</div>
+                        <div class="data-value" data-due-till="-">-</div>
+                      </div>
+                    </div>
+                    <div class="card-controls">
+                      <a
+                        href="#"
+                        class="card-button card-manage button button_secondary"
+                        >Управлять</a
+                      >
+                      <a href="#" class="card-button card-pay button"
+                        >Оплатить</a
+                      >
+                    </div>
+                  </div>
+                  <!-- component - card end-->
+                  <!-- component - card -->
+                  <div class="subscribe-card sbcr_comfort waiting">
+                    <div class="card-head">
+                      <div class="profile-logo">
+                        <img
+                          src="images/subscribe-card/my-comfort-plus.svg"
+                          alt="plus"
+                        />
+                      </div>
+                      <div class="subscribe-status">
+                        <div class="subscribe-indicator"></div>
+                        <div class="status-description h6">Ожидает оплаты</div>
+                      </div>
+                    </div>
+                    <div class="card-data">
+                      <div class="card-data-item b2">
+                        <div class="data-property">Номер договора</div>
+                        <div class="data-value" data-contract-id="DA-2020-11">
+                          DA-2020-11
+                        </div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Кондиционер</div>
+                        <div class="data-value" data-machine-count="3">3</div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Действует до</div>
+                        <div class="data-value" data-due-till="-">-</div>
+                      </div>
+                    </div>
+                    <div class="card-controls">
+                      <a
+                        href="#"
+                        class="card-button card-manage button button_secondary"
+                        >Управлять</a
+                      >
+                      <a href="#" class="card-button card-pay button"
+                        >Оплатить</a
+                      >
+                    </div>
+                  </div>
+                  <!-- component - card end-->
+                  <!-- component - card -->
+                  <div class="subscribe-card sbcr_comfort waiting">
+                    <div class="card-head">
+                      <div class="profile-logo">
+                        <img
+                          src="images/subscribe-card/my-comfort-plus.svg"
+                          alt="plus"
+                        />
+                      </div>
+                      <div class="subscribe-status">
+                        <div class="subscribe-indicator"></div>
+                        <div class="status-description h6">
+                          Ожидает активации
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-data">
+                      <div class="card-data-item b2">
+                        <div class="data-property">Номер договора</div>
+                        <div class="data-value" data-contract-id="DA-2020-11">
+                          DA-2020-11
+                        </div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Кондиционер</div>
+                        <div class="data-value" data-machine-count="3">3</div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Действует до</div>
+                        <div class="data-value" data-due-till="-">-</div>
+                      </div>
+                    </div>
+                    <div class="card-controls">
+                      <a
+                        href="#"
+                        class="card-button card-manage button button_secondary"
+                        >Управлять</a
+                      >
+                      <a href="#" class="card-button card-pay button"
+                        >Оплатить</a
+                      >
+                    </div>
+                  </div>
+                  <!-- component - card end-->
+                  <!-- component - card -->
+                  <div class="subscribe-card sbcr_comfort overdue">
+                    <div class="card-head">
+                      <div class="profile-logo">
+                        <img
+                          src="images/subscribe-card/my-comfort-plus.svg"
+                          alt="plus"
+                        />
+                      </div>
+                      <div class="subscribe-status">
+                        <div class="subscribe-indicator"></div>
+                        <div class="status-description h6">Просрочена</div>
+                      </div>
+                    </div>
+                    <div class="card-data">
+                      <div class="card-data-item b2">
+                        <div class="data-property">Номер договора</div>
+                        <div class="data-value" data-contract-id="DA-2020-11">
+                          DA-2020-11
+                        </div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Кондиционер</div>
+                        <div class="data-value" data-machine-count="3">3</div>
+                      </div>
+                      <div class="card-data-item b2">
+                        <div class="data-property">Действует до</div>
+                        <div class="data-value" data-due-till="-">-</div>
+                      </div>
+                    </div>
+                    <div class="card-controls">
+                      <a
+                        href="#"
+                        class="card-button card-manage button button_secondary"
+                        >Управлять</a
+                      >
+                      <a href="#" class="card-button card-pay button"
+                        >Оплатить</a
+                      >
+                    </div>
+                  </div>
+                  <!-- component - card end-->
+                </div>
+                <!-- component - card-box ending -->
+              </div>
+            </div>
+            <!-- tabs-block end -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/enterance-slider.js"></script>
+  <script src="js/maskedinput.min.js"></script>
+  <script src="js/app.js"></script>
+</html>

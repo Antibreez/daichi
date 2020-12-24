@@ -1,0 +1,42 @@
+.tabs-container {
+  margin-top: 50px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 25px;
+  }
+}
+.tabs-control-box {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+}
+
+.tab-item {
+  padding: 15px;
+  line-height: 23px;
+  transition: color 0.25s ease;
+  color: $minor;
+
+  @include media-breakpoint-down(sm) {
+    flex-grow: 2;
+    flex-shrink: 0;
+    width: 50%;
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
+.tab-item.active {
+  color: $primary;
+}
+
+.tabs-content {
+  margin-top: 50px;
+  
+  @include media-breakpoint-down(sm) {
+    margin-top: 25px;
+  }
+}

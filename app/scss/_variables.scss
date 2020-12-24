@@ -48,7 +48,7 @@ $cyan: #17a2b8 !default;
 $colors: () !default;
 $colors: map-merge(
   (
-    "blue": $blue,
+    "blue": $blue,fff
     "indigo": $indigo,
     "purple": $purple,
     "pink": $pink,
@@ -198,12 +198,10 @@ $paragraph-margin-bottom: 1rem !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1360px,
+  xs: 0px,
+  sm: 480px,
+  md: 769px,
+  lg: 1280px,
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -214,11 +212,9 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1200px,
-  xxl: 1330px,
+  sm: 450px,
+  md: 738px,
+  lg: 1200px,
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -1165,26 +1161,20 @@ $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
 
 // Custom
-$lead: #1f1f1f;
-$minor: white;
-$accent: #6108dc;
-$accentSpecial: #efe6fb;
-$plate: #00c0a2;
-$plateActive: #48a188;
-$plateSpecial: #d9f6f1;
-$error: #eb5757;
-$dark: #585858;
-$middle: #bcbcbc;
-$light: #e0e0e0;
-$point: #ff6f00;
-$pointLight: #FF9801
-;
+$lead: #444444;
+$minor: #888888;
+$stroke: #eeeeee;
+$bg: #f6f6f6;
+$disabled: #dadada;
 
+$primary-btn: #00adef;
+$primary-btn-hover: #4687e0;
+$primary-btn-active: #095aad;
+$btn-bg: #e8f8fe;
+$light-text: white;
 
-
-
-
+$alert: #ff0000;
+$waiting: #fdd74f;
+$success: #3ddc97;
 
 // fontsss
-
-

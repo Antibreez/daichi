@@ -1,0 +1,132 @@
+.subscribe-cards-box {
+  //   margin: 0 -15px -15px 0;
+  margin-bottom: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  //   justify-content: space-between;
+}
+
+.subscribe-card {
+  margin: 0 15px 15px 0;
+  padding: 23px 23px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 380px;
+  box-sizing: border-box;
+  border: 1px $stroke solid;
+  border-radius: 5px;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 226px;
+  }
+}
+
+.card-head {
+  padding-bottom: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $stroke;
+  }
+}
+.profile-logo {
+  height: 30px;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.subscribe-status {
+  max-width: 106px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-indicator {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.status-description {
+  line-height: 19px;
+}
+.card-data {
+  margin-top: 23px;
+}
+
+.card-data-item {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  word-wrap: none;
+  white-space: nowrap;
+  line-height: 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.data-property {
+  color: $minor;
+}
+
+.card-controls {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-button {
+  margin-right: 15px;
+  min-height: unset;
+  flex-grow: 1;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.subscribe-card {
+  &.expires {
+    .subscribe-indicator {
+      background-color: $waiting;
+    }
+  }
+  &.waiting {
+    .subscribe-indicator {
+      background-color: $waiting;
+    }
+  }
+  &.active {
+    .subscribe-indicator {
+      background-color: $success;
+    }
+  }
+  &.overdue {
+    .subscribe-indicator {
+      background-color: $disabled;
+    }
+  }
+}

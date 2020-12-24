@@ -1,0 +1,104 @@
+body {
+  font-family: "Gotham Pro", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.main {
+  margin-top: 75px;
+  min-height: calc(100vh - 145px);
+  display: grid;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 50px;
+  }
+}
+
+// typography
+
+.h1,
+.h2,
+.h3,
+.h4,
+.b1,
+.b2,
+.b3 {
+  font-weight: 300;
+}
+
+.h5,
+.h6,
+.h7 {
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: 48px;
+}
+.h2 {
+  font-size: 31px;
+}
+.h3 {
+  font-size: 27px;
+}
+.h4 {
+  font-size: 19px;
+}
+.h5 {
+  font-size: 15px;
+}
+.h6 {
+  font-size: 13px;
+}
+.h7 {
+  font-size: 11px;
+}
+.b1 {
+  font-size: 15px;
+}
+.b2 {
+  font-size: 13px;
+}
+.b3 {
+  font-size: 11px;
+}
+
+.page-title {
+  @include media-breakpoint-down(sm) {
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+  }
+}
+
+//
+.btn {
+  background: none;
+  border: none;
+  outline: transparent;
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    outline: transparent;
+  }
+}
+
+.header,
+.footer {
+  @include media-breakpoint-down(lg) {
+    background-color: orangered;
+  }
+  @include media-breakpoint-down(md) {
+    background-color: rgb(101, 255, 101);
+  }
+  @include media-breakpoint-down(sm) {
+    background-color: lightseagreen;
+  }
+  @include media-breakpoint-down(xs) {
+    background-color: lightblue;
+  }
+}

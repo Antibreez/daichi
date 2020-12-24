@@ -1,8 +1,5 @@
 // fonts
-// @import "../fonts/OpenSans";
-// @import "../fonts/geometria";
-
-
+@import "../fonts/Gotham_Pro/stylesheet.css";
 
 // bootstrap
 @import "variables";
@@ -12,8 +9,15 @@
 @import "node_modules/bootstrap/scss/grid";
 
 //main
-@import "layout"; 
+@import "layout";
 @import "header";
 @import "footer";
+@import "components/inputs.scss";
+@import "components/buttons.scss";
+@import "components/mini-tile.scss";
+@import "components/search-bar.scss";
+@import "components/tabs-container.scss";
+@import "components/subscribe-cards.scss";
+
 
 // pages
