@@ -1,0 +1,46 @@
+@import "../../scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+.main {
+  margin-top: 100px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 50px;
+  }
+}
+.title-pic {
+  margin: 0 auto;
+  width: 345px;
+  height: 160px;
+  background: url("../../images/other-pages/no-subccribes.svg") 50% 50% /
+    contain no-repeat;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.page-title,
+.page-text-box {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 870px;
+}
+
+.page-title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.page-text-box {
+  margin-top: 15px;
+  text-align: center;
+  max-width: 870px;
+  color: $minor;
+}
+
+.subscribe__mini-tile {
+  margin-top: 25px;
+  justify-content: center;
+}

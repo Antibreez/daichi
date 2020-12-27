@@ -1,6 +1,7 @@
 $(function () {
-  //  search-input`s mechanics
   if (window.innerWidth < 768) {
+    //  search-input`s mechanics
+
     $(".search-bar").addClass("mobile");
     $(".search-field").attr("placeholder", "Поиск");
 
@@ -20,6 +21,9 @@ $(function () {
         input.closest(".search-bar").removeClass("inputed-mobile");
       });
     });
+
+    // subscribe-cards
+
   }
 
   // tabs-switch

@@ -8,12 +8,15 @@ img {
 
 .main {
   margin-top: 75px;
+  padding-bottom: 100px;
+
   min-height: calc(100vh - 145px);
   display: grid;
   overflow: hidden;
 
   @include media-breakpoint-down(sm) {
     margin-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
