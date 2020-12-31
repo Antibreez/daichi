@@ -1,0 +1,51 @@
+.breadcrumbs-container {
+  padding-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 25px;
+  }
+}
+
+.breadcrumb,
+.breadcrumb:hover {
+  color: $minor;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::after {
+    content: "/";
+    padding: 0 10px;
+    position: static;
+    display: inline-block;
+    pointer-events: none;
+
+    &:hover {
+      text-decoration: none;
+      cursor: none;
+    }
+  }
+}
+
+.current-page-crumb {
+  color: $primary;
+
+  &::after,
+  &:hover::after {
+    display: none;
+  }
+
+  &.breadcrumb:hover,
+  &:hover {
+    color: $primary;
+  }
+}
+
+.breadcrumb {
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}

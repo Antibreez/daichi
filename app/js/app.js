@@ -1,3 +1,5 @@
+// const { each } = require("jquery");
+
 $(function () {
   if (window.innerWidth < 768) {
     //  search-input`s mechanics
@@ -23,7 +25,6 @@ $(function () {
     });
 
     // subscribe-cards
-
   }
 
   // tabs-switch
@@ -56,3 +57,19 @@ $(function () {
 // versInput.oninput = function () {
 //   console.log(versInput.val());
 // };
+
+const countdownItem = $(".countdown-item");
+
+const percentage_progress = (countdownItem) => {
+  countdownItem.each(function () {
+    const countdown_data = $(this).data();
+    const percentage = (countdown_data.currentDay / countdown_data.cycleDays) * 100;
+
+    $(this)
+      .find(".progress-scale")
+      .css("width", percentage + "%");
+  });
+
+};
+
+percentage_progress(countdownItem);
