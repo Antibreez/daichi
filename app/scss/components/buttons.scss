@@ -56,3 +56,28 @@
     border-color: $disabled;
   }
 }
+
+// links
+
+.link {
+  color: $primary;
+  outline: transparent;
+
+  &:hover {
+    color: $primary-btn-hover;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $primary-btn-active;
+  }
+
+  &_disabled {
+    color: $disabled;
+    pointer-events: none;
+
+    &:hover {
+      color: $disabled;
+    }
+  }
+}
