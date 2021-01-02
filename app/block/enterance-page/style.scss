@@ -259,3 +259,14 @@
 .enterance-form.sign-in .enterance__input-area .assistive-text {
   text-align: right;
 }
+// restore
+
+.restore-picture {
+  background: 50% 50% / contain no-repeat;
+  height: 253px;
+  width: 253px;
+  @include media-breakpoint-down(xs) {
+    width: 180px;
+    height: 180px;
+  }
+}
