@@ -1,0 +1,88 @@
+// lock of position of all)))  with deleteng scroll bar
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
+}
+
+.blackout {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  &_active {
+    opacity: 0.25;
+    pointer-events: unset;
+  }
+}
+
+.popup {
+  padding: 30px 30px 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: white;
+  z-index: 3;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &.active {
+    pointer-events: unset;
+    opacity: 1;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100vw;
+    height: calc(100vh);
+    padding: 70px 15px 65px;
+    border-radius: 0;
+  }
+}
+
+.popup__exit-button {
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  height: 24px;
+  width: 24px;
+  background: url("../../images/icons/exit-icon.svg") 50% 50%/10px 10px
+    no-repeat;
+  border-radius: 50%;
+  background-color: $bg;
+  border: none;
+  outline: transparent;
+  flex-shrink: 0;
+
+  &:active,
+  &:focus {
+    outline: transparent;
+  }
+
+  @include media-breakpoint-down(sm) {
+    top: 70px;
+    right: 15px;
+  }
+}
+
+.popup-title {
+  margin-bottom: 15px;
+  padding-right: 35px;
+  line-height: 37px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
