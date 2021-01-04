@@ -1,0 +1,401 @@
+@import "../../scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+main.main {
+  grid-auto-rows: min-content;
+}
+
+.service-programs-page {
+  .page-title {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      font-size: 27px;
+      line-height: 33px;
+    }
+  }
+
+  .page-subtitle {
+    color: $minor;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+}
+
+.service-programs-container {
+  margin-top: 50px;
+  margin-bottom: -30px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -15px;
+    margin-top: 25px;
+  }
+}
+
+.service-program-item {
+  margin-bottom: 30px;
+  display: flex;
+  min-height: 330px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 15px;
+    flex-direction: column;
+    box-shadow: none;
+  }
+}
+
+.service-program-pic {
+  flex-shrink: 0;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    background-color: $stroke;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+.program-item-logo {
+  width: 100%;
+  height: 96px;
+  background: white 30px 30px/142px 36px no-repeat;
+
+  @include media-breakpoint-down(sm) {
+    height: 55px;
+    background: 15px 15px/100px 25px no-repeat;
+  }
+}
+.program-image {
+  background: url("../../images/enterance-slider/55.jpg") 50% 50% / cover;
+  flex-grow: 1;
+
+  @include media-breakpoint-down(sm) {
+    height: 160px;
+  }
+}
+
+.program-data-box {
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(sm) {
+    padding: 15px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
+.service-program-description {
+  .main-text {
+    @include media-breakpoint-down(md) {
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .note {
+    margin-top: 10px;
+    color: $minor;
+
+    @include media-breakpoint-down(md) {
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+.options-container {
+  margin-top: 30px;
+  margin-right: -30px;
+  margin-bottom: -15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  line-height: 18px;
+  width: 100%;
+  max-width: 100%;
+
+  @include media-breakpoint-down(md) {
+    margin-right: 0;
+    margin-top: 25px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 25px;
+  }
+}
+.program-option {
+  margin-right: 30px;
+  margin-bottom: 15px;
+  flex: 1 0 calc(33% - 60px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-right: 0;
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.service-program-control-block {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-right: -15px;
+    margin-bottom: -15px;
+  }
+}
+
+.program-controls {
+  display: flex;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+  @include media-breakpoint-down(xs) {
+    flex-wrap: wrap;
+  }
+
+  button {
+    margin-right: 15px;
+
+    @include media-breakpoint-down(md) {
+      flex-grow: 1;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.program-price {
+  line-height: 18px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 25px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 38px;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 25px;
+  }
+  .count {
+    margin: 0 10px;
+    line-height: 37px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 19px;
+      line-height: 23px;
+    }
+  }
+}
+
+// popup componentns
+
+.service-popup-container {
+  display: flex;
+  margin-right: -15px;
+}
+
+.service-popup-item {
+  margin-right: 15px;
+  padding: 0 20px 20px 20px;
+  border: 1px solid $stroke;
+  border-radius: 5px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(md) {
+    padding: 15px;
+    width: 205px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: calc(100vw - 50px);
+    min-height: calc(100vh - 250px);
+  }
+
+  .program-price {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 38px;
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    .count {
+      margin: 0 10px;
+      line-height: 37px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 19px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+.service-p-logo {
+  height: 150px;
+  width: 100%;
+  background: 50% 50% / auto 48px no-repeat;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    background-color: $stroke;
+    height: 1px;
+    width: calc(100% + 40px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 105px;
+    background-size: auto 32px;
+
+    &::after {
+      width: calc(100% + 30px);
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    height: 110px;
+    background-size: auto 36px;
+  }
+}
+
+.service-p-advantages {
+  margin-top: 30px;
+  margin-bottom: 65px;
+  line-height: 19px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 25px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.service-p-advantage {
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    margin-top: 2px;
+    margin-right: 13px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 19px;
+    height: 12px;
+    background: url("../../images/icons/blue_checkmark-icon.svg");
+  }
+}
+.service-p-controls {
+  margin-top: auto;
+}
+.service-p-arrange-button {
+  margin-top: 30px;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 25px;
+  }
+}
+
+.s-p-wrp {
+  display: contents;
+}
+
+.service-popup-mobile-navigation {
+  display: none;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 4px;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.service-popup-mobile-navigation-item {
+  height: 4px;
+  width: calc((100vw - 30px) / 3);
+  background-color: $bg;
+  transition: background-color 0.25s ease;
+}
+
+.slick-current.service-popup-mobile-navigation-item {
+    background-color: $disabled;
+}

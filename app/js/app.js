@@ -1,5 +1,3 @@
-// const { each } = require("jquery");
-
 $(function () {
   if (window.innerWidth < 768) {
     //  search-input`s mechanics
@@ -63,13 +61,38 @@ const countdownItem = $(".countdown-item");
 const percentage_progress = (countdownItem) => {
   countdownItem.each(function () {
     const countdown_data = $(this).data();
-    const percentage = (countdown_data.currentDay / countdown_data.cycleDays) * 100;
+    const percentage =
+      (countdown_data.currentDay / countdown_data.cycleDays) * 100;
 
     $(this)
       .find(".progress-scale")
       .css("width", percentage + "%");
   });
-
 };
 
 percentage_progress(countdownItem);
+
+// программы обслуживания - вызов попапа
+
+const blackout = $(".blackout");
+const every_popup = $(".popup");
+
+const blackout_on = () => {
+  blackout.addClass("blackout_active");
+  $("html, body").css("overflow", "hidden");
+};
+
+const blackout_off = () => {
+  blackout.removeClass("blackout_active");
+  $("html, body").css("overflow", "auto");
+  every_popup.removeClass("active");
+};
+
+$(document).on("click", ".blackout,.popup__exit-button", blackout_off);
+
+
+
+$(document).on("click", ".button-change-subscribe_js", (e) => {
+  $(".service-programs-popup").addClass("active");
+  blackout_on();
+});
