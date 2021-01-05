@@ -22,6 +22,8 @@ $(function () {
       });
     });
 
+  $(".input-tel").mask("+7 (999) 999-9999");
+
     // subscribe-cards
   }
 
@@ -34,9 +36,7 @@ $(function () {
   });
 });
 
-// if ($(".input-tel")) {
-//   $(".input-tel").mask("+7 (999) 999-9999");
-// }
+  
 // const versInput = $(".enterance-input");
 
 // $(document).on("change", ".enterance-input", (e) => {
