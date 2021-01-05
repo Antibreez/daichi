@@ -1,0 +1,25 @@
+.block-with-banners {
+  display: flex;
+
+  .main-content-wrp {
+    flex-grow: 1;
+  }
+
+  .banners-wrp {
+    margin-left: 60px;
+    width: 420px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    .banner{
+      margin-bottom: 50px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

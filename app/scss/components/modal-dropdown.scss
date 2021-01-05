@@ -1,0 +1,39 @@
+.modal-dropdown-container {
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
+}
+.modal-dropdown-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: static;
+    display: block;
+    margin-left: 15px;
+    background: url("../../images/icons/dropdown-arrow.svg") 50% 50%/23px 14px
+      no-repeat;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.25s ease;
+  }
+
+  &.open {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.modal-dropdown-box {
+  margin-top: 15px;
+  display: none;
+}
+
+.modal-dropdown-content {
+  width: 100%;
+}
