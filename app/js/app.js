@@ -75,24 +75,58 @@ percentage_progress(countdownItem);
 // программы обслуживания - вызов попапа
 
 const blackout = $(".blackout");
-const every_popup = $(".popup");
 
 const blackout_on = () => {
   blackout.addClass("blackout_active");
-  $("html, body").css("overflow", "hidden");
+  $("html, body").css("overflow-y", "hidden");
 };
 
 const blackout_off = () => {
   blackout.removeClass("blackout_active");
-  $("html, body").css("overflow", "auto");
-  every_popup.removeClass("active");
+  $("html, body").css("overflow-y", "auto");
 };
 
-$(document).on("click", ".blackout,.popup__exit-button", blackout_off);
+$(document).on("click", ".popup__exit-button", (e) => {
+  blackout_off();
+  $(".popup").removeClass("active");
+});
 
-
+$(document).on("click", ".blackout", (e) => {
+  blackout_off();
+  $(".popup").removeClass("active");
+  console.log("blac");
+});
 
 $(document).on("click", ".button-change-subscribe_js", (e) => {
   $(".service-programs-popup").addClass("active");
   blackout_on();
+});
+
+// date-bar
+
+$(document).on("click", ".cal-icon", (e) => {
+  const icon = $(e.currentTarget);
+  icon.siblings(".input").trigger("focus");
+});
+
+// requests-modals
+
+$(document).on("click", ".request-item", (e) => {
+  blackout_on();
+
+  const request_item = $(e.currentTarget);
+
+  request_item.find(".popup").addClass("active");
+});
+
+// modal dropdown
+
+$(document).on("click", ".modal-dropdown-title", (e) => {
+  const btn = $(e.currentTarget);
+  if (btn.siblings(".modal-dropdown-box").filter(":animated").length > 0) {
+    return false;
+  }
+
+  btn.siblings(".modal-dropdown-box").slideToggle(250);
+  btn.toggleClass("open");
 });

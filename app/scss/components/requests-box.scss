@@ -1,0 +1,162 @@
+.requests-box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid $stroke;
+}
+
+.request-item {
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+
+.request-date-line {
+  padding: 10px 15px;
+  color: $minor;
+  background-color: $bg;
+}
+.request-line {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.request-controls {
+  text-align: right;
+  margin-left: 15px;
+}
+
+.request-status,
+.request-device {
+  margin-top: 5px;
+  color: $minor;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.request-status.done {
+  color: $primary;
+}
+
+// modals
+
+.request-detail-modal {
+  max-width: 690px;
+  cursor: auto;
+}
+
+.request-modal-progress-bar {
+  padding: 0 60px;
+  margin: 0 0 30px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+
+  &:first-child {
+    flex-grow: 0;
+
+    .point-dot {
+      margin-left: 0;
+    }
+
+    .point-line {
+      display: none;
+    }
+  }
+  &:last-child {
+    .point-dot {
+      margin-right: 0;
+    }
+    .point-name {
+      transform: translateX(calc(-50% + 32px));
+    }
+  }
+}
+.point-dot {
+  margin: 0 10px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: $stroke;
+  flex-shrink: 0;
+}
+.point-line {
+  flex-grow: 1;
+  flex-grow: 1;
+  width: 1px;
+  height: 1px;
+  background-color: $stroke;
+}
+.point-name {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  transform: translateX(calc(-50% + 22px));
+  color: $minor;
+}
+
+.point.current {
+  .point-name {
+    color: $lead;
+  }
+}
+
+.point.done {
+  .point-dot {
+    background-color: $primary;
+  }
+  .point-line {
+    background-color: $primary;
+  }
+}
+
+.modal-alert-box {
+  margin-bottom: 50px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  line-height: 23px;
+  border-radius: 5px;
+
+  &.wait {
+    background-color: #fff7f7;
+  }
+}
+.modal-alert-pic {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  background: url("../../images/icons/alert_critical.svg") 50% 50% / contain
+    no-repeat;
+  flex-shrink: 0;
+}
+
+
+
+
+
+.request-detail-modal{
+
+  .product-item{
+    padding: 15px;
+    width: 100%;
+
+  }
+}
