@@ -128,7 +128,7 @@
 }
 
 .modal-alert-box {
-  margin-bottom: 50px;
+ margin: 50px 0;
   padding: 15px;
   display: flex;
   align-items: center;
@@ -137,6 +137,13 @@
 
   &.wait {
     background-color: #fff7f7;
+  }
+  &.ok{
+    background-color: $bg;
+
+    .modal-alert-pic{
+      background-image: url("../../images/icons/blue_checkmark-icon.svg");
+    }
   }
 }
 .modal-alert-pic {
@@ -148,6 +155,10 @@
   flex-shrink: 0;
 }
 
+.modal-alert-box.ok{
+
+}
+
 
 
 
@@ -157,6 +168,27 @@
   .product-item{
     padding: 15px;
     width: 100%;
+  }
+  .product-item-pic{
+    width: 80px;
+    height: 80px;
+  }
+  .product-item-info{
+    padding: 0;
+  }
 
+  .document-item{
+    margin: 0 0 15px 0;
+    width: 100%;
+    max-width: 100%;
+    
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .invoice-controller{
+    margin-top: 50px;
   }
 }
+
+

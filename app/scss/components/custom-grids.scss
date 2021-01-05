@@ -13,5 +13,13 @@
     @include media-breakpoint-down(md) {
       display: none;
     }
+
+    .banner{
+      margin-bottom: 50px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 }

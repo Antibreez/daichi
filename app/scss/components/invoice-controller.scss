@@ -1,0 +1,31 @@
+.invoice-controller {
+  padding: 30px;
+  width: 100%;
+  background-color: $bg;
+}
+.expense-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.expense-cost {
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.summary-line {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.invoice-order-button {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 100%;
+}
