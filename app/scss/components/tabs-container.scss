@@ -8,6 +8,7 @@
 .tabs-control-box {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   @include media-breakpoint-down(sm) {
     justify-content: center;
@@ -15,15 +16,20 @@
 }
 
 .tab-item {
-  padding: 15px;
+  padding: 15px 0;
+  margin-right: 15px;
   line-height: 23px;
   transition: color 0.25s ease;
   color: $minor;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   @include media-breakpoint-down(sm) {
-    flex-grow: 2;
+    flex-grow: 1;
     flex-shrink: 0;
-    width: 50%;
+    width: calc(50% - 15px);
     font-size: 13px;
     line-height: 19px;
   }
@@ -35,7 +41,7 @@
 
 .tabs-content {
   margin-top: 50px;
-  
+
   @include media-breakpoint-down(sm) {
     margin-top: 25px;
   }
