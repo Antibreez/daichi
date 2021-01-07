@@ -84,3 +84,21 @@
     }
   }
 }
+
+.direct-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: none;
+  background: $bg url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px
+    no-repeat;
+
+  outline: transparent;
+  &:active,
+  &:focus {
+    outline: transparent;
+  }
+}

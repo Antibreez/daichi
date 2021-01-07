@@ -1,0 +1,17 @@
+.account-data-cta{
+    padding: 15px 45px 15px 15px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    position: relative;
+    
+    .description{
+        color: $minor;
+    }
+}
+
+
+.account-data-cta.added{
+    .direct-button{
+        background-image: url("../../images/icons/exit-icon.svg");
+    }
+}

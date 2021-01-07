@@ -1,6 +1,6 @@
 // lock of position of all)))  with deleteng scroll bar
 html {
-  margin-right: calc(-1 * (100vw - 100%));
+  // margin-right: calc(-1 * (100vw - 100%));
   overflow-x: hidden;
 }
 
@@ -23,6 +23,8 @@ html {
 
 .popup {
   padding: 30px 30px 50px;
+  max-width: 690px;
+  width: 690px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -36,7 +38,6 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 80vh;
-
 
   &.active {
     pointer-events: unset;
@@ -89,3 +90,41 @@ html {
     line-height: 23px;
   }
 }
+
+.popup-subtitle {
+  margin-top: 20px;
+  color: $minor;
+  line-height: 23px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.modal-ok-button {
+  min-width: 250px;
+}
+
+.modal-button-mobile {
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.confirmed-modal {
+  .popup-title {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+

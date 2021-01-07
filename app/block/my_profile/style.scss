@@ -1,0 +1,218 @@
+@import "../../scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+.profile-form-section {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile-section-title {
+  margin-bottom: 25px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 15px;
+  }
+}
+
+main.main_my-profile {
+  .page-title {
+    margin-bottom: 50px;
+  }
+}
+
+.profile-form {
+  .alert-box {
+    background-image: url("../../images/icons/edit-icon.svg");
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}
+
+.add-adress-button {
+  margin-top: 15px;
+}
+
+// popup-change-add-adress
+
+.adress-change-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .input-container.inp-md,
+  .input-container.inp-sm {
+    margin-right: 15px;
+
+    &.n_mr {
+      margin-right: 0;
+    }
+  }
+  .inp-b {
+    width: 100%;
+    flex-grow: 6;
+  }
+  .inp-md {
+    width: calc(50% - 30px);
+    flex-grow: 3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .inp-sm {
+    width: calc((100% / 3) - 30px);
+    flex-grow: 2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .button.delete-adress-button {
+    margin: 0 15px 15px 0;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 50px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .input-container {
+      width: 100%;
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      &.inp-b,
+      &.inp-md,
+      &.inp-sm {
+        margin-right: 0;
+      }
+    }
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+.adress-change-popup.adding {
+  .delete-adress-button {
+    display: none;
+  }
+  .save-adress-button {
+    margin-top: 50px;
+  }
+}
+
+// edit-form
+
+.edit-form {
+  margin-top: 30px;
+}
+
+.save-email-button,
+.modal-ok-button {
+  margin: 50px auto 0;
+}
+
+.new-email-box,
+.old-email-box {
+  color: $lead;
+}
+
+.confirmed-modal {
+  text-align: center;
+
+  .new-email-box {
+    margin-top: 10px;
+  }
+}
+
+.modal-sucsess-pic {
+  height: 253px;
+  width: 253px;
+  margin: 0 auto 30px;
+  background: url("../../images/other-pages/confirmation-restore.svg") 50% 50% /
+    contain no-repeat;
+}
+
+.email-cahnge-alert {
+  padding: 15px;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.25s ease;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0;
+  }
+
+  .notice {
+    margin-top: 10px;
+    color: $minor;
+  }
+}
+.email-alert-pic {
+  height: 122px;
+  width: 100%;
+  background: url("../../images/enterance-slider/55.jpg") 50% 50% / cover;
+}
+
+.account-change-modal {
+  padding-top: 180px;
+  .popup-title {
+    margin-top: 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 160px;
+  }
+}
+
+.account-change-modal-pic {
+  height: 180px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../../images/banners/modal-banner-img.jpg") 50% 50% / cover;
+
+  @include media-breakpoint-down(sm) {
+    height: 160px;
+  }
+}
+
+.account-change-modal-pic_complete {
+  margin: 0 auto 30px;
+  width: 253px;
+  height: 253px;
+  background: url("../../images/other-pages/daichi-inner-1.svg") 50% 50% /
+    contain no-repeat;
+}
+
+.account-added-modal {
+  @include media-breakpoint-down(sm) {
+    .account-change-modal-pic_complete {
+      margin-top: 75px;
+    }
+    .popup-title {
+      padding: 0;
+      text-align: center;
+    }
+    .page-subtitle {
+      text-align: center;
+    }
+  }
+}
