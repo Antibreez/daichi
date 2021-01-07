@@ -93,8 +93,12 @@
   width: 24px;
   border-radius: 50%;
   border: none;
-  background-color: $bg;
-
-  background: url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px
+  background: $bg url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px
     no-repeat;
+
+  outline: transparent;
+  &:active,
+  &:focus {
+    outline: transparent;
+  }
 }

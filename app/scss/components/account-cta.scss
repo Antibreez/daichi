@@ -8,3 +8,10 @@
         color: $minor;
     }
 }
+
+
+.account-data-cta.added{
+    .direct-button{
+        background-image: url("../../images/icons/exit-icon.svg");
+    }
+}
