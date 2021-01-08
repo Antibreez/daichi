@@ -42,7 +42,7 @@
   &:hover,
   &:active,
   &:focus {
-    input {
+    input, .select__trigger {
       border-color: $primary;
     }
   }
@@ -79,7 +79,8 @@
 }
 
 .input-container_error {
-  input {
+  input,
+  .select__trigger {
     border-color: $alert;
   }
   .assistive-text {
@@ -95,9 +96,13 @@
   }
 
   input,
-  &:hover input {
+  &:hover input,
+  .select__trigger,
+  &:hover .select__trigger {
     border-color: $disabled;
+    pointer-events: none;
   }
+  .select-placeholder,
   .assistive-text,
   label,
   input,
@@ -119,4 +124,135 @@
     height: 100%;
     width: 100%;
   }
+}
+
+// select - inputs
+
+.select {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+
+  li {
+    list-style: none;
+  }
+}
+
+.select__trigger {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid $stroke;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transition: border-color 0.25s ease;
+
+  line-height: 19px;
+  user-select: none;
+
+  .select__item {
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+
+.select__trigger::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url("../../images/icons/dropdown-arrow.svg") 50% 50% / contain
+    no-repeat;
+  transition: transform 0.25s ease;
+}
+
+.select__trigger:focus,
+.select__trigger:active {
+  outline: transparent;
+}
+
+.select_show .select__trigger::after {
+  transform: rotate(180deg);
+}
+
+.select__dropdown {
+  display: none;
+  position: absolute;
+  bottom: -5px;
+  transform: translateY(100%);
+  background: white;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  max-height: 192px;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+}
+
+.select_show .select__dropdown {
+  display: block;
+}
+
+.select_show .select__backdrop {
+  display: block;
+}
+
+.select__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.select__item {
+  padding: 12px 15px;
+}
+
+.select__item_selected {
+  background-color: #e1f5fe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// .select__item_selected::after {
+//   content: "";
+//   width: 0.75rem;
+//   height: 0.75rem;
+//   color: #0277bd;
+//   background-size: cover;
+//   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100" class="svg-inline--fa fa-check fa-w-16" data-icon="check" data-prefix="fas" aria-hidden="true"%3E%3Cpath d="M33.964 85.547l-32.5-32.251a4.935 4.935 0 010-7.017l7.071-7.017a5.027 5.027 0 017.071 0L37.5 60.987l46.894-46.534a5.028 5.028 0 017.07 0l7.072 7.017a4.935 4.935 0 010 7.017l-57.5 57.06a5.027 5.027 0 01-7.072 0z" fill="%230277bd"/%3E%3C/svg%3E');
+// }
+
+.select__item:hover {
+  background-color: $bg;
+  cursor: pointer;
+  transition: 0.25s background-color ease-in-out;
+}
+
+.select__backdrop {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  .input-container {
+    &:hover {
+      .select__trigger {
+        border-color: $primary;
+      }
+    }
+  }
+  background-color: transparent;
+}
+
+
+.select-placeholder{
+  color: $minor;
 }

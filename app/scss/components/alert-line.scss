@@ -1,0 +1,29 @@
+
+.alert-line {
+  width: 100%;
+  margin: 50px 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  line-height: 23px;
+  border-radius: 5px;
+
+  &.wait {
+    background-color: #fff7f7;
+  }
+  &.ok {
+    background-color: $bg;
+
+    .alert-line-pic {
+      background-image: url("../../images/icons/blue_checkmark-icon.svg");
+    }
+  }
+}
+.alert-line-pic {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  background: url("../../images/icons/alert_critical.svg") 50% 50% / contain
+    no-repeat;
+  flex-shrink: 0;
+}

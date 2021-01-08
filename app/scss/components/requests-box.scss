@@ -127,68 +127,29 @@
   }
 }
 
-.modal-alert-box {
- margin: 50px 0;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  line-height: 23px;
-  border-radius: 5px;
-
-  &.wait {
-    background-color: #fff7f7;
-  }
-  &.ok{
-    background-color: $bg;
-
-    .modal-alert-pic{
-      background-image: url("../../images/icons/blue_checkmark-icon.svg");
-    }
-  }
-}
-.modal-alert-pic {
-  width: 24px;
-  height: 24px;
-  margin-right: 15px;
-  background: url("../../images/icons/alert_critical.svg") 50% 50% / contain
-    no-repeat;
-  flex-shrink: 0;
-}
-
-.modal-alert-box.ok{
-
-}
-
-
-
-
-
-.request-detail-modal{
-
-  .product-item{
+.request-detail-modal {
+  .product-item {
     padding: 15px;
     width: 100%;
   }
-  .product-item-pic{
+  .product-item-pic {
     width: 80px;
     height: 80px;
   }
-  .product-item-info{
+  .product-item-info {
     padding: 0;
   }
 
-  .document-item{
+  .document-item {
     margin: 0 0 15px 0;
     width: 100%;
     max-width: 100%;
-    
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
-  .invoice-controller{
+  .invoice-controller {
     margin-top: 50px;
   }
 }
-
-

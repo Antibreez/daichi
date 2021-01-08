@@ -3,13 +3,14 @@
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  width: 100%;
 
   .tile-item {
     margin: 0 15px 15px 0;
     padding: 15px;
     cursor: pointer;
     height: 78px;
-    width: 380px;
+    width: calc(100% / 3 - 30px);
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
@@ -32,8 +33,9 @@
       margin-right: 5px;
       flex-direction: column;
       justify-content: center;
-      height: 90px;
+      align-items: center;
       text-align: center;
+      height: 90px;
     }
     @include media-breakpoint-down(xs) {
       height: unset;
@@ -73,11 +75,17 @@
 }
 
 .mini-tile-mobile-carusel {
+  margin-bottom: 0;
   .tile-item {
     @include media-breakpoint-down(sm) {
       width: 111px;
       height: 102px;
       margin-bottom: 0;
+    }
+  }
+  .item-pic {
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto 5px auto;
     }
   }
 }
@@ -120,4 +128,9 @@
   .item-pic {
     background-color: $stroke;
   }
+}
+
+
+.actions-container .mini-tile{
+  margin-top: 15px;
 }

@@ -132,17 +132,20 @@ img {
 }
 
 .section {
-  padding: 75px 0;
+  padding: 75px 0 0;
 
   &:first-child {
     padding: 50px 0 75px;
   }
+  &:last-child{
+    padding-bottom: 0;
+  }
 
   @include media-breakpoint-down(sm) {
-    padding: 50px 0;
+    padding: 50px 0 0 ;
 
     &:first-child {
-      padding: 25px 0 50px;
+      padding: 25px 0 0;
     }
   }
 }
