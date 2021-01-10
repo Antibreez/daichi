@@ -130,3 +130,29 @@ $(document).on("click", ".modal-dropdown-title", (e) => {
   btn.siblings(".modal-dropdown-box").slideToggle(250);
   btn.toggleClass("open");
 });
+
+
+$(document).on("mouseover", ".alert-box", (e)=>{
+  const alertBox = $(e.currentTarget);
+
+  alertBox.closest(".input-container").find(".input-alert-window").addClass("input-alert-window_visible");
+
+})
+
+$(document).on("mouseleave", ".alert-box", (e)=>{
+  const alertBox = $(e.currentTarget);
+
+  alertBox.closest(".input-container").find(".input-alert-window").removeClass("input-alert-window_visible");
+
+})
+
+
+
+// if (window.innerWidth < 768) {
+//   $(document).on("click", "data-picker"
+// }
+
+// var hideKeyboard = function() {
+//   document.activeElement.blur();
+//   $("input").blur();
+// };  if (window.innerWidth < 768) {

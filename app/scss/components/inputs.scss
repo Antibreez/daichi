@@ -126,6 +126,19 @@
   }
 }
 
+
+.date-bar .cal-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url("../../images/icons/calendar-pic.svg") 50% 50% / contain
+    no-repeat;
+}
+
 // select - inputs
 
 .select {

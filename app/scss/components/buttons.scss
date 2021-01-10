@@ -4,8 +4,8 @@
   text-align: center;
   padding: 15px 40px;
   font-size: 15px;
-  font-weight: 400;
   line-height: 18px;
+  font-weight: 400;
   border-radius: 5px;
   min-width: 130px;
   max-width: 100%;
@@ -22,10 +22,12 @@
     color: $light-text;
     text-decoration: none;
   }
+
   &:active {
     background-color: $primary-btn-active;
     outline: transparent;
   }
+  
   &:focus {
     outline: transparent;
   }
@@ -33,6 +35,11 @@
   &.disabled {
     background-color: $disabled;
     pointer-events: none;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 13px;
+    line-height: 15px;
   }
 }
 
