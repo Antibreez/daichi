@@ -92,7 +92,7 @@
   }
 }
 
-.direct-button {
+.direct-button ,.delete-button{
   padding: 0;
   position: absolute;
   top: 15px;
@@ -109,4 +109,8 @@
   &:focus {
     outline: transparent;
   }
+}
+.delete-button{
+  background-image: url("../../images/icons/exit-icon.svg");
+  background-size: 10px 10px;
 }

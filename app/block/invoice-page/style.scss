@@ -1,0 +1,59 @@
+@import "../../scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+.receipt {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.summ {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.page-subtitle {
+  margin-bottom: 50px;
+  color: $minor;
+  text-align: center;
+}
+
+.invoice-form {
+  margin: 0 auto 50px;
+  max-width: 690px;
+}
+
+.ch-ctr {
+  margin: 50px 0;
+}
+.ch-line {
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  margin: 0 auto;
+  width: 250px;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.payment-emits {
+  margin-top: 50px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.payment-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 25px;
+  background: 50% 50% / contain no-repeat;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

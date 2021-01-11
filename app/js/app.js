@@ -22,7 +22,7 @@ $(function () {
       });
     });
 
-  $(".input-tel").mask("+7 (999) 999-9999");
+    $(".input-tel").mask("+7 (999) 999-9999");
 
     // subscribe-cards
   }
@@ -36,7 +36,6 @@ $(function () {
   });
 });
 
-  
 // const versInput = $(".enterance-input");
 
 // $(document).on("change", ".enterance-input", (e) => {
@@ -131,22 +130,23 @@ $(document).on("click", ".modal-dropdown-title", (e) => {
   btn.toggleClass("open");
 });
 
-
-$(document).on("mouseover", ".alert-box", (e)=>{
+$(document).on("mouseover", ".alert-box", (e) => {
   const alertBox = $(e.currentTarget);
 
-  alertBox.closest(".input-container").find(".input-alert-window").addClass("input-alert-window_visible");
+  alertBox
+    .closest(".input-container")
+    .find(".input-alert-window")
+    .addClass("input-alert-window_visible");
+});
 
-})
-
-$(document).on("mouseleave", ".alert-box", (e)=>{
+$(document).on("mouseleave", ".alert-box", (e) => {
   const alertBox = $(e.currentTarget);
 
-  alertBox.closest(".input-container").find(".input-alert-window").removeClass("input-alert-window_visible");
-
-})
-
-
+  alertBox
+    .closest(".input-container")
+    .find(".input-alert-window")
+    .removeClass("input-alert-window_visible");
+});
 
 // if (window.innerWidth < 768) {
 //   $(document).on("click", "data-picker"
@@ -156,3 +156,35 @@ $(document).on("mouseleave", ".alert-box", (e)=>{
 //   document.activeElement.blur();
 //   $("input").blur();
 // };  if (window.innerWidth < 768) {
+
+// чекбоксы опций в оформлении заказа
+$(document).on("click", ".option-item", function (e) {
+  $(this).find("input[type = radio]").prop("checked", true);
+  $(this).closest(".switch-box").find(".option-item").removeClass("select");
+  $(this).closest(".option-item").addClass("select");
+});
+
+// вставка текста из подсказок в строке поиска
+$(document).on("click", ".search-prompt", (e) => {
+  const prompt = $(e.currentTarget);
+  prompt.closest(".search-bar").find(".search-field").val(prompt.text());
+});
+
+// замена картинок в custom drop-down select menu (оформление заказа)
+
+
+$(document).on("click", ".select__item" ,(e)=>{
+const sel = $(e.currentTarget);
+const newSrc = sel.data("nsrc")
+sel.closest(".custom-select-bar").find(".select-picture img").attr("src", newSrc)
+
+})
+
+
+// 
+
+
+
+$(document).on("click", ".switch", function () {
+  $(this).toggleClass("switchOn");
+});

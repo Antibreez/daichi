@@ -152,3 +152,14 @@ class CustomSelect {
 
 const select1 = new CustomSelect('#remote-control-select-obj');
 const select2 = new CustomSelect('#remote-control-select-room');
+
+
+
+const select4 = new CustomSelect('#select-obj-2');
+
+
+
+// const select3 = new CustomSelect('#custom-select-checkout');
+
+
+
