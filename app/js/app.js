@@ -172,19 +172,56 @@ $(document).on("click", ".search-prompt", (e) => {
 
 // замена картинок в custom drop-down select menu (оформление заказа)
 
+$(document).on("click", ".select__item", (e) => {
+  const sel = $(e.currentTarget);
+  const newSrc = sel.data("nsrc");
+  sel
+    .closest(".custom-select-bar")
+    .find(".select-picture img")
+    .attr("src", newSrc);
+});
 
-$(document).on("click", ".select__item" ,(e)=>{
-const sel = $(e.currentTarget);
-const newSrc = sel.data("nsrc")
-sel.closest(".custom-select-bar").find(".select-picture img").attr("src", newSrc)
-
-})
-
-
-// 
-
-
+//
 
 $(document).on("click", ".switch", function () {
   $(this).toggleClass("switchOn");
+});
+
+// qr-scanner
+
+let text = document.querySelector(".text");
+//
+
+$(document).on("click", ".register-new-device-js", (e) => {
+  $(".device-registration-popup").addClass("active");
+  blackout_on();
+});
+
+$(document).on("click", ".qr-scanner-trigger", (e) => {
+  $(".qr-scanner-modal").addClass("active");
+
+  QrScanner.hasCamera()
+    .then(
+      (res) => {
+        if (res !== true) throw Error("Not camera");
+        console.log("decoded qr code:", "result", res);
+        let videoElement = document.querySelector(".js-video-box");
+        window.qrScanner = new QrScanner(videoElement, (result) => {
+          console.log("decoded qr code:", result);
+          $(".warranty-qr-inner").val(result);
+          qrScanner.stop();
+          $(".qr-scanner-modal").removeClass("active");
+        });
+        window.qrScanner.start();
+      },
+      (err) => {
+        console.log(err);
+      }
+    )
+    .catch((error) => {
+      console.log(error);
+      text.innerHTML = error.message;
+    });
+
+  window.qrScanner.start();
 });

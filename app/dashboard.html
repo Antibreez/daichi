@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/dashboard/style.css" />
     <link rel="stylesheet" href="css/slickSlider.css" />
+    <script src="qr-scanner.min.js"></script>
+    <script src="qr-scanner.umd.min.js"></script>
+
+    
   </head>
   <body>
     <header class="header header_extented">
@@ -1056,15 +1060,7 @@
                                   <span class="document-format">PDF</span>
                                 </div>
                               </div>
-                              <div class="document-controls">
-                                <a
-                                  download="#"
-                                  href="#"
-                                  class="document-download"
-                                ></a>
-                                <a href="#" class="document-preview"></a>
-                              </div>
-                            </div>
+                              <div class="document-conscript
                           </div>
                         </div>
                       </div>
@@ -1279,7 +1275,7 @@
                     ></div>
                     <div class="item-title h5">Купить облачный кондиционер</div>
                   </div>
-                  <div class="tile-item">
+                  <div class="tile-item register-new-device-js">
                     <div
                       class="item-pic"
                       style="
@@ -1313,7 +1309,7 @@
       </div>
     </main>
 
-    <article class="popup device-registration-popup">
+    <article class="popup  device-registration-popup">
       <button class="popup__exit-button"></button>
       <div
         class="popup-decorative-picture"
@@ -1336,7 +1332,7 @@
               <input
                 id="register-device-input-1"
                 type="text"
-                class="b1 input-js"
+                class="b1 input-js warranty-qr-inner"
                 placeholder="Не указано"
               />
               <div class="alert-box qr-scanner-trigger"></div>
@@ -1371,9 +1367,20 @@
           <button class="button button-save disabled">Сохранить</button>
         </div>
       </div>
-    </article>
 
-    <article class="active popup device-registrered-modal">
+    
+    </article>
+    <article class="popup qr-scanner-modal">
+      <div class="qr-part">
+        <video class="camera-layout js-video-box" src="#"></video>
+        <div class="qr-layout">
+        </div>
+        <div class="qr-tip b2">QR код расположен на боковой панели корпуса внешнего или внутреннего блока кондиционера</div>
+        <div class="text"></div>
+      </div>
+      <div class="popup__exit-button"></div>
+    </article>
+    <article class="popup device-registrered-modal">
       <button class="popup__exit-button"></button>
 
       <div
@@ -1383,11 +1390,11 @@
       <h2 class="modal-title h2">Устройство зарегистрировано!</h2>
 
       <div class="modal-device-data b1">
+        <div class="data-line device-name">Daikin FTXB-C</div>
 
-<div class="data-line device-name">Daikin FTXB-C</div>
-
-<div class="data-line serial-n"> Серийный № <span class="serial-id">ABCD1234GHYUDlLSC</span></div>
-
+        <div class="data-line serial-n">
+          Серийный № <span class="serial-id">ABCD1234GHYUDlLSC</span>
+        </div>
       </div>
       <div class="modal-text-block b1">
         Теперь вы можете отслеживать статус гарантии и подключенных услуг вашего
@@ -1398,15 +1405,14 @@
       </div>
     </article>
 
-    <div class="blackout blackout_active"></div>
+    <div class="blackout"></div>
     <!-- <footer class="footer">
   </footer> -->
   </body>
-  <script src="js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/maskedinput.min.js"></script>
   <script src="js/datepicker.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/dshboard-sliders.js"></script>
 </html>
-
