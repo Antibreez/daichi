@@ -115,7 +115,8 @@
   flex-shrink: 0;
 }
 .status-description {
-  line-height: 19px;
+  line-height: 15px;
+  margin: 0;
 
   @include media-breakpoint-down(sm) {
     font-size: 11px;

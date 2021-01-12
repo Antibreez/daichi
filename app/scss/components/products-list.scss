@@ -26,6 +26,10 @@
     width: calc(100% / 2 - 15px);
   }
 
+  &:hover {
+    background-color: #eee;
+  }
+
   &-pic {
     margin-right: 20px;
     width: 117px;

@@ -55,8 +55,8 @@ main.main.dashboard {
   grid-row-gap: 50px;
 }
 
-.db_col_1,
-.db_col_2 {
+.db_col_1 {
+//.db_col_2
   overflow: hidden;
 }
 .db_col_1 {
@@ -99,6 +99,10 @@ article.db_unit {
   &.prev-btn {
     margin-right: 10px;
     transform: rotate(-180deg);
+  }
+
+  &:hover {
+    background-color: #eee;
   }
 }
 
@@ -151,7 +155,7 @@ article.db_unit {
 }
 .my-devices-section {
   grid-area: myDevices;
-  overflow: hidden;
+  //overflow: hidden;
 
   .products-box {
     margin: 0;
@@ -212,6 +216,12 @@ article.db_unit {
 .banner_1 {
   grid-area: banner1;
 }
+
+.banner_no-border {
+  border: unset;
+  overflow: hidden;
+}
+
 .banner_2 {
   grid-area: banner2;
 }

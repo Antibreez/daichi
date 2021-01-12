@@ -57,6 +57,7 @@ img {
 }
 .h5 {
   font-size: 15px;
+  line-height: 18px;
 }
 .h6 {
   font-size: 13px;
@@ -81,6 +82,18 @@ img {
     font-size: 27px;
     line-height: 33px;
     text-align: center;
+  }
+}
+
+main.main.dashboard .page-title_redirect .page-title__slider {
+  color: #212529;
+
+  &:hover {
+    color: #888;
+
+    .direct-marker {
+      background-image: url(../../images/icons/direct-arrow.svg);
+    }
   }
 }
 

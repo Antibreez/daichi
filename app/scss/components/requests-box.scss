@@ -25,6 +25,10 @@
   padding: 15px;
   display: flex;
   justify-content: space-between;
+
+  &:hover {
+    background-color: #F6F6F6;
+  }
 }
 
 .request-controls {
