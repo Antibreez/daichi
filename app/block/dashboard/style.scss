@@ -21,6 +21,8 @@ main.main.dashboard {
     @include media-breakpoint-down(sm) {
       margin-bottom: 25px;
       line-height: 23px;
+      font-size: 19px;
+      line-height: 23px;
     }
 
     &_redirect {
@@ -30,6 +32,7 @@ main.main.dashboard {
       a {
         display: contents;
         color: $lead;
+
         &:hover {
           color: $lead;
           text-decoration: none;
@@ -56,19 +59,23 @@ main.main.dashboard {
 }
 
 .db_col_1 {
-//.db_col_2
+  //.db_col_2
   overflow: hidden;
 }
+
 .db_col_1 {
   grid-area: "col1";
 }
+
 .db_col_2 {
   grid-area: "col2";
 
   @include media-breakpoint-down(md) {
     margin-bottom: 50px;
+    order: -1;
   }
 }
+
 section.db_unit,
 article.db_unit {
   margin-bottom: 50px;
@@ -87,13 +94,13 @@ article.db_unit {
     display: none;
   }
 }
+
 .slider-control {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-color: $bg;
-  background: $bg url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px
-    no-repeat;
+  background: $bg url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px no-repeat;
   cursor: pointer;
 
   &.prev-btn {
@@ -113,6 +120,28 @@ article.db_unit {
 
   .subscribe-cards-box {
     margin: 0;
+
+    .subscribe-card {
+
+      @include media-breakpoint-down(md) {
+        max-width: unset;
+        padding: 20px;
+      }
+    }
+
+    .profile-logo {
+      height: 30px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      img {
+        @include media-breakpoint-down(md) {
+          width: unset;
+        }
+      }
+    }
   }
 
   .subscribe-card {
@@ -137,6 +166,7 @@ article.db_unit {
     }
   }
 }
+
 //
 .service-programs-section {
   grid-area: servicePrograms;
@@ -153,6 +183,7 @@ article.db_unit {
     }
   }
 }
+
 .my-devices-section {
   grid-area: myDevices;
   //overflow: hidden;
@@ -160,6 +191,7 @@ article.db_unit {
   .products-box {
     margin: 0;
   }
+
   .product-item {
     margin: 0 0 15px 0;
     width: 420px;
@@ -178,6 +210,7 @@ article.db_unit {
     margin: 25px 0 0 0;
     padding-bottom: 10px;
   }
+
   .tile-item {
     margin: 0 15px 0 0;
     flex-basis: calc(50% - 15px);
@@ -197,6 +230,7 @@ article.db_unit {
     &:last-child {
       margin-right: 0;
     }
+
     .item-title {
       margin-top: 15px;
 
@@ -210,9 +244,11 @@ article.db_unit {
     }
   }
 }
+
 .my-requests-section {
   grid-area: myRequests;
 }
+
 .banner_1 {
   grid-area: banner1;
 }
@@ -225,6 +261,7 @@ article.db_unit {
 .banner_2 {
   grid-area: banner2;
 }
+
 .banner_3 {
   grid-area: banner3;
 
@@ -232,6 +269,7 @@ article.db_unit {
     display: none;
   }
 }
+
 //
 
 // //////////////////////////////////////////////////
@@ -247,8 +285,7 @@ article.db_unit {
 .direct-marker {
   height: 24px;
   width: 24px;
-  background: url("../../images/icons/direct-arrow-black.svg") 50% 50%/7px 10px
-    no-repeat;
+  background: url("../../images/icons/direct-arrow-black.svg") 50% 50%/7px 10px no-repeat;
 
   @include media-breakpoint-down(md) {
     display: none;
@@ -278,6 +315,7 @@ article.db_unit {
     opacity: 1;
   }
 }
+
 .popup-decorative-picture {
   width: 100%;
   height: 180px;
@@ -288,6 +326,7 @@ article.db_unit {
     border-radius: 0;
   }
 }
+
 .popup-content {
   padding: 50px 30px;
   overflow-y: auto;
@@ -306,6 +345,7 @@ article.db_unit {
     line-height: 23px;
   }
 }
+
 .modal-text-block {
   line-height: 23px;
   color: $minor;
@@ -335,11 +375,6 @@ article.db_unit {
   }
 }
 
-html,
-body {
-  overflow: hidden;
-}
-
 .button-modal-help {
   margin-right: 15px;
 
@@ -365,15 +400,18 @@ body {
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
+
   &_visible {
     opacity: 1;
   }
 }
+
 .alert-window-pic {
   width: 100%;
   height: 122px;
   background: red 50% 50% / cover;
 }
+
 .alert-window-text {
   margin-top: 10px;
 }
@@ -395,18 +433,19 @@ body {
     height: 253px;
     background: 50% 50% / contain no-repeat;
   }
-  
+
 
 }
 
 
-.modal-device-data{
+.modal-device-data {
   margin-bottom: 30px;
 }
-.data-line{
+
+.data-line {
   margin-bottom: 5px;
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 }

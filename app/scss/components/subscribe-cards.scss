@@ -79,6 +79,10 @@
   img {
     height: 100%;
     object-fit: contain;
+
+    @include media-breakpoint-down(md) {
+      object-fit: none;
+    }
   }
 
   @include media-breakpoint-down(md) {
@@ -199,7 +203,8 @@
 
   @include media-breakpoint-down(xs) {
     padding: 10px;
-    font-size: 11px;
+    font-size: 13px;
+    line-height: 15px;
   }
 }
 
