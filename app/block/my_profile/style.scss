@@ -205,7 +205,7 @@ main.main_my-profile {
 .account-added-modal {
   @include media-breakpoint-down(sm) {
     .account-change-modal-pic_complete {
-      margin-top: 75px;
+      margin-top: 0px;
     }
     .popup-title {
       padding: 0;

@@ -34,6 +34,28 @@ $(function () {
     tab.closest(".tabs-control-box").find(".tab-item").removeClass("active");
     tab.addClass("active");
   });
+
+  if($('.main-datepicker-here').length != 0) {
+    $('.main-datepicker-here').datepicker({
+      onShow(inst) {
+        if(window.innerHeight - inst.$el[0].getBoundingClientRect().bottom <= 250) {
+          inst.update({
+            position: "top right",
+          })
+        } else {
+          inst.update({
+            position: "bottom right",
+          })
+        }
+      }
+    })
+  }
+
+
+  $('.enterance-input').on('click', function (){
+    $('.email-cahnge-alert').hide()
+  })
+
 });
 
 // const versInput = $(".enterance-input");
@@ -86,6 +108,7 @@ const blackout_off = () => {
 };
 
 $(document).on("click", ".popup__exit-button", (e) => {
+  e.stopPropagation()
   blackout_off();
   $(".popup").removeClass("active");
 });

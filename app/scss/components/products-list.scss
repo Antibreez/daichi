@@ -159,7 +159,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-      height: 213px;
+      height: auto;
       width: 170px;
     }
   }

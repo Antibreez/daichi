@@ -13,10 +13,12 @@
 
   @include media-breakpoint-down(sm) {
     grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   @include media-breakpoint-down(xs) {
-    grid-column-gap: 15px;
+    //grid-column-gap: 15px;
   }
 }
 
@@ -25,6 +27,29 @@
   grid-row: 1/2;
   border-bottom: 1px solid $stroke;
   padding-bottom: 15px;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.adress-data-box {
+  white-space: nowrap;
+  @include media-breakpoint-down(sm) {
+    width: 22%;
+  }
+
+  .b1 {
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+    }
+  }
+
+  .b2 {
+    @include media-breakpoint-down(sm) {
+      font-size: 11px;
+    }
+  }
 }
 
 .city-name,

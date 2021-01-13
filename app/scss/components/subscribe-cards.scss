@@ -82,15 +82,17 @@
 
     @include media-breakpoint-down(md) {
       object-fit: none;
+      width: auto;
     }
   }
 
   @include media-breakpoint-down(md) {
     order: 2;
+    width: 100%;
   }
 
   @include media-breakpoint-down(sm) {
-    height: 25px;
+    height: 30px;
   }
 }
 

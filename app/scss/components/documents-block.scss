@@ -18,7 +18,7 @@
   overflow: hidden;
 
   @include media-breakpoint-down(sm) {
-    width: 100%;
+    width: auto;
     max-width: unset;
     margin: 0 0 30px 0;
   }
@@ -53,7 +53,7 @@
     }
 
     @include media-breakpoint-down(xs) {
-      max-width: 196px;
+      max-width: 140px;
     }
   }
   &-controls {

@@ -16,7 +16,7 @@
 }
 
 .tab-item {
-  padding: 15px 0;
+  padding: 15px;
   margin-right: 15px;
   line-height: 23px;
   transition: color 0.25s ease;
@@ -37,6 +37,7 @@
 
 .tab-item.active {
   color: $primary;
+  border-bottom: 1px solid $primary;
 }
 
 .tabs-content {
