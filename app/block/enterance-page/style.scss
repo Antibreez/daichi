@@ -12,6 +12,7 @@
   @include media-breakpoint-down(xs) {
     height: auto;
     padding-bottom: 30px;
+    min-height: calc(100vh - 65px);
   }
 }
 
@@ -150,6 +151,7 @@
 
   @include media-breakpoint-down(xs) {
     bottom: 50px;
+    margin-top: auto;
   }
 }
 
