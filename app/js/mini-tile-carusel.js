@@ -1,7 +1,6 @@
 if (window.innerWidth < 768) {
   $(".mini-tile-mobile-carusel").slick({
     dots: false,
-    infinite: false,
     speed: 300,
     arrows: false,
     // variableWidth: true,

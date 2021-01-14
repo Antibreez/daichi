@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  transition: .25s ease;
 
   @include media-breakpoint-down(md) {
     padding: 20px;
@@ -28,6 +29,10 @@
 
   &:hover {
     background-color: #eee;
+
+    .product-item-pic {
+      background-color: $white;
+    }
   }
 
   &-pic {
@@ -36,6 +41,7 @@
     height: 117px;
     background: 50% 50% / contain no-repeat;
     flex-shrink: 0;
+    border-radius: 5px;
 
     @include media-breakpoint-down(md) {
       margin-bottom: 20px;

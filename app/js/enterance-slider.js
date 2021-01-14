@@ -4,7 +4,6 @@ $(function () {
   $('.enterance-slider').slick({
     autoplay:true,
     autoplaySpeed:1500,
-    infinite: true,
     speed: 1000,
     fade: true,
     cssEase: 'linear',

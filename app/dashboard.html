@@ -34,6 +34,7 @@
                     Мои подписки
                     <div class="group-controller">
                       <div class="direct-marker"></div>
+                      <div class="direct-marker direct-marker_light"></div>
                       <span class="direct-to-main-page-of-group link h5"
                         >Все (<span class="subscribes-quantity">6</span>)</span
                       >
@@ -46,7 +47,8 @@
                 </h2>
                 <div class="subscribe-cards-box db_subscribe-cards-box">
                   <!-- component - card -->
-                  <div class="subscribe-card sbcr_comfort active">
+                  <div class="slide-wrp">
+                    <div class="subscribe-card sbcr_comfort active">
                     <div class="card-head">
                       <div class="profile-logo">
                         <img
@@ -83,9 +85,11 @@
                       >
                     </div>
                   </div>
+                  </div>
                   <!-- component - card end-->
                   <!-- component - card -->
-                  <div class="subscribe-card sbcr_comfort expires">
+                  <div class="slide-wrp">
+                    <div class="subscribe-card sbcr_comfort expires">
                     <div class="card-head">
                       <div class="profile-logo">
                         <img
@@ -126,9 +130,11 @@
                       >
                     </div>
                   </div>
+                  </div>
                   <!-- component - card end-->
                   <!-- component - card -->
-                  <div class="subscribe-card sbcr_comfort waiting">
+                  <div class="slide-wrp">
+                    <div class="subscribe-card sbcr_comfort waiting">
                     <div class="card-head">
                       <div class="profile-logo">
                         <img
@@ -168,9 +174,11 @@
                       >
                     </div>
                   </div>
+                  </div>
                   <!-- component - card end-->
                   <!-- component - card -->
-                  <div class="subscribe-card sbcr_comfort waiting">
+                  <div class="slide-wrp">
+                    <div class="subscribe-card sbcr_comfort waiting">
                     <div class="card-head">
                       <div class="profile-logo">
                         <img
@@ -214,9 +222,11 @@
                       >
                     </div>
                   </div>
+                  </div>
                   <!-- component - card end-->
                   <!-- component - card -->
-                  <div class="subscribe-card sbcr_comfort overdue">
+                  <div class="slide-wrp">
+                    <div class="subscribe-card sbcr_comfort overdue">
                     <div class="card-head">
                       <div class="profile-logo">
                         <img
@@ -253,10 +263,11 @@
                       >
                     </div>
                   </div>
+                  </div>
                   <!-- component - card end-->
                 </div>
               </section>
-              <article class="banner db_unit banner_2 banner_big">
+              <article class="banner banner_no-border db_unit banner_2 banner_big">
                 <div
                         class="banner_type-2"
                         style="background-image: url(images/banners/banner-bg.jpg)"
@@ -282,10 +293,11 @@
               </article>
               <section class="section db_unit my-requests-section">
                 <h2 class="h2 page-title page-title_redirect">
-                  <a href="#"
+                  <a class="page-title__slider" href="#"
                   >Мои обращения
                     <div class="group-controller">
                       <div class="direct-marker"></div>
+                      <div class="direct-marker direct-marker_light"></div>
                       <span class="direct-to-main-page-of-group link h5"
                       >Все (<span class="devices-quantity">6</span>)</span
                       >
@@ -980,10 +992,11 @@
               </section>
               <section class="section db_unit service-programs-section">
                 <h2 class="h2 page-title page-title_redirect">
-                  <a href="#"
+                  <a class="page-title__slider" href="#"
                     >Программы обслуживания
                     <div class="group-controller">
                       <div class="direct-marker"></div>
+                      <div class="direct-marker direct-marker_light"></div>
                       <span class="direct-to-main-page-of-group link h5"
                         >Все (<span class="devices-quantity">6</span>)</span
                       >
@@ -996,7 +1009,7 @@
                       <div
                         class="card-logo"
                         style="
-                          background-image: url(images/subscribe-card/my-comfort-plus.svg);
+                          background-image: url(images/icons/climatOnline.svg);
                         "
                       ></div>
                       <div class="card-caption b2">
@@ -1012,7 +1025,7 @@
                         >
                           Подробнее
                         </button>
-                        <button class="button card-arrange">Оформить</button>
+                        <a class="link">Оформить</a>
                       </div>
                       <div
                         class="sbr-promo-curtain"
@@ -1044,7 +1057,7 @@
                         >
                           Подробнее
                         </button>
-                        <button class="button card-arrange">Оформить</button>
+                        <a class="link">Оформить</a>
                       </div>
                       <div
                         class="sbr-promo-curtain"
@@ -1060,7 +1073,7 @@
                       <div
                         class="card-logo"
                         style="
-                          background-image: url(images/subscribe-card/my-comfort-plus.svg);
+                          background-image: url(images/icons/mobile.svg);
                         "
                       ></div>
                       <div class="card-caption b2">
@@ -1076,7 +1089,7 @@
                         >
                           Подробнее
                         </button>
-                        <button class="button card-arrange">Оформить</button>
+                        <a class="link">Оформить</a>
                       </div>
                       <div
                         class="sbr-promo-curtain"
@@ -1119,6 +1132,7 @@
                     Мои устройства
                     <div class="group-controller">
                       <div class="direct-marker"></div>
+                      <div class="direct-marker direct-marker_light"></div>
                       <span class="direct-to-main-page-of-group link h5"
                         >Все (<span class="devices-quantity">6</span>)</span
                       >
@@ -1284,7 +1298,7 @@
                   </div>
                 </div>
               </section>
-              <article class="db_unit banner banner_3 banner_small">
+              <article class="db_unit banner banner_3 banner_small banner_no-border">
                 <div class="banner banner_type-1">
                   <div
                     class="banner-pic"
@@ -1348,7 +1362,7 @@
             <div class="input-wrp">
               <input
                 placeholder="Выберите даты"
-                class="input datepicker-here"
+                class="input main-datepicker-here"
                 type="text"
                 data-clear-button="true"
                 data-range="true"
@@ -1359,7 +1373,7 @@
           </div>
         </form>
         <div class="modal-controls">
-          <a href="#" class="button button-modal-help button_secondary"
+          <a href="#" class="button button-modal-help button_secondary find-qr-js"
             >Не нашли гарантийный код?</a
           >
           <button class="button button-save disabled">Сохранить</button>
@@ -1368,6 +1382,96 @@
 
     
     </article>
+
+
+
+    <article class="popup  find-qr-popup">
+      <button class="popup__exit-button"></button>
+      <div
+        class="popup-decorative-picture"
+        style="background-image: url(images/other-pages/modal-2-bg.jpg)"
+      ></div>
+      <div class="popup-content">
+        <h2 class="modal-title h2">Не нашли гарантийный код?</h2>
+        <div class="modal-text-block b1">
+          Отправьте нам данные своего кондиционера, мы обязательно проверим указанную информацию и свяжемся с Вами.
+        </div>
+
+        <form action="post" class="modal-form">
+          <div class="search-field-wrp input-container">
+            <input class="search-field b1" type="search" placeholder="Поиск по устройствам" name="subscribes_search" id="subscribes_search">
+            <span class="search-pic"></span>
+          </div>
+
+
+          <div class="input-container input-container_error">
+            <label for="#seria-num" class="enterance-label"
+              >Серийный номер устройства</label
+            >
+            <div class="input-wrp">
+              <input
+                id="seria-num"
+                type="text"
+                class="b1 input-js warranty-qr-inner"
+                placeholder="Не указано"
+              />
+              <div class="alert-box qr-scanner-trigger"></div>
+            </div>
+            <div class="assistive-text">111</div>
+            <div class="input-alert-window">
+              <div class="alert-window-pic"></div>
+              <div class="alert-window-text b1">
+                Гарантийный код расположен на боковой панели корпуса внешнего
+                или внутреннего блока кондиционера
+              </div>
+            </div>
+          </div>
+
+          <div class="date-bar input-container">
+            <label for="#start-date" class="enterance-label"
+            >Дата начала эксплуатации*</label
+            >
+            <div class="input-wrp">
+              <input
+                id="start-date"
+                placeholder="Дата начала эксплуатации*"
+                class="input main-datepicker-here"
+                type="text"
+                data-clear-button="true"
+                data-range="true"
+                data-multiple-dates-separator=" - "
+              />
+              <div class="cal-icon"></div>
+            </div>
+          </div>
+
+          <div class="input-container input-container-file">
+            <div class="input-wrp">
+              <input
+                      id="file"
+                      type="file"
+                      class="file-input-js file-input"
+                      multiple
+              />
+              <span class="b1 span-file input-js-file warranty-qr-inner">Выберите файл</span>
+            </div>
+          </div>
+
+        </form>
+        <div class="modal-controls">
+          <a href="#" class="button button-modal-help button_secondary find-qr-js-close"
+            >Вернуться к регистрации</a
+          >
+          <button class="button button-save">Отправить</button>
+        </div>
+      </div>
+
+
+    </article>
+
+
+
+
     <article class="popup qr-scanner-modal">
       <div class="qr-part">
         <video class="camera-layout js-video-box" src="#"></video>

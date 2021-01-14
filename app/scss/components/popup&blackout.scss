@@ -42,14 +42,22 @@ html {
   &.active {
     pointer-events: unset;
     opacity: 1;
+    top: 0;
+    left: 0;
   }
 
   @include media-breakpoint-down(sm) {
     max-height: unset;
+    opacity: 1;
     width: 100vw;
     height: calc(100vh);
     padding: 70px 15px 65px;
     border-radius: 0;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    transform: unset;
+    transition: .5s ease;
   }
 }
 
@@ -74,8 +82,8 @@ html {
   }
 
   @include media-breakpoint-down(sm) {
-    top: 70px;
-    right: 15px;
+    top: 31px;
+    right: 17px;
   }
 }
 

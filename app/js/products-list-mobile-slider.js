@@ -1,7 +1,6 @@
 if (window.innerWidth < 768) {
     $(".products-box-slider-js").slick({
         dots: false,
-        infinite: false,
         speed: 300,
         arrows: false,
         // variableWidth: true,

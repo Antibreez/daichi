@@ -1,12 +1,11 @@
 // слайдер устройств
 
-if (window.innerWidth < 1200) {
+if (window.innerWidth < 1280) {
     $(".product-item").unwrap();
 }
 
 $(".products-box-slider-js").slick({
     dots: false,
-    infinite: false,
     speed: 300,
     prevArrow: ".dvc-prev-btn",
     nextArrow: ".dvc-next-btn",
@@ -16,9 +15,10 @@ $(".products-box-slider-js").slick({
 
     responsive: [
         {
-            breakpoint: 1200,
+            breakpoint: 1280,
             settings: {
                 arrows: false,
+                slidesToShow: 3,
             },
         },
         {
@@ -49,7 +49,6 @@ $(".products-box-slider-js").slick({
 //слайдер активных подписок
 $(".db_subscribe-cards-box").slick({
     dots: false,
-    infinite: false,
     speed: 300,
     // variableWidth: true,
     slidesToShow: 2,
@@ -58,9 +57,10 @@ $(".db_subscribe-cards-box").slick({
     nextArrow: ".sbr-next-btn",
     responsive: [
         {
-            breakpoint: 1200,
+            breakpoint: 1280,
             settings: {
                 arrows: false,
+                slidesToShow: 3,
             },
         },
         {
@@ -73,7 +73,6 @@ $(".db_subscribe-cards-box").slick({
             breakpoint: 500,
             settings: {
                 slidesToShow: 2,
-                variableWidth: true,
             },
         },
     ],
@@ -83,7 +82,6 @@ $(".db_subscribe-cards-box").slick({
 if (window.innerWidth < 768) {
     $(".sbr-promo-box_db").slick({
         dots: false,
-        infinite: false,
         speed: 300,
         arrows: false,
         // variableWidth: true,

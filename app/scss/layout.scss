@@ -1,3 +1,7 @@
+* {
+  transition: .25s ease;
+}
+
 body {
   font-family: "Gotham Pro", sans-serif;
 }
@@ -87,12 +91,13 @@ img {
 
 main.main.dashboard .page-title_redirect .page-title__slider {
   color: #212529;
+  transition: .25s ease;
 
   &:hover {
     color: #888;
 
-    .direct-marker {
-      background-image: url(../../images/icons/direct-arrow.svg);
+    .direct-marker_light {
+      opacity: 1;
     }
   }
 }
@@ -183,5 +188,32 @@ main.main.dashboard .page-title_redirect .page-title__slider {
   @include media-breakpoint-down(sm) {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+body {
+  .datepicker--nav-title {
+    color: $black;
+
+    i {
+      color: $black;
+    }
+  }
+
+  .datepicker--day-name {
+    color: $black;
+  }
+
+  .datepicker--cell.-current- {
+    color: $white;
+    background: $primary;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .datepicker--buttons {
+    display: none;
   }
 }
