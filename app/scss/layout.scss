@@ -192,6 +192,37 @@ main.main.dashboard .page-title_redirect .page-title__slider {
 }
 
 body {
+  .datepickers-container {
+    @include media-breakpoint-down(sm) {
+      position: static !important;
+    }
+  }
+
+  .datepicker {
+    @include media-breakpoint-down(sm) {
+      transition: unset, opacity 0.25s ease !important;
+      left: 50% !important;
+      top: 150% !important;
+      transform: translate(-50%, 50%) !important;
+      visibility: hidden;
+    }
+  }
+
+  .datepicker.active {
+    @include media-breakpoint-down(sm) {
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, 50%);
+      visibility: visible;
+    }
+  }
+
+  .datepicker--pointer {
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+  }
+
   .datepicker--nav-title {
     color: $black;
 
@@ -216,4 +247,15 @@ body {
   .datepicker--buttons {
     display: none;
   }
+}
+
+.mob-datePicker-bg {
+  opacity: .25;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  z-index: 99;
 }

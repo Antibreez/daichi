@@ -1,4 +1,4 @@
-if (window.innerWidth < 768) {
+/*if (window.innerWidth < 768) {
     $(".products-box-slider-js").slick({
         dots: false,
         speed: 300,
@@ -19,3 +19,4 @@ if (window.innerWidth < 768) {
 }
   
 
+*/

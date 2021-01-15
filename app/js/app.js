@@ -35,6 +35,27 @@ $(function () {
         tab.addClass("active");
     });
 
+    if ($('.main-datepicker-here-no-range').length != 0) {
+        $('.main-datepicker-here-no-range').datepicker({
+            range: false,
+            onShow(inst) {
+                if (window.innerHeight - inst.$el[0].getBoundingClientRect().bottom <= 250) {
+                    inst.update({
+                        range: false,
+                        position: "top right",
+                    })
+                } else {
+                    inst.update({
+                        range: false,
+                        position: "bottom right",
+                    })
+                }
+
+                addMobDateBg()
+            }
+        })
+    }
+
     if ($('.main-datepicker-here').length != 0) {
         $('.main-datepicker-here').datepicker({
             onShow(inst) {
@@ -118,7 +139,11 @@ $(document).on("click", ".popup__exit-button", function (e) {
 
 $(document).on("click", ".blackout", (e) => {
     blackout_off();
-    $(".popup").removeClass("active");
+    if(!blackout.hasClass('blackout_active-datePicker')) {
+        $(".popup").removeClass("active");
+    }
+
+    blackout.removeClass("blackout_active-datePicker");
 });
 
 $(document).on("click", ".button-change-subscribe_js", (e) => {
@@ -130,6 +155,7 @@ $(document).on("click", ".button-change-subscribe_js", (e) => {
 
 $(document).on("click", ".cal-icon", (e) => {
     const icon = $(e.currentTarget);
+    icon.siblings(".input").trigger("click");
     icon.siblings(".input").trigger("focus");
 });
 
@@ -276,3 +302,15 @@ $(document).on('click', '.find-qr-js-close', function () {
   console.log($(this).closest('popup'));
   $(this).closest('.popup').removeClass('active')
 })
+
+$(document).on('click', '.mob-datePicker-bg', function () {
+  $(this).remove()
+})
+
+function addMobDateBg () {
+    if(window.innerWidth < 769 && $('.mob-datePicker-bg').length < 1) {
+        let dateBlackout = document.createElement('div')
+        $(dateBlackout).addClass('mob-datePicker-bg')
+        $('body').append(dateBlackout)
+    }
+}

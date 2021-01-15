@@ -6,6 +6,7 @@ if (window.innerWidth < 1280) {
 
 $(".products-box-slider-js").slick({
     dots: false,
+    infinite: true,
     speed: 300,
     prevArrow: ".dvc-prev-btn",
     nextArrow: ".dvc-next-btn",
@@ -24,15 +25,10 @@ $(".products-box-slider-js").slick({
         {
             breakpoint: 769,
             settings: {
-                slidesToShow: 3,
-            },
-        },
-        {
-            breakpoint: 500,
-            settings: {
+                variableWidth: true,
                 slidesToShow: 2,
             },
-        },
+        }
     ],
 });
 
@@ -50,7 +46,7 @@ $(".products-box-slider-js").slick({
 $(".db_subscribe-cards-box").slick({
     dots: false,
     speed: 300,
-    // variableWidth: true,
+    infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     prevArrow: ".sbr-prev-btn",
@@ -66,13 +62,8 @@ $(".db_subscribe-cards-box").slick({
         {
             breakpoint: 769,
             settings: {
-                slidesToShow: 3,
-            },
-        },
-        {
-            breakpoint: 500,
-            settings: {
                 slidesToShow: 2,
+                variableWidth: true,
             },
         },
     ],
@@ -84,22 +75,31 @@ if (window.innerWidth < 768) {
         dots: false,
         speed: 300,
         arrows: false,
-        // variableWidth: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 500,
-                settings: {
                     variableWidth: true,
                 },
             },
         ],
     });
+}
+
+$(function () {
+    setSliderWidth('.need-resize')
+})
+
+$(window).on('resize', function () {
+    setSliderWidth('.need-resize')
+})
+
+function setSliderWidth (selector) {
+    if(window.innerWidth < 769) {
+        $(selector).width(`${window.innerWidth - 15}px`)
+    }
 }
