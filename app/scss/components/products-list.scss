@@ -28,10 +28,14 @@
   }
 
   &:hover {
-    background-color: #eee;
+    background-color: #f6f6f6;
 
     .product-item-pic {
       background-color: $white;
+    }
+
+    @include media-breakpoint-down(md) {
+      background: #fff;
     }
   }
 
@@ -129,7 +133,7 @@
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  background: url("../../images/icons/alert_critical.svg") 50% 50%/ 23px 23px no-repeat;
+  background: url("/images/icons/alert_critical.svg") 50% 50%/ 23px 23px no-repeat;
   cursor: pointer;
 
   &:hover {

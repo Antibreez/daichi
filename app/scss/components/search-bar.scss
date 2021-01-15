@@ -64,7 +64,7 @@ input.search-field {
   top: 50%;
   transform: translateY(-50%);
   left: 15px;
-  background: url("../../images/icons/search-icon.svg") 50% 50% / contain
+  background: url("/images/icons/search-icon.svg") 50% 50% / contain
     no-repeat;
 }
 .input-container .search-clear {
@@ -79,7 +79,7 @@ input.search-field {
   width: 17px;
   height: 17px;
   transition: opacity 0.25s ease;
-  background: url("../../images/icons/exit-button.svg") 50% 50% / contain
+  background: url("/images/icons/exit-button.svg") 50% 50% / contain
     no-repeat;
 }
 

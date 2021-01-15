@@ -19,14 +19,18 @@ $(".products-box-slider-js").slick({
             breakpoint: 1280,
             settings: {
                 arrows: false,
+                variableWidth: true,
                 slidesToShow: 3,
             },
         },
         {
-            breakpoint: 769,
+            breakpoint: 768,
             settings: {
+                swipeToSlide: true,
+                touchThreshold: 10,
                 variableWidth: true,
                 slidesToShow: 2,
+                infinite: false,
             },
         }
     ],
@@ -56,14 +60,18 @@ $(".db_subscribe-cards-box").slick({
             breakpoint: 1280,
             settings: {
                 arrows: false,
+                variableWidth: true,
                 slidesToShow: 3,
             },
         },
         {
-            breakpoint: 769,
+            breakpoint: 768,
             settings: {
-                slidesToShow: 2,
+                swipeToSlide: true,
+                touchThreshold: 10,
                 variableWidth: true,
+                slidesToShow: 2,
+                infinite: false,
             },
         },
     ],
@@ -80,10 +88,19 @@ if (window.innerWidth < 768) {
         infinite: true,
         responsive: [
             {
-                breakpoint: 769,
+                breakpoint: 1280,
                 settings: {
                     slidesToShow: 2,
                     variableWidth: true,
+                },
+
+                breakpoint: 768,
+                settings: {
+                    swipeToSlide: true,
+                    touchThreshold: 10,
+                    slidesToShow: 2,
+                    variableWidth: true,
+                    infinite: false,
                 },
             },
         ],
@@ -99,7 +116,7 @@ $(window).on('resize', function () {
 })
 
 function setSliderWidth (selector) {
-    if(window.innerWidth < 769) {
+    if(window.innerWidth < 768) {
         $(selector).width(`${window.innerWidth - 15}px`)
     }
 }

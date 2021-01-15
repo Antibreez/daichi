@@ -19,7 +19,7 @@ main.main.dashboard {
     text-align: left;
 
     @include media-breakpoint-down(md) {
-      margin-bottom: 0;
+      margin-bottom: 35px;
     }
 
     @include media-breakpoint-down(sm) {
@@ -111,7 +111,7 @@ article.db_unit {
   height: 24px;
   border-radius: 50%;
   background-color: $bg;
-  background: $bg url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px no-repeat;
+  background: $bg url("/images/icons/direct-arrow.svg") 50% 50%/7px 10px no-repeat;
   cursor: pointer;
 
   &.prev-btn {
@@ -139,7 +139,14 @@ article.db_unit {
     .subscribe-card {
 
       @include media-breakpoint-down(md) {
+        max-width: 226px;
+        width: 226px;
+        padding: 20px;
+      }
+
+      @include media-breakpoint-down(sm) {
         max-width: unset;
+        width: 170px;
         padding: 20px;
       }
     }
@@ -213,10 +220,11 @@ article.db_unit {
     }
 
     .sbr-promo-wrp {
-      margin: 0 15px 15px 0;
+      margin: 0 10px 15px 0;
 
       @include media-breakpoint-down(sm) {
         width: 170px;
+        margin-right: 5px;
       }
 
       @include media-breakpoint-down(xs) {
@@ -344,7 +352,7 @@ article.db_unit {
 .direct-marker {
   height: 24px;
   width: 24px;
-  background: url("../../images/icons/direct-arrow-black.svg") 50% 50%/7px 10px no-repeat;
+  background: url("/images/icons/direct-arrow-black.svg") 50% 50%/7px 10px no-repeat;
   transform: translateY(50%);
 
   @include media-breakpoint-down(md) {
@@ -353,7 +361,7 @@ article.db_unit {
 
   &_light {
     opacity: 0;
-    background-image: url(../../images/icons/direct-arrow.svg);
+    background-image: url(/images/icons/direct-arrow.svg);
     transform: translateY(-50%);
   }
 }
@@ -374,8 +382,11 @@ article.db_unit {
 // device-registration-popup
 
 .device-registration-popup {
-  padding: 0;
   border-radius: 10px;
+
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+  }
 
   .alert-box {
     opacity: 1;
@@ -393,7 +404,7 @@ article.db_unit {
 
   .modal-controls {
     @include media-breakpoint-down(sm) {
-      bottom: 40px;
+      bottom: 80px;
     }
   }
 }
@@ -412,10 +423,11 @@ article.db_unit {
 
 .popup-content {
   padding: 50px 30px;
-  overflow-y: auto;
+  overflow-y: visible;
 
   @include media-breakpoint-down(sm) {
     max-height: calc(100vh - 191px - 160px);
+    overflow-y: scroll;
   }
 }
 
@@ -451,7 +463,7 @@ article.db_unit {
   @include media-breakpoint-down(sm) {
     padding: 0 15px;
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
     left: 0;
     width: 100vw;
     flex-direction: column;
@@ -501,7 +513,7 @@ article.db_unit {
 
 .qr-scanner-trigger {
   @include media-breakpoint-down(sm) {
-    background-image: url("../../images/icons/qr-icon.svg");
+    background-image: url("/images/icons/qr-icon.svg");
   }
 }
 
@@ -539,7 +551,7 @@ article.db_unit {
   @include media-breakpoint-down(sm) {
     width: 170px;
     padding: 0;
-    margin-right: 15px;
+    margin-right: 5px;
   }
 
   @include media-breakpoint-down(xs) {
@@ -561,7 +573,6 @@ article.db_unit {
 }
 
 .find-qr-popup {
-  padding: 0;
   z-index: 5;
 }
 
@@ -599,18 +610,14 @@ article.db_unit {
   top: 28px;
 }
 
-.popup .input-container .span-file,
-.popup .input-container input {
-
-  @include media-breakpoint-down(sm) {
-    border-radius: unset;
-  }
-}
-
-.products-box-slider-js .slick-list{
+.products-box-slider-js .slick-list {
   @include media-breakpoint-down(sm) {
     //overflow: visible;
   }
+}
+
+.show-all {
+  display: none;
 }
 
 .slick-initialized .slick-slide.show-all {

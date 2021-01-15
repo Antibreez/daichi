@@ -26,7 +26,7 @@ main.main_my-profile {
 
 .profile-form {
   .alert-box {
-    background-image: url("../../images/icons/edit-icon.svg");
+    background-image: url("/images/icons/edit-icon.svg");
     opacity: 1;
     pointer-events: auto;
     cursor: pointer;
@@ -135,7 +135,7 @@ main.main_my-profile {
   height: 253px;
   width: 253px;
   margin: 0 auto 30px;
-  background: url("../../images/other-pages/confirmation-restore.svg") 50% 50% /
+  background: url("/images/other-pages/confirmation-restore.svg") 50% 50% /
     contain no-repeat;
 }
 
@@ -167,7 +167,7 @@ main.main_my-profile {
 .email-alert-pic {
   height: 122px;
   width: 100%;
-  background: url("../../images/enterance-slider/55.jpg") 50% 50% / cover;
+  background: url("/images/enterance-slider/55.jpg") 50% 50% / cover;
 }
 
 .account-change-modal {
@@ -187,7 +187,7 @@ main.main_my-profile {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../../images/banners/modal-banner-img.jpg") 50% 50% / cover;
+  background: url("/images/banners/modal-banner-img.jpg") 50% 50% / cover;
 
   @include media-breakpoint-down(sm) {
     height: 160px;
@@ -198,7 +198,7 @@ main.main_my-profile {
   margin: 0 auto 30px;
   width: 253px;
   height: 253px;
-  background: url("../../images/other-pages/daichi-inner-1.svg") 50% 50% /
+  background: url("/images/other-pages/daichi-inner-1.svg") 50% 50% /
     contain no-repeat;
 }
 

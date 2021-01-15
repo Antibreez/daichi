@@ -28,7 +28,7 @@
     flex-shrink: 0;
     height: 48px;
     width: 48px;
-    background: url("../../images/icons/PDF.svg") 50% 50% / contain no-repeat;
+    background: url("/images/icons/PDF.svg") 50% 50% / contain no-repeat;
 
     @include media-breakpoint-down(sm) {
       height: 36px;
@@ -68,11 +68,11 @@
     background: 50% 50% / contain no-repeat;
   }
   &-download {
-    background-image: url("../../images/icons/download.svg");
+    background-image: url("/images/icons/download.svg");
   }
   &-preview {
     margin-left: 15px;
-    background-image: url("../../images/icons/preview-icon.svg");
+    background-image: url("/images/icons/preview-icon.svg");
   }
   &-data {
     color: $minor;

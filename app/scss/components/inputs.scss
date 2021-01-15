@@ -63,7 +63,7 @@
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
-  background: url("../../images/icons/prompt.svg") 50% 50% / contain no-repeat;
+  background: url("/images/icons/prompt.svg") 50% 50% / contain no-repeat;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -91,7 +91,7 @@
 
 .input-container_disabled {
   .alert-box {
-    background-image: url("../../images/icons/prompt_disabled.svg");
+    background-image: url("/images/icons/prompt_disabled.svg");
     pointer-events: none;
     cursor: unset;
   }
@@ -135,7 +135,7 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url("../../images/icons/calendar-pic.svg") 50% 50% / contain
+  background: url("/images/icons/calendar-pic.svg") 50% 50% / contain
     no-repeat;
 }
 
@@ -179,7 +179,7 @@
   content: "";
   width: 10px;
   height: 10px;
-  background: url("../../images/icons/dropdown-arrow.svg") 50% 50% / contain
+  background: url("/images/icons/dropdown-arrow.svg") 50% 50% / contain
     no-repeat;
   transition: transform 0.25s ease;
 }
@@ -461,7 +461,7 @@
 }
 /* стили для радиокнопки, находящейся в состоянии checked */
 .custom-radio:checked+label::before {
-  background: url("../../images/icons/checked-radio.svg") 50% 50%/contain no-repeat;
+  background: url("/images/icons/checked-radio.svg") 50% 50%/contain no-repeat;
   border: none;
 }
 /* стили для радиокнопки, находящейся в состоянии disabled */

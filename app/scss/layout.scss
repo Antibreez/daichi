@@ -98,6 +98,11 @@ main.main.dashboard .page-title_redirect .page-title__slider {
 
     .direct-marker_light {
       opacity: 1;
+      margin-left: 10px;
+    }
+
+    .direct-marker {
+      margin-left: 10px;
     }
   }
 }
@@ -203,8 +208,9 @@ body {
       transition: unset, opacity 0.25s ease !important;
       left: 50% !important;
       top: 150% !important;
-      transform: translate(-50%, 50%) !important;
+      transform: translate(-50%, -50%) !important;
       visibility: hidden;
+      position: fixed !important;
     }
   }
 
@@ -212,7 +218,7 @@ body {
     @include media-breakpoint-down(sm) {
       left: 50% !important;
       top: 50% !important;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, -50%);
       visibility: visible;
     }
   }

@@ -101,7 +101,7 @@
   width: 24px;
   border-radius: 50%;
   border: none;
-  background: $bg url("../../images/icons/direct-arrow.svg") 50% 50%/7px 10px
+  background: $bg url("/images/icons/direct-arrow.svg") 50% 50%/7px 10px
     no-repeat;
 
   outline: transparent;
@@ -111,6 +111,6 @@
   }
 }
 .delete-button{
-  background-image: url("../../images/icons/exit-icon.svg");
+  background-image: url("/images/icons/exit-icon.svg");
   background-size: 10px 10px;
 }

@@ -88,7 +88,7 @@ main.main {
   }
 }
 .program-image {
-  background: url("../../images/enterance-slider/55.jpg") 50% 50% / cover;
+  background: url("/images/enterance-slider/55.jpg") 50% 50% / cover;
   flex-grow: 1;
 
   @include media-breakpoint-down(sm) {
@@ -358,7 +358,7 @@ main.main {
     top: 0;
     width: 19px;
     height: 12px;
-    background: url("../../images/icons/blue_checkmark-icon.svg");
+    background: url("/images/icons/blue_checkmark-icon.svg");
   }
 }
 .service-p-controls {

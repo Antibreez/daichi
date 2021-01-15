@@ -38,37 +38,49 @@ $(function () {
     if ($('.main-datepicker-here-no-range').length != 0) {
         $('.main-datepicker-here-no-range').datepicker({
             range: false,
+            autoClose: true,
             onShow(inst) {
                 if (window.innerHeight - inst.$el[0].getBoundingClientRect().bottom <= 250) {
                     inst.update({
                         range: false,
                         position: "top right",
+                        autoClose: true,
                     })
                 } else {
                     inst.update({
                         range: false,
                         position: "bottom right",
+                        autoClose: true,
                     })
                 }
-
-                addMobDateBg()
-            }
+                // console.log(123123);
+                setTimeout(addMobDateBg, 100)
+            },
+            onSelect: function () {
+                $('.mob-datePicker-bg').remove()
+            },
         })
     }
 
     if ($('.main-datepicker-here').length != 0) {
         $('.main-datepicker-here').datepicker({
+            autoClose: true,
             onShow(inst) {
                 if (window.innerHeight - inst.$el[0].getBoundingClientRect().bottom <= 250) {
                     inst.update({
                         position: "top right",
+                        autoClose: true,
                     })
                 } else {
                     inst.update({
                         position: "bottom right",
+                        autoClose: true,
                     })
                 }
-            }
+            },
+            onSelect: function () {
+                $('.mob-datePicker-bg').remove()
+            },
         })
     }
 
@@ -308,7 +320,7 @@ $(document).on('click', '.mob-datePicker-bg', function () {
 })
 
 function addMobDateBg () {
-    if(window.innerWidth < 769 && $('.mob-datePicker-bg').length < 1) {
+    if(window.innerWidth < 768 && $('.mob-datePicker-bg').length < 1 && $('.datepicker.active').length != 0) {
         let dateBlackout = document.createElement('div')
         $(dateBlackout).addClass('mob-datePicker-bg')
         $('body').append(dateBlackout)

@@ -27,23 +27,41 @@ html {
   }
 }
 
+.popup::-webkit-scrollbar {
+  width: 0;
+}
+
 .popup {
-  padding: 30px 30px 50px;
-  max-width: 690px;
-  width: 690px;
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  background-color: white;
+  transform: translateX(-50%);
   z-index: 3;
   transition: opacity 0.25s ease;
   pointer-events: none;
   opacity: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 80vh;
+  height: 100vh;
+  padding-top: 100px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+
+  .popup-content-c {
+    max-width: 690px;
+    width: 690px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
 
   &.active {
     pointer-events: unset;
@@ -57,7 +75,8 @@ html {
     opacity: 1;
     width: 100vw;
     height: calc(100vh);
-    padding: 70px 15px 65px;
+    background: #fff;
+    padding: 0;
     border-radius: 0;
     position: fixed;
     top: 100%;
@@ -79,10 +98,10 @@ html {
   padding: 0;
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 130px;
   height: 24px;
   width: 24px;
-  background: url("../../images/icons/exit-icon.svg") 50% 50%/10px 10px
+  background: url("/images/icons/exit-icon.svg") 50% 50%/10px 10px
     no-repeat;
   border-radius: 50%;
   background-color: $bg;

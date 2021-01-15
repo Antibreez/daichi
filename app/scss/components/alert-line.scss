@@ -15,7 +15,7 @@
     background-color: $bg;
 
     .alert-line-pic {
-      background-image: url("../../images/icons/blue_checkmark-icon.svg");
+      background-image: url("/images/icons/blue_checkmark-icon.svg");
     }
   }
 }
@@ -23,7 +23,7 @@
   width: 24px;
   height: 24px;
   margin-right: 15px;
-  background: url("../../images/icons/alert_critical.svg") 50% 50% / contain
+  background: url("/images/icons/alert_critical.svg") 50% 50% / contain
     no-repeat;
   flex-shrink: 0;
 }
