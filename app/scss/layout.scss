@@ -50,31 +50,40 @@ img {
 .h1 {
   font-size: 48px;
 }
+
 .h2 {
   font-size: 31px;
 }
+
 .h3 {
   font-size: 27px;
 }
+
 .h4 {
   font-size: 19px;
 }
+
 .h5 {
   font-size: 15px;
   line-height: 18px;
 }
+
 .h6 {
   font-size: 13px;
 }
+
 .h7 {
   font-size: 11px;
 }
+
 .b1 {
   font-size: 15px;
 }
+
 .b2 {
   font-size: 13px;
 }
+
 .b3 {
   font-size: 11px;
 }
@@ -160,12 +169,13 @@ main.main.dashboard .page-title_redirect .page-title__slider {
   &:first-child {
     padding: 50px 0 75px;
   }
-  &:last-child{
+
+  &:last-child {
     padding-bottom: 0;
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 50px 0 0 ;
+    padding: 50px 0 0;
 
     &:first-child {
       padding: 25px 0 0;
@@ -212,6 +222,41 @@ body {
       visibility: hidden;
       position: fixed !important;
     }
+
+    .datepicker--buttons {
+      .datepicker--button {
+        display: none !important;
+      }
+
+      .c-btn-datepicker {
+        padding: 15px;
+        height: auto;
+        border: 1px solid #EEEEEE;
+        font-size: 15px;
+        line-height: 18px;
+        color: #444444;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0 10px;
+        border-radius: 5px;
+
+        &.disabled {
+          opacity: .7;
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+
+        &:hover {
+          padding: 15px;
+          height: auto;
+          border: 1px solid #EEEEEE;
+          background: #fff;
+        }
+      }
+    }
   }
 
   .datepicker.active {
@@ -250,8 +295,9 @@ body {
     }
   }
 
-  .datepicker--buttons {
-    display: none;
+  .datepicker--cell.datepicker--cell-day.-current- {
+    background: #eee;
+    color: #000;
   }
 }
 
@@ -264,4 +310,212 @@ body {
   right: 0;
   background: #000;
   z-index: 99;
+}
+
+
+.span-file {
+  padding: 12px 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px #eee dashed;
+  border-radius: 5px;
+  overflow: hidden;
+  outline: transparent;
+  color: #444;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color .4s ease;
+  -o-transition: border-color .4s ease;
+  transition: border-color .4s ease;
+  font-size: 16px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: normal;
+  line-height: 20px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+.span-file.loaded {
+  border: 1px #eee solid;
+}
+
+.input-container input:hover + .span-file.loaded {
+  border: 1px $primary solid;
+}
+
+.input-container input:hover + .span-file {
+  border-color: $primary;
+}
+
+.remove-file {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(/images/icons/exit-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $bg;
+  background-size: 10px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  right: 17px;
+
+  &:hover {
+    background-color: $stroke;
+  }
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.input-container.input-container-file {
+  top: 28px;
+
+  .input-wrp {
+    height: auto;
+  }
+}
+
+
+.popup-content {
+  padding: 50px 30px;
+  overflow-y: visible;
+
+  @include media-breakpoint-down(sm) {
+    max-height: calc(100vh - 286px);
+    overflow-y: scroll;
+  }
+}
+
+.modal-form {
+  margin-top: 30px;
+}
+
+.alert-window-text {
+  margin-top: 10px;
+}
+
+.modal-title {
+  margin-bottom: 15px;
+  line-height: 37px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
+
+.modal-text-block {
+  line-height: 23px;
+  color: $minor;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
+.modal-controls {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  .button {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 15px 30px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    flex-direction: column;
+    background: #fff;
+  }
+}
+
+.popup-sms-phone {
+  color: #444;
+  font-weight: 500;
+}
+
+.popup {
+  .button {
+    width: 250px;
+    max-width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}
+
+.button-modal-help {
+  margin-right: 15px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 15px 0;
+  }
+}
+
+.service-programs-popup.popup {
+
+  .popup-content-c {
+    width: auto;
+    max-width: unset;
+    padding: 30px 30px 70px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    top: -36px;
+    width: 100%;
+    list-style: none;
+
+    li {
+      width: 100%;
+      outline: none;
+      height: 4px;
+
+      button {
+        width: 100%;
+        border: unset;
+        color: transparent;
+        background: #F6F6F6;
+        height: 4px;
+        overflow: hidden;
+        outline: none;
+      }
+    }
+
+    .slick-active {
+      button {
+        background: #DADADA;
+      }
+    }
+  }
 }

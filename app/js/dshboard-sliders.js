@@ -21,6 +21,7 @@ $(".products-box-slider-js").slick({
                 arrows: false,
                 variableWidth: true,
                 slidesToShow: 3,
+                infinite: false,
             },
         },
         {
@@ -62,6 +63,7 @@ $(".db_subscribe-cards-box").slick({
                 arrows: false,
                 variableWidth: true,
                 slidesToShow: 3,
+                infinite: false,
             },
         },
         {
@@ -78,7 +80,7 @@ $(".db_subscribe-cards-box").slick({
 });
 
 // слайдер промо-карточек подписок
-if (window.innerWidth < 768) {
+if ($(".sbr-promo-box_db .sbr-promo-wrp").length >= 5 || window.innerWidth < 480) {
     $(".sbr-promo-box_db").slick({
         dots: false,
         speed: 300,
@@ -86,22 +88,14 @@ if (window.innerWidth < 768) {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 1280,
                 settings: {
-                    slidesToShow: 2,
-                    variableWidth: true,
-                },
-
-                breakpoint: 768,
-                settings: {
-                    swipeToSlide: true,
-                    touchThreshold: 10,
-                    slidesToShow: 2,
                     variableWidth: true,
                     infinite: false,
-                },
+                }
             },
         ],
     });
@@ -116,7 +110,7 @@ $(window).on('resize', function () {
 })
 
 function setSliderWidth (selector) {
-    if(window.innerWidth < 768) {
+    if(window.innerWidth < 1280) {
         $(selector).width(`${window.innerWidth - 15}px`)
     }
 }

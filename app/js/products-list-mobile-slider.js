@@ -1,9 +1,8 @@
-/*if (window.innerWidth < 768) {
+if (window.innerWidth < 768) {
     $(".products-box-slider-js").slick({
         dots: false,
         speed: 300,
         arrows: false,
-        // variableWidth: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
@@ -12,11 +11,9 @@
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    variableWidth: true,
                 },
             },
         ]
     });
 }
-  
-
-*/

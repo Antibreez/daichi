@@ -17,6 +17,19 @@
       display: none;
     }
   }
+
+  &:not(:placeholder-shown) {
+    border: 1px solid #eee;
+    background: #fff;
+  }
+
+  &:not(:placeholder-shown) + .search-clear {
+    opacity: 1;
+  }
+
+  &:focus {
+    border: 1px solid #eee;
+  }
 }
 
 //
@@ -25,9 +38,18 @@
   position: relative;
   height: 48px;
 
-  &:hover {
+  @include media-breakpoint-down(sm) {
+    transition: unset;
+  }
+
+    &:hover {
     .search-field {
       background-color: $stroke;
+      border: 1px solid #eee;
+
+      @include media-breakpoint-down(sm) {
+        background-color: #fff;
+      }
     }
   }
   &:focus-within {
@@ -38,11 +60,29 @@
     .search-dropdown {
       opacity: 1;
       transform: translateY(100%);
-     
+
+      @include media-breakpoint-down(sm) {
+        transform: unset;
+      }
     }
     // .prompts-box{
     //  transform: unset;
     // }
+  }
+
+  &.search-mobile-is-active {
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: auto;
+      padding: 20px 15px;
+      margin: 0;
+      background: #fff;
+      z-index: 100;
+    }
   }
 }
 
@@ -52,6 +92,7 @@ input.search-field {
   height: 48px;
   background-color: $bg;
   transition: background-color 0.25s ease;
+  border: unset;
 }
 .search-field-wrp {
   position: relative;
@@ -67,6 +108,7 @@ input.search-field {
   background: url("/images/icons/search-icon.svg") 50% 50% / contain
     no-repeat;
 }
+
 .input-container .search-clear {
   padding: 0;
   position: absolute;
@@ -79,20 +121,9 @@ input.search-field {
   width: 17px;
   height: 17px;
   transition: opacity 0.25s ease;
-  background: url("/images/icons/exit-button.svg") 50% 50% / contain
+  background: url("/images/icons/search-remoove.svg") 50% 50% / contain
     no-repeat;
-}
-
-.search-bar.mobile {
-  .search-clear {
-    opacity: 0;
-  }
-
-  &:focus-within {
-    .search-clear {
-      opacity: 1;
-    }
-  }
+  opacity: 0;
 }
 
 .search-bar.inputed-mobile {
@@ -119,6 +150,11 @@ input.search-field {
   transition-delay: .25s ;
   opacity: 0;
 
+  @include media-breakpoint-down(sm) {
+    bottom: unset;
+    top: 68px;
+    transform: unset;
+  }
 
   &::before {
     content: "";
@@ -141,7 +177,10 @@ input.search-field {
   position: relative;
   z-index: 4;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
-  
+
+  @include media-breakpoint-down(sm) {
+    box-shadow: unset;
+  }
 }
 
 .search-prompt {

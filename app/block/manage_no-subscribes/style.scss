@@ -9,6 +9,29 @@
     margin-top: 50px;
   }
 }
+
+.main_empty {
+  display: flex;
+  align-items: center;
+
+  .page-title {
+
+    @include media-breakpoint-down(sm) {
+      font-size: 19px;
+      line-height: 23px;
+    }
+  }
+
+  .page-text-box {
+
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+      line-height: 19px;
+      padding: 0 30px;
+    }
+  }
+}
+
 .title-pic {
   margin: 0 auto;
   width: 345px;

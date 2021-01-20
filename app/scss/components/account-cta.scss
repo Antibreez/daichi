@@ -3,12 +3,51 @@
     border: 1px solid $stroke;
     border-radius: 5px;
     position: relative;
-    
+
     .description{
         color: $minor;
+        line-height: 19px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
+
+    &:hover {
+        background: #f6f6f6;
+    }
+
+    .title {
+        margin-bottom: 5px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 13px;
+            line-height: 15px;
+        }
     }
 }
 
+.account-data-cta.disabled {
+    opacity: .7;
+    cursor: not-allowed;
+    position: relative;
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.account-data-cta.disabled:before {
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+}
 
 .account-data-cta.added{
     .direct-button{

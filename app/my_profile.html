@@ -1,491 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Личный кабинет</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/my_profile/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/my_profile/style.css"/>
+</head>
+<body>
+<header class="header">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12"></div>
+            <div class="col-md-12"></div>
         </div>
-      </div>
-    </header>
-    <main class="main main_my-profile">
-      <div class="container">
+    </div>
+</header>
+<main class="main main_my-profile">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <!-- g component -->
-            <div class="block-with-banners">
-              <div class="main-content-wrp">
-                <h1 class="h1 page-title">
-                  Добрый день, <span class="users-name">Иван</span>!
-                </h1>
+            <div class="col-md-12">
+                <!-- g component -->
+                <div class="block-with-banners">
+                    <div class="main-content-wrp">
+                        <h1 class="h1 page-title">
+                            Добрый день, <span class="users-name">Иван</span>!
+                        </h1>
 
-                <form class="profile-form">
-                  <div class="profile-form-section">
-                    <div class="profile-section-title">Данные аккаунта</div>
+                        <form class="profile-form">
+                            <div class="profile-form-section">
+                                <div class="profile-section-title">Данные аккаунта</div>
 
-                    <div class="input-container">
-                      <label for="#main-enterance-input" class="enterance-label"
-                        >Email</label
-                      >
-                      <div class="input-wrp">
-                        <input
-                          id="main-enterance-input input-js"
-                          type="text"
-                          class="b1 enterance-input"
-                          placeholder="Не указано"
-                        />
-                        <div class="alert-box profile-edit-button"></div>
-                      </div>
+                                <div class="input-container">
+                                    <label for="#main-enterance-input" class="enterance-label"
+                                    >Email</label
+                                    >
+                                    <div class="input-wrp">
+                                        <input
+                                                id="main-enterance-input input-js"
+                                                type="text"
+                                                class="b1 enterance-input"
+                                                placeholder="Не указано"
+                                        />
+                                        <div
+                                                class="alert-box profile-edit-button call-modal"
+                                                data-id="email"
+                                        ></div>
+                                    </div>
 
-                      <div class="email-cahnge-alert">
-                        <div class="email-alert-pic"></div>
-                        <div class="notice b1">
-                          Подтвердите адрес электронной почты
-                        </div>
-                      </div>
-                    </div>
+                                    <!---<div class="email-cahnge-alert">
+                                        <div class="email-alert-pic"></div>
+                                        <div class="notice b1">
+                                            Подтвердите адрес электронной почты
+                                        </div>
+                                    </div>-->
+                                </div>
 
-                    <div class="input-container">
-                      <label for="#main-enterance-input" class="enterance-label"
-                        >Номер телефона</label
-                      >
-                      <div class="input-wrp">
-                        <input
-                          id="main-enterance-input input-js input-tel"
-                          type="tel"
-                          class="b1 enterance-input"
-                          placeholder="Не указано"
-                        />
-                        <div class="alert-box profile-edit-button"></div>
-                      </div>
-                    </div>
+                                <div class="input-container">
+                                    <label for="#main-enterance-input" class="enterance-label"
+                                    >Номер телефона</label
+                                    >
+                                    <div class="input-wrp">
+                                        <input
+                                                id="main-enterance-input input-js input-tel"
+                                                type="tel"
+                                                class="b1 enterance-input"
+                                                placeholder="Не указано"
+                                        />
+                                        <div class="alert-box profile-edit-button call-modal"
+                                             data-id="phone"
+                                        ></div>
+                                    </div>
+                                </div>
 
-                    <div class="input-container">
-                      <label for="#main-enterance-input" class="enterance-label"
-                        >Пароль</label
-                      >
-                      <div class="input-wrp">
-                        <input
-                          id="main-enterance-input input-js"
-                          type="password"
-                          class="b1 enterance-input"
-                          placeholder="Не указано"
-                        />
-                        <div class="alert-box profile-edit-button"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="profile-form-section">
-                    <div class="profile-section-title">Личные данные</div>
-                    <div class="input-container">
-                      <label for="#main-enterance-input" class="enterance-label"
-                        >Фамилия Имя Отчество (через пробел)</label
-                      >
-                      <div class="input-wrp">
-                        <input
-                          id="main-enterance-input input-js"
-                          type="text"
-                          class="b1 enterance-input"
-                          placeholder="Не указано"
-                        />
-                        <div class="alert-box profile-edit-button"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="profile-form-section">
-                    <div class="profile-section-title">
-                      Аккаунт Daichi Comfort
-                    </div>
-                    <!-- Если добавить клаксс added, то стрелка сменится на крестик -->
-                    <div class="account-data-cta added">
-                      <button class="direct-button"></button>
-                      <div class="title h5">
-                        Укажите данные аккаунта Daichi Comfort
-                      </div>
-                      <div class="description b2">
-                        Привязывая аккаунт, вы получаете возможность переходить
-                        к управлению Вашими устройствами сразу из личного
-                        кабинета.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="profile-form-section">
-                    <div class="profile-section-title">Мои Адреса</div>
+                                <div class="input-container">
+                                    <label for="#main-enterance-input" class="enterance-label"
+                                    >Пароль</label
+                                    >
+                                    <div class="input-wrp">
+                                        <input
+                                                id="main-enterance-input input-js"
+                                                type="password"
+                                                class="b1 enterance-input"
+                                                placeholder="Не указано"
+                                        />
+                                        <div
+                                                class="alert-box profile-edit-button call-modal"
+                                                data-id="pass"
+                                        >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-form-section">
+                                <div class="profile-section-title">Личные данные</div>
+                                <div class="input-container">
+                                    <label for="#main-enterance-input" class="enterance-label"
+                                    >Фамилия Имя Отчество (через пробел)</label
+                                    >
+                                    <div class="input-wrp">
+                                        <input
+                                                id="main-enterance-input input-js"
+                                                type="text"
+                                                class="b1 enterance-input"
+                                                placeholder="Не указано"
+                                        />
 
-                    <div class="adress-item">
-                      <div class="street-line">
-                        <div class="street-name h5">
-                          Лермонтовский проспект,
-                          <span class="house-number">8к1</span>
-                        </div>
-                        <div class="city-name b2">Москва</div>
-                        <a href="#" class="link change-adress">Изменить</a>
-                      </div>
-                      <div class="adress-data-box">
-                        <div class="adress-data-title b2">Подъезд</div>
-                        <div class="adress-data-value b1">1</div>
-                      </div>
-                      <div class="adress-data-box">
-                        <div class="adress-data-title b2">Кв / Офис</div>
-                        <div class="adress-data-value b1">172</div>
-                      </div>
-                      <div class="adress-data-box">
-                        <div class="adress-data-title b2">Домофон</div>
-                        <div class="adress-data-value b1">172#8766</div>
-                      </div>
-                      <div class="adress-data-box">
-                        <div class="adress-data-title b2">Этаж</div>
-                        <div class="adress-data-value b1">10</div>
-                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-form-section">
+                                <div class="profile-section-title">
+                                    Аккаунт Daichi Comfort
+                                </div>
+                                <!-- Если добавить клаксс added, то стрелка сменится на крестик -->
+                                <!-- Если добавить клаксс disabled, блок элемента -->
+                                <div class="account-data-cta">
+                                    <button class="direct-button"></button>
+                                    <div class="title h5">
+                                        Укажите данные аккаунта Daichi Comfort
+                                    </div>
+                                    <div class="description b2">
+                                        Привязывая аккаунт, вы получаете возможность переходить
+                                        к управлению Вашими устройствами сразу из личного
+                                        кабинета.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-form-section">
+                                <div class="profile-section-title">Мои Адреса</div>
+
+                                <div class="adress-item">
+                                    <div class="street-line">
+                                        <div class="street-name h5">
+                                            Лермонтовский проспект,
+                                            <span class="house-number">8к1</span>
+                                        </div>
+                                        <div class="city-name b2">Москва</div>
+                                        <a href="#" class="link change-adress">Изменить</a>
+                                    </div>
+                                    <div class="adress-data-box">
+                                        <div class="adress-data-title b2">Подъезд</div>
+                                        <div class="adress-data-value b1">1</div>
+                                    </div>
+                                    <div class="adress-data-box">
+                                        <div class="adress-data-title b2">Кв / Офис</div>
+                                        <div class="adress-data-value b1">172</div>
+                                    </div>
+                                    <div class="adress-data-box">
+                                        <div class="adress-data-title b2">Домофон</div>
+                                        <div class="adress-data-value b1">172#8766</div>
+                                    </div>
+                                    <div class="adress-data-box">
+                                        <div class="adress-data-title b2">Этаж</div>
+                                        <div class="adress-data-value b1">10</div>
+                                    </div>
+                                </div>
+                                <button class="button add-adress-button">
+                                    Добавить адрес
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <button class="button add-adress-button">
-                      Добавить адрес
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <div class="banners-wrp">
-                <!-- component  -->
-                <div class="banner banner_type-1">
-                  <div
-                    class="banner-pic"
-                    style="
+                    <div class="banners-wrp">
+                        <!-- component  -->
+                        <div class="banner banner_type-1">
+                            <div
+                                    class="banner-pic"
+                                    style="
                       background-image: url(images/banners/Rectangle\ 52.jpg);
                     "
-                  ></div>
-                  <div class="banner-content">
-                    <div class="banner-title h3">Климат Онлайн</div>
-                    <div class="banner-description b1">
-                      Хотите, чтобы кондицинер служил долго?
-                    </div>
-                    <button class="button banner-button">Оформить</button>
-                  </div>
-                </div>
-                <div class="banner banner_type-1">
-                  <div
-                    class="banner-pic"
-                    style="
+                            ></div>
+                            <div class="banner-content">
+                                <div class="banner-title h3">Климат Онлайн</div>
+                                <div class="banner-description b1">
+                                    Хотите, чтобы кондицинер служил долго?
+                                </div>
+                                <button class="button banner-button">Оформить</button>
+                            </div>
+                        </div>
+                        <div class="banner banner_type-1">
+                            <div
+                                    class="banner-pic"
+                                    style="
                       background-image: url(images/banners/Rectangle\ 52.jpg);
                     "
-                  ></div>
-                  <div class="banner-content">
-                    <div class="banner-title h3">Климат Онлайн</div>
-                    <div class="banner-description b1">
-                      Хотите, чтобы кондицинер служил долго?
-                    </div>
-                    <button class="button banner-button">Оформить</button>
-                  </div>
-                </div>
+                            ></div>
+                            <div class="banner-content">
+                                <div class="banner-title h3">Климат Онлайн</div>
+                                <div class="banner-description b1">
+                                    Хотите, чтобы кондицинер служил долго?
+                                </div>
+                                <button class="button banner-button">Оформить</button>
+                            </div>
+                        </div>
 
-                <!-- component  end -->
-              </div>
+                        <!-- component  end -->
+                    </div>
+                </div>
+                <!-- g component end -->
+                <!-- наличие клаасса adding определяет, будет ли выводиться кнопка "удалить адрес", есть класс-нет кнопки -->
+                <article class="popup adress-change-popup">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <h2 class="popup-title h2">Добавить/изменить адрес</h2>
+                        <form action="post" class="adress-change-form">
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Город*</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Улица*</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+
+                            <div class="input-container inp-sm">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Дом / Корпус*</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+
+                            <div class="input-container inp-sm">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Подъезд</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+
+                            <div class="input-container inp-sm n_mr">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Кв / Офис*</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+
+                            <div class="input-container inp-md">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Домофон</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+                            <div class="input-container inp-md">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Этаж</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+                            <button class="button button_secondary delete-adress-button">
+                                Удалить адрес
+                            </button>
+                            <button class="button save-adress-button">Сохранить</button>
+                        </form>
+                    </div>
+                </article>
+                <!-- --- -->
+                <article class="popup change-modal">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <h2 class="popup-title h2">Укажите новый Email</h2>
+                        <div class="popup-subtitle b1">
+                            Укажите новый адрес Email. На него будет отправлено письмо для
+                            последующей активации.
+                        </div>
+
+                        <form action="post" class="edit-form">
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Email</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Пароль</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="password"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >подтверждение пароля</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="password"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+                            <button
+                                    class="modal-button-mobile button save-email-button disabled"
+                            >
+                                Сохранить
+                            </button>
+                        </form>
+                    </div>
+                </article>
+                <!-- --- -->
+                <article class="popup confirm-modal">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <h2 class="popup-title h2">Подтвердите новый Email!</h2>
+                        <div class="popup-subtitle b1">
+                            На ваш новый почтовый адрес
+                            <span class="new-email-box h5">newemail@daichi.ru</span> должно
+                            прийти письмо с подтверждением смены адреса электронной почты.
+                        </div>
+
+                        <div class="popup-subtitle b1">
+                            На старый почтовый адрес
+                            <span class="old-email-box h5">vanyafromsyzran@daichi.ru</span>
+                            придет письмо с возможностью отката изменений.
+                        </div>
+
+                        <button class="modal-button-mobile button modal-ok-button">
+                            Ок
+                        </button>
+                    </div>
+                </article>
+                <!-- --- -->
+                <article class="popup  confirmed-modal">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <div class="modal-sucsess-pic"></div>
+                        <h2 class="popup-title h2">Адрес Email успешно изменён!</h2>
+                        <div class="popup-subtitle b1">
+                            Теперь вы можете авторизоваться в личном кабинете Даичи по
+                            указанному Email
+                        </div>
+                        <div class="new-email-box h5">newemail@daichi.ru</div>
+                        <button class="modal-button-mobile button modal-ok-button">
+                            Ок
+                        </button>
+                    </div>
+                </article>
+                <!-- --- -->
+
+                <article class="popup account-change-modal">
+                    <div class="popup-content-c">
+                        <div class="account-change-modal-pic"></div>
+                        <div class="popup__exit-button"></div>
+                        <h2 class="popup-title h2">Укажите данные аккаунта
+                            Daichi Comfort</h2>
+                        <div class="popup-subtitle b1">
+                            Введите логин и пароль от вашего аккаунта Daichi Comfort для привязки.
+                        </div>
+
+                        <form action="post" class="edit-form">
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Email</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="text"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+                            <div class="input-container inp-b">
+                                <label for="#main-enterance-input" class="enterance-label"
+                                >Пароль</label
+                                >
+                                <div class="input-wrp">
+                                    <input
+                                            id="main-enterance-input input-js"
+                                            type="password"
+                                            class="b1 enterance-input"
+                                            placeholder="Не указано"
+                                    />
+                                    <div class="alert-box"></div>
+                                </div>
+                                <div class="ive-text"></div>
+                            </div>
+
+                            <button
+                                    class="modal-button-mobile button save-email-button disabled"
+                            >
+                                Сохранить
+                            </button>
+                        </form>
+                    </div>
+                </article>
+                <!-- -- версия, где всё добавлено -->
+                <article class="popup account-added-modal">
+                    <div class="popup-content-c">
+                        <div class="account-change-modal-pic_complete"></div>
+                        <div class="popup__exit-button"></div>
+                        <h2 class="popup-title h2">Аккаунт Daichi Comfort
+                            успешно привязан!</h2>
+                        <div class="popup-subtitle b1">
+                            Теперь вы можете переходить к управлению Вашими устройствами из личного кабинета.
+                        </div>
+                        <button class="modal-button-mobile button modal-ok-button">
+                            Ок
+                        </button>
+
+                    </div>
+                </article>
+
+
+                <!--       Модальные окна для изменения полей         -->
+                <article id="email" class="popup">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <div class="popup-content">
+                            <h2 class="modal-title h2">Укажите новый Email</h2>
+                            <div class="modal-text-block b1">
+                                Укажите новый адрес Email. На него будет отправлено письмо для последующей активации.
+                            </div>
+
+                            <form action="post" class="modal-form">
+                                <div class="input-container">
+                                    <label for="change-mail" class="enterance-label">Email</label>
+                                    <div class="input-wrp">
+                                        <input id="change-mail" type="text" class="b1 input-js warranty-qr-inner" placeholder="Не указано">
+                                        <div class="alert-box qr-scanner-trigger"></div>
+                                    </div>
+                                    <div class="assistive-text"></div>
+                                </div>
+                                <div class="modal-controls">
+                                    <button class="button button-save">Сохранить</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="phone" class="popup">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <div class="popup-content">
+                            <h2 class="modal-title h2">Укажите номер телефона</h2>
+                            <div class="modal-text-block b1">
+                                Укажите номер, на него должен прийти СМС-код с подтверждением.
+                            </div>
+
+                            <form action="post" class="modal-form">
+                                <div class="input-container">
+                                    <label for="change-phone" class="enterance-label">Номер телефона</label>
+                                    <div class="input-wrp">
+                                        <input id="change-phone" type="text" class="b1 js-mask-phone input-js warranty-qr-inner" placeholder="+7 (999) 999-99-99">
+                                        <div class="alert-box qr-scanner-trigger"></div>
+                                    </div>
+                                    <div class="assistive-text"></div>
+                                </div>
+                                <div class="modal-controls">
+                                    <button data-id="phone-code" class="button button-save js-next-step-phone">Продолжить</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </article>
+                <article id="phone-code" class="popup">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <div class="popup-content">
+                            <h2 class="modal-title h2">Введите код подтверждения</h2>
+                            <div class="modal-text-block b1">
+                                Введите код из СМС, присланного на указанный </br>
+                                номер телефона <span class="popup-sms-phone" id="phone-sms"></span>
+                            </div>
+
+                            <form action="post" class="modal-form">
+                                <div class="input-container">
+                                    <label for="change-phone-sms" class="enterance-label">Код подтверждения</label>
+                                    <div class="input-wrp">
+                                        <input id="change-phone-sms" type="password" class="b1 input-js warranty-qr-inner" placeholder="">
+                                        <div class="alert-box qr-scanner-trigger"></div>
+                                    </div>
+                                    <div class="assistive-text assistive-text_right">
+                                        <a href="#" class="recive-code-again link link_disabled">
+                                            Получить код повторно
+                                        </a>
+                                        <span class="code-disable-timer b1">(через <span class="code-sec-counter">60</span> сек.)</span>
+                                    </div>
+                                </div>
+                                <div class="modal-controls">
+                                    <button class="button button-modal-help button_secondary change-phone-modal" data-id="phone">Изменить номер</button>
+                                    <button class="button button-save">Продолжить</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="pass" class="popup">
+                    <div class="popup-content-c">
+                        <div class="popup__exit-button"></div>
+                        <div class="popup-content">
+                            <h2 class="modal-title h2">Укажите новый пароль</h2>
+                            <div class="modal-text-block b1">
+                                Введите новый пароль и подтверждение пароля.
+                            </div>
+
+                            <form action="post" class="modal-form">
+                                <div class="input-container">
+                                    <label for="change-pass" class="enterance-label">Пароль</label>
+                                    <div class="input-wrp">
+                                        <input id="change-pass" type="password" class="b1 input-js warranty-qr-inner" placeholder="">
+                                        <div class="alert-box qr-scanner-trigger"></div>
+                                    </div>
+                                    <div class="assistive-text"></div>
+                                    <label for="change-pass-2" class="enterance-label">Подтверждение пароля</label>
+                                    <div class="input-wrp">
+                                        <input id="change-pass-2" type="password" class="b1 input-js warranty-qr-inner" placeholder="">
+                                        <div class="alert-box qr-scanner-trigger"></div>
+                                    </div>
+                                    <div class="assistive-text"></div>
+                                </div>
+                                <div class="modal-controls">
+                                    <button class="button button-save">Продолжить</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </article>
+
+
             </div>
-            <!-- g component end -->
-            <!-- наличие клаасса adding определяет, будет ли выводиться кнопка "удалить адрес", есть класс-нет кнопки -->
-            <article class="popup  adress-change-popup">
-              <div class="popup__exit-button"></div>
-              <h2 class="popup-title h2">Добавить/изменить адрес</h2>
-              <form action="post" class="adress-change-form">
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Город*</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Улица*</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-
-                <div class="input-container inp-sm">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Дом / Корпус*</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-
-                <div class="input-container inp-sm">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Подъезд</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-
-                <div class="input-container inp-sm n_mr">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Кв / Офис*</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-
-                <div class="input-container inp-md">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Домофон</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-                <div class="input-container inp-md">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Этаж</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-                <button class="button button_secondary delete-adress-button">
-                  Удалить адрес
-                </button>
-                <button class="button save-adress-button">Сохранить</button>
-              </form>
-            </article>
-            <!-- --- -->
-            <article class="popup  change-modal">
-              <div class="popup__exit-button"></div>
-              <h2 class="popup-title h2">Укажите новый Email</h2>
-              <div class="popup-subtitle b1">
-                Укажите новый адрес Email. На него будет отправлено письмо для
-                последующей активации.
-              </div>
-
-              <form action="post" class="edit-form">
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Email</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Пароль</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="password"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text"></div>
-                </div>
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >подтверждение пароля</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="password"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text"></div>
-                </div>
-                <button
-                  class="modal-button-mobile button save-email-button disabled"
-                >
-                  Сохранить
-                </button>
-              </form>
-            </article>
-            <!-- --- -->
-            <article class="popup  confirm-modal">
-              <div class="popup__exit-button"></div>
-              <h2 class="popup-title h2">Подтвердите новый Email!</h2>
-              <div class="popup-subtitle b1">
-                На ваш новый почтовый адрес
-                <span class="new-email-box h5">newemail@daichi.ru</span> должно
-                прийти письмо с подтверждением смены адреса электронной почты.
-              </div>
-
-              <div class="popup-subtitle b1">
-                На старый почтовый адрес
-                <span class="old-email-box h5">vanyafromsyzran@daichi.ru</span>
-                придет письмо с возможностью отката изменений.
-              </div>
-
-              <button class="modal-button-mobile button modal-ok-button">
-                Ок
-              </button>
-            </article>
-            <!-- --- -->
-            <article class="popup  confirmed-modal">
-              <div class="popup__exit-button"></div>
-              <div class="modal-sucsess-pic"></div>
-              <h2 class="popup-title h2">Адрес Email успешно изменён!</h2>
-              <div class="popup-subtitle b1">
-                Теперь вы можете авторизоваться в личном кабинете Даичи по
-                указанному Email
-              </div>
-              <div class="new-email-box h5">newemail@daichi.ru</div>
-              <button class="modal-button-mobile button modal-ok-button">
-                Ок
-              </button>
-            </article>
-            <!-- --- -->
-
-            <article class="popup active account-change-modal">
-              <div class="account-change-modal-pic"></div>
-              <div class="popup__exit-button"></div>
-              <h2 class="popup-title h2">Укажите данные аккаунта 
-                Daichi Comfort</h2>
-                <div class="popup-subtitle b1">
-                  Введите логин и пароль от вашего аккаунта Daichi Comfort для привязки.
-                </div>
-
-              <form action="post" class="edit-form">
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Email</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="text"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-                <div class="input-container inp-b">
-                  <label for="#main-enterance-input" class="enterance-label"
-                    >Пароль</label
-                  >
-                  <div class="input-wrp">
-                    <input
-                      id="main-enterance-input input-js"
-                      type="password"
-                      class="b1 enterance-input"
-                      placeholder="Не указано"
-                    />
-                    <div class="alert-box"></div>
-                  </div>
-                  <div class="assistive-text">assist</div>
-                </div>
-              
-                <button
-                  class="modal-button-mobile button save-email-button disabled"
-                >
-                  Сохранить
-                </button>
-              </form>
-            </article>
-            <!-- -- версия, где всё добавлено -->
-            <article class="popup active account-added-modal">
-              <div class="account-change-modal-pic_complete"></div>
-              <div class="popup__exit-button"></div>
-              <h2 class="popup-title h2">Аккаунт Daichi Comfort
-                успешно привязан!</h2>
-                <div class="popup-subtitle b1">
-                  Теперь вы можете переходить к управлению Вашими устройствами из личного кабинета.
-                </div>
-                <button class="modal-button-mobile button modal-ok-button">
-                  Ок
-                </button>
-
-
-            
-            </article>
-          </div>
         </div>
-      </div>
-      <div class="blackout  blackout_active"></div>
-    </main>
+    </div>
+    <div class="blackout"></div>
+</main>
 
-    <footer class="footer">
-      <div class="container">
+<footer class="footer">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12"></div>
+            <div class="col-md-12"></div>
         </div>
-      </div>
-    </footer>
-  </body>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/maskedinput.min.js"></script>
-  <script src="js/app.js"></script>
+    </div>
+</footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/maskedinput.min.js"></script>
+<script src="js/app.js"></script>
 </html>

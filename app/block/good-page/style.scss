@@ -64,6 +64,8 @@ main.main {
 }
 .good-title-prev {
   color: $minor;
+  font-size: 15px;
+  line-height: 23px;
 
   @include media-breakpoint-down(sm) {
     font-size: 11px;
@@ -74,6 +76,8 @@ main.main {
   display: block;
   grid-column: 2/3;
   grid-row: 2/3;
+  font-size: 27px;
+  line-height: 33px;
 
   @include media-breakpoint-down(sm) {
     font-size: 15px;
@@ -112,7 +116,9 @@ main.main {
 .good-property {
   margin-bottom: 4px;
   color: $minor;
+  font-size: 15px;
   line-height: 23px;
+  font-weight: 300;
 
   @include media-breakpoint-down(sm) {
     font-size: 11px;
@@ -121,11 +127,16 @@ main.main {
 }
 .good-value {
   line-height: 23px;
+  font-weight: 300;
 
   @include media-breakpoint-down(sm) {
     font-size: 11px;
     line-height: 13px;
   }
+}
+
+.good-value_bold {
+  font-weight: 400;
 }
 
 .good-status {

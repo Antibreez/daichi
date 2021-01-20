@@ -114,6 +114,10 @@ html {
     outline: transparent;
   }
 
+  &:hover {
+    background-color: #eee;
+  }
+
   @include media-breakpoint-down(sm) {
     top: 31px;
     right: 17px;

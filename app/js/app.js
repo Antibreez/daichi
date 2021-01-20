@@ -1,34 +1,7 @@
 $(function () {
-    if (window.innerWidth < 768) {
-        //  search-input`s mechanics
-
-        $(".search-bar").addClass("mobile");
-        $(".search-field").attr("placeholder", "Поиск");
-
-        $(document).on("input", ".search-field", (e) => {
-            const input = $(e.currentTarget);
-            const clear = input.siblings(".search-clear");
-
-            console.log(clear);
-
-            if (input.val().length !== 0) {
-                console.log(1);
-                input.closest(".search-bar").addClass("inputed-mobile");
-            } else if (input.val().length == 0) {
-                input.closest(".search-bar").removeClass("inputed-mobile");
-            }
-            $(clear).on("click", (e) => {
-                input.closest(".search-bar").removeClass("inputed-mobile");
-            });
-        });
-
-        $(".input-tel").mask("+7 (999) 999-9999");
-
-        // subscribe-cards
-    }
+    $('.js-mask-phone').mask('+7 (999) 999-99-99')
 
     // tabs-switch
-
     $(document).on("click", ".tab-item", (e) => {
         const tab = $(e.currentTarget);
         tab.closest(".tabs-control-box").find(".tab-item").removeClass("active");
@@ -53,7 +26,7 @@ $(function () {
                         autoClose: true,
                     })
                 }
-                // console.log(123123);
+
                 setTimeout(addMobDateBg, 100)
             },
             onSelect: function () {
@@ -77,10 +50,28 @@ $(function () {
                         autoClose: true,
                     })
                 }
+                setTimeout(addMobDateBg, 100)
+
+
+                const btn = document.createElement('span')
+                $(btn).addClass('c-btn-datepicker')
+                if (inst.selectedDates.length && $(inst.nav.$buttonsContainer).find('.c-btn-datepicker').length == 0) {
+                    console.log(true);
+                    $(btn).text('Очистить')
+                    $('.datepicker--buttons').append(btn)
+                    $(btn).on('click', function () {
+                        inst.clear()
+                    })
+                } else if ($(inst.nav.$buttonsContainer).find('.c-btn-datepicker').length == 0) {
+                    $(btn).addClass('disabled')
+                    $(btn).text('Готово')
+                    $('.datepicker--buttons').append(btn)
+                }
             },
-            onSelect: function () {
+            onHide(inst) {
+                setTimeout(function () {$('.c-btn-datepicker').remove()}, 400)
                 $('.mob-datePicker-bg').remove()
-            },
+            }
         })
     }
 
@@ -151,7 +142,7 @@ $(document).on("click", ".popup__exit-button", function (e) {
 
 $(document).on("click", ".blackout", (e) => {
     blackout_off();
-    if(!blackout.hasClass('blackout_active-datePicker')) {
+    if (!blackout.hasClass('blackout_active-datePicker')) {
         $(".popup").removeClass("active");
     }
 
@@ -298,31 +289,99 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
 $(document).on('input', '.file-input-js', function (e) {
     let counter = 0;
     const strNames = [...e.target.files].reduce((accumulator, currentValue) => {
-      let scpace = '';
-      if (counter === 0)
-        counter = ' '
-      else
-        scpace = ', '
-      counter++
-      return accumulator + scpace + '' + currentValue.name
+        let scpace = '';
+        if (counter === 0)
+            counter = ' '
+        else
+            scpace = ', '
+        counter++
+        return accumulator + scpace + '' + currentValue.name
     }, '')
-    console.log(strNames);
+    $(this).siblings('.remove-file').show()
+    $(this).siblings('.input-js-file').addClass('loaded')
     $(this).siblings('.input-js-file').text(strNames)
 })
 
+$(document).on('click', '.remove-file', function () {
+    $(this).hide()
+    $(this).siblings('input').val('')
+    $(this).siblings('.span-file').removeClass('loaded')
+    $(this).siblings('.span-file').text('Выберите файл')
+})
+
 $(document).on('click', '.find-qr-js-close', function () {
-  console.log($(this).closest('popup'));
-  $(this).closest('.popup').removeClass('active')
+    console.log($(this).closest('popup'));
+    $(this).closest('.popup').removeClass('active')
 })
 
 $(document).on('click', '.mob-datePicker-bg', function () {
-  $(this).remove()
+    $(this).remove()
 })
 
-function addMobDateBg () {
-    if(window.innerWidth < 768 && $('.mob-datePicker-bg').length < 1 && $('.datepicker.active').length != 0) {
+$(document).on('click', '.search-clear', function (e) {
+    e.stopPropagation();
+    if (window.innerWidth >= 768)
+        $(this).siblings('.search-field').focus()
+    else {
+        $(this).siblings('.search-field').blur()
+        $('.search-dropdown').hide()
+    }
+})
+
+$(document).on('blur', '.search-field', function () {
+    setTimeout(function () {
+        $('.search-dropdown').hide()
+        $('.search-mobile-is-active').removeClass('search-mobile-is-active')
+    }, 100)
+})
+
+$(document).on('focus', '.search-field', function () {
+    $('.search-dropdown').show()
+    $(this).closest('.search-bar').addClass('search-mobile-is-active')
+})
+
+$(document).on('click', '.call-modal', function () {
+    const id = $(this).data('id')
+    $(`#${id}`).addClass('active')
+    blackout_on()
+})
+
+$(document).on('click', '.js-next-step-phone', function (e) {
+    e.preventDefault()
+    $(this).closest('.popup').removeClass('active')
+    $(`#${$(this).data('id')}`).addClass('active')
+    $('#phone-sms').text($(this).closest('.popup').find('.js-mask-phone').val())
+})
+
+$(document).on('click', '.change-phone-modal', function (e) {
+    e.preventDefault()
+    $(this).closest('.popup').removeClass('active')
+    $(`#${$(this).data('id')}`).addClass('active')
+})
+
+$(document).on('scroll', changeModalHeightOnMobile)
+$(document).on('resize', changeModalHeightOnMobile)
+changeModalHeightOnMobile()
+
+function addMobDateBg() {
+    if (window.innerWidth < 768 && $('.mob-datePicker-bg').length < 1 && $('.datepicker.active').length != 0) {
         let dateBlackout = document.createElement('div')
         $(dateBlackout).addClass('mob-datePicker-bg')
         $('body').append(dateBlackout)
+    }
+}
+
+function changeModalHeightOnMobile() {
+    if (window.innerWidth < 768) {
+        $('.popup').each(function () {
+            const bannerHeight = $(this).find('.popup-decorative-picture').length != 0 ?
+                $(this).find('.popup-decorative-picture').height() : 0;
+            const btnsHeight = $(this).find('.modal-controls').length != 0 ?
+                $(this).find('.modal-controls').height() : 0;
+            const height = window.innerHeight - bannerHeight - btnsHeight
+
+            $(this).css('max-height', `${window.innerHeight}px`)
+            $(this).find('.popup-content').css('max-height', `${height}px`)
+        })
     }
 }

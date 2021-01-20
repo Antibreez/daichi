@@ -11,10 +11,15 @@
 }
 
 .profile-section-title {
+  font-size: 31px;
+  line-height: 37px;
   margin-bottom: 25px;
+  font-weight: 300;
 
   @include media-breakpoint-down(sm) {
     margin-bottom: 15px;
+    font-size: 19px;
+    line-height: 23px;
   }
 }
 

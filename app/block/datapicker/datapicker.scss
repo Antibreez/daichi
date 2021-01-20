@@ -352,8 +352,9 @@
     display: -ms-flexbox;
     display: flex;
     padding: 4px;
-    border-top: 1px solid #efefef; }
-  
+    border-top: 1px solid #efefef;
+  }
+
   .datepicker--button {
     color: #4EB5E6;
     cursor: pointer;
@@ -370,10 +371,13 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 32px; }
+    height: 32px;
+
+  }
     .datepicker--button:hover {
       color: #4a4a4a;
-      background: #f0f0f0; }
+      background: #f0f0f0;
+    }
   
   .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
     color: #dedede; }

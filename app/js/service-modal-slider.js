@@ -1,24 +1,18 @@
 if (window.innerWidth < 768) {
   $(".service-popup-container").slick({
-    dots: false,
+    dots: true,
     speed: 300,
     arrows: false,
     variableWidth: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    asNavFor: ".service-popup-mobile-navigation",
     centerMode: true,
-  });
-
-  $(".service-popup-mobile-navigation").slick({
-    dots: false,
-    speed: 300,
-    arrows: false,
-    variableWidth: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: ".service-popup-container",
-    centerMode: true,
-    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        centerMode: false,
+      }
+    }
+]
   });
 }
