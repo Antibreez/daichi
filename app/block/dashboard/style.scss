@@ -149,6 +149,10 @@ article.db_unit {
         width: 170px;
         padding: 20px;
       }
+
+      &.slick-slide {
+        margin-right: 5px;
+      }
     }
 
     .profile-logo {
@@ -286,6 +290,12 @@ article.db_unit {
       margin-right: 0;
     }
 
+    &:nth-child(even) {
+      @include media-breakpoint-down(md) {
+        margin-right: 0;
+      }
+    }
+
     .item-pic {
       margin: 0;
 
@@ -409,17 +419,7 @@ article.db_unit {
   }
 }
 
-.popup-decorative-picture {
-  width: 100%;
-  height: 180px;
-  background-color: red;
 
-  @include media-breakpoint-down(sm) {
-    height: 160px;
-    border-radius: 0;
-    background-size: cover;
-  }
-}
 
 .input-alert-window {
   position: absolute;

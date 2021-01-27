@@ -25,11 +25,23 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 10vh; // 100px
+  padding-top: 209px;
   padding-bottom: 50px;
 
   .privacy-policy {
     margin-top: auto;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(123, 123, 123, .7);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    height: 15px;
+    max-height: 15px;
   }
 
   @include media-breakpoint-down(md) {
@@ -64,6 +76,8 @@
 
 // left-side
 .enterance__main-content {
+  overflow: auto;
+
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
@@ -127,7 +141,7 @@
 }
 
 .enterance-form {
-  margin: 3vh 0;
+  margin: 50px 0;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -174,7 +188,7 @@
   border-radius: 50%;
   transition: background-color 0.3s ease;
 
-  &::hover {
+  &:hover {
     background-color: $stroke;
   }
 
@@ -304,7 +318,7 @@
 // register/enterance
 
 .enter-method-container {
-  margin: 3vh 0 0;
+  margin: 50px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,3 +343,4 @@
 .method-content {
   margin-bottom: 10px;
 }
+

@@ -8,7 +8,7 @@
     margin: 0;
   }
   @include media-breakpoint-down(xs) {
-    margin: 0 -5px -5px 0;
+    margin: 0;
   }
 }
 
@@ -45,6 +45,10 @@
     max-width: calc((100% - 5px) / 2);
     margin-right: 0;
     margin-bottom: 5px;
+  }
+
+  &.slick-slide {
+    margin-right: 5px;
   }
 }
 

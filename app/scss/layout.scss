@@ -89,7 +89,8 @@ img {
 }
 
 .page-title {
-  line-height: 57px;
+  line-height: 37px;
+  margin-bottom: 25px;
 
   @include media-breakpoint-down(sm) {
     font-size: 27px;
@@ -403,6 +404,10 @@ body {
   }
 }
 
+.popup-content.popup-content_info {
+  padding: 30px;
+}
+
 .modal-form {
   margin-top: 30px;
 }
@@ -493,7 +498,7 @@ body {
     padding: 0;
     margin: 0;
     top: -36px;
-    width: 100%;
+    width: calc(100% - 45px);
     list-style: none;
 
     li {
@@ -516,6 +521,110 @@ body {
       button {
         background: #DADADA;
       }
+    }
+  }
+}
+
+.popup-decorative-picture {
+  width: 100%;
+  height: 180px;
+  background-color: red;
+
+  @include media-breakpoint-down(sm) {
+    height: 160px;
+    border-radius: 0;
+    background-size: cover;
+  }
+}
+
+.code-disable-timer {
+  padding-left: 12px;
+}
+
+.sbr-tabs {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.select-device-wrp {
+  width: 835px;
+  max-width: 100%;
+
+  &.popup .popup-content-c {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-text-block {
+    margin-bottom: 30px;
+  }
+}
+
+.select-device-wrp .select-device {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: -15px;
+
+  .select {
+    height: unset;
+    background: #E8F8FE !important;
+  }
+
+  .option-item {
+    display: flex;
+    width: calc(50% - 7px);
+    max-width: calc(50% - 7px);
+    margin-bottom: 15px;
+
+      &:last-child {
+      margin-right: 15px;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: calc(50% - 8px);
+      max-width: calc(50% - 8px);
+      flex-direction: column;
+      margin-right: 15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 15px;
+    }
+  }
+
+  .switch-box {
+    width: 100%;
+  }
+
+  .product-item-pic {
+    @include media-breakpoint-down(sm) {
+      width: 150px;
+      max-width: 100%;
+      height: 90px;
+    }
+  }
+}
+
+.pick-up-point {
+  .option-item {
+    width: 100%;
+    margin-right: 0;
+    flex-basis: unset;
+    margin-bottom: 15px;
+  }
+
+  .option-title {
+    color: #888;
+  }
+
+  .select {
+    .option-title {
+      color: $black;
     }
   }
 }

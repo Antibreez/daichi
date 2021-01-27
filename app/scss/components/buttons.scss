@@ -109,6 +109,12 @@
   &:focus {
     outline: transparent;
   }
+
+  &.link {
+    background: unset;
+    width: auto;
+    line-height: 1;
+  }
 }
 .delete-button{
   background-image: url("/images/icons/exit-icon.svg");

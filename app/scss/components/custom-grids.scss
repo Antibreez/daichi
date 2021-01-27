@@ -5,6 +5,16 @@
     flex-grow: 1;
   }
 
+  .main-content-wrp_two-row {
+    display: flex;
+
+    .requests-box {
+      flex-direction: column;
+      width: 100%;
+      height: max-content;
+    }
+  }
+
   .banners-wrp {
     margin-left: 60px;
     width: 420px;

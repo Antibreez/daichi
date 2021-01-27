@@ -80,6 +80,40 @@ $(function () {
         $('.email-cahnge-alert').hide()
     })
 
+    setSliderWidth('.need-resize')
+
+    if(window.innerWidth < 768){
+        $(".db_subscribe-cards-box").slick({
+            dots: false,
+            speed: 300,
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            prevArrow: ".sbr-prev-btn",
+            nextArrow: ".sbr-next-btn",
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        arrows: false,
+                        variableWidth: true,
+                        slidesToShow: 3,
+                        infinite: false,
+                    },
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        swipeToSlide: true,
+                        touchThreshold: 10,
+                        variableWidth: true,
+                        slidesToShow: 2,
+                        infinite: true,
+                    },
+                },
+            ],
+        });
+    }
 });
 
 // const versInput = $(".enterance-input");
@@ -326,6 +360,8 @@ $(document).on('click', '.search-clear', function (e) {
         $(this).siblings('.search-field').blur()
         $('.search-dropdown').hide()
     }
+
+    $(this).prev().val('')
 })
 
 $(document).on('blur', '.search-field', function () {
@@ -340,7 +376,8 @@ $(document).on('focus', '.search-field', function () {
     $(this).closest('.search-bar').addClass('search-mobile-is-active')
 })
 
-$(document).on('click', '.call-modal', function () {
+$(document).on('click', '.call-modal', function (e) {
+    e.preventDefault()
     const id = $(this).data('id')
     $(`#${id}`).addClass('active')
     blackout_on()
@@ -383,5 +420,19 @@ function changeModalHeightOnMobile() {
             $(this).css('max-height', `${window.innerHeight}px`)
             $(this).find('.popup-content').css('max-height', `${height}px`)
         })
+    }
+}
+
+$(function () {
+    setSliderWidth('.need-resize')
+})
+
+$(window).on('resize', function () {
+    setSliderWidth('.need-resize')
+})
+
+function setSliderWidth (selector) {
+    if(window.innerWidth < 1280) {
+        $(selector).width(`${window.innerWidth - 15}px`)
     }
 }

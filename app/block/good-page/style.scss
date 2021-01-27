@@ -10,6 +10,9 @@ main.main {
   .page-title {
     @include media-breakpoint-down(sm) {
       text-align: left;
+      font-size: 19px;
+      line-height: 23px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -55,6 +58,7 @@ main.main {
 
   @include media-breakpoint-down(sm) {
     grid-row: 1/2;
+    height: 80px;
   }
 }
 
@@ -228,11 +232,18 @@ main.main {
         margin-right: 0;
       }
 
+      &:nth-child(even) {
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+        }
+      }
+
       @include media-breakpoint-down(sm) {
-        flex-basis: calc(100% / 3 - 30px);
-        width: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 10px);
+        width: calc(100% / 3 - 10px);
         max-width: 100%;
         flex-grow: 1;
+        margin-right: 5px;
       }
     }
   }
@@ -255,6 +266,15 @@ main.main {
       flex-grow: 2;
       width: 100%;
       flex-basis: 100%;
+    }
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      line-height: 1;
+      margin-bottom: 6px;
     }
   }
 }

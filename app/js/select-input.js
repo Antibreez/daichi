@@ -46,6 +46,14 @@ class CustomSelect {
     }
     this._$trigger = this._$main.querySelector('[data-select="trigger"]');
     this._addEventListener();
+
+    document.addEventListener('click', function (e) {
+      if(this._$main.classList.contains('select_show') &&
+          e.target != this._$main &&
+          !e.target.closest('.select_show')
+      )
+        this._$main.classList.remove('select_show')
+    }.bind(this))
   }
   _isShow() {
     return this._$main.classList.contains("select_show");
