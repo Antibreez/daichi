@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/invoice-page/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main invoice-page">
+      <article class="breadcrumbs-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 breadcrumbs-box b1">
+              <a class="breadcrumb" href="#">Программы обслуживания</a>
+              <a class="breadcrumb current-page-crumb" href="#"
+                >Программы обслуживания</a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="h1 receipt">
+              Счёт №<span class="number-of-rec">2020_418</span>
+            </h1>
+            <h2 class="summ h2">
+              на сумму <span class="final-cost">5000</span>руб.
+            </h2>
+            <div class="page-subtitle b1">
+              Введите свои ФИО, номер телефона и E-mail для продолжения оплаты.
+            </div>
+
+            <form action="post" class="invoice-form">
+              <div class="input-container">
+                <label for="#inv-1" class="enterance-label"
+                  >Укажите фамилию, имя и отчество через пробел</label
+                >
+                <div class="input-wrp">
+                  <input
+                    id="inv-1"
+                    type="text"
+                    class="b1 input-js"
+                    placeholder="Константинов Константин Константинопольский"
+                  />
+                  <div class="alert-box"></div>
+                </div>
+                <div class="assistive-text">assist</div>
+              </div>
+
+              <div class="input-container">
+                <label for="#inv-2" class="enterance-label"
+                  >Номер телефона</label
+                >
+                <div class="input-wrp">
+                  <input
+                    id="inv-2"
+                    type="text"
+                    class="b1 input-js"
+                    placeholder="Константинов Константин Константинопольский"
+                  />
+                  <div class="alert-box"></div>
+                </div>
+                <div class="assistive-text">assist</div>
+              </div>
+
+              <div class="input-container">
+                <label for="#inv-2" class="enterance-label">Email</label>
+                <div class="input-wrp">
+                  <input
+                    id="inv-2"
+                    type="text"
+                    class="b1 input-js"
+                    placeholder="user@daichi.ru"
+                  />
+                  <div class="alert-box"></div>
+                </div>
+                <div class="assistive-text">assist</div>
+              </div>
+
+              <div class="ch-ctr">
+                <div class="checkbox-item ch-line">
+                  <input
+                    type="checkbox"
+                    id="ch2"
+                    name="ch2"
+                    value="yes"
+                    class="custom-checkbox"
+                  />
+                  <label class="b1" for="ch2"
+                    >Я согласен с обработкой персональных данных</label
+                  >
+                </div>
+
+                <div class="checkbox-item ch-line">
+                  <input
+                    type="checkbox"
+                    id="ch3"
+                    name="ch3"
+                    value="yes"
+                    class="custom-checkbox"
+                  />
+                  <label class="b1" for="ch3"
+                    >Я согласен с договором оферты</label
+                  >
+                </div>
+
+                <div class="radiobox-item ch-line">
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    id="r1"
+                    name="r1"
+                    value="r1"
+                  />
+                  <label for="r1">Я согласен с договором оферты</label>
+                </div>
+
+                <div class="radiobox-item ch-line">
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    id="r2"
+                    name="r1"
+                    value="r2"
+                  />
+                  <label for="r2">Другие способы оплаты</label>
+                </div>
+              </div>
+              <button class="button checkout-btn">Оплатить</button>
+            </form>
+
+            <div class="payment-emits">
+              <div
+                class="payment-item"
+                style="
+                  background-image: url(/images/pay/Acquiring/Apple\ pay.png);
+                "
+              ></div>
+              <div
+                class="payment-item"
+                style="background-image: url(/images/pay/Acquiring/Maestro.png)"
+              ></div>
+
+              <div
+                class="payment-item"
+                style="
+                  background-image: url(/images/pay/Acquiring/Mastercard.png);
+                "
+              ></div>
+
+              <div
+                class="payment-item"
+                style="background-image: url(/images/pay/Acquiring/Visa.png)"
+              ></div>
+
+              <div
+                class="payment-item"
+                style="background-image: url(/images/pay/Acquiring/Webmoney.png)"
+              ></div>
+
+              <div
+                class="payment-item"
+                style="background-image: url(/images/pay/Acquiring/Мир.png)"
+              ></div>
+
+              <div
+                class="payment-item"
+                style="
+                  background-image: url(/images/pay/Acquiring/Яндекс\ деньги.png);
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/enterance-slider.js"></script>
+  <script src="js/maskedinput.min.js"></script>
+  <script src="js/app.js"></script>
+</html>

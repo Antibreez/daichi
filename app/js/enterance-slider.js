@@ -3,8 +3,8 @@
 $(function () {
   $('.enterance-slider').slick({
     autoplay:true,
-    autoplaySpeed:1500,
-    speed: 1000,
+    autoplaySpeed:6000,
+    speed: 500,
     fade: true,
     cssEase: 'linear',
     arrows: false,

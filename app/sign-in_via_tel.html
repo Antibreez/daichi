@@ -32,20 +32,26 @@
 
           <form class="enterance-form">
             <!-- .disabled for disable -->
-            <div class="enterance__input-area input-container">
+            <div class="enterance__input-area input-container input-container_error">
               <label for="#main-enterance-input" class="enterance-label"
                 >Код подтверждения</label
               >
               <div class="input-wrp">
                 <input
                   id="main-enterance-input input-js"
-                  type="text"
-                  class="b1 enterance-input "
+                  type="password"
+                  class="b1 enterance-input"
                   placeholder="Не указано"
                 />
                 <div class="alert-box"></div>
+                <div class="assistive-text">Введён неверный код</div>
               </div>
-              <div class="assistive-text assistive-text_right"><a href="#" class="recive-code-again link">Получить код повторно </a><span class="code-disable-timer b1">(через <span class="code-sec-counter">60</span> сек.)</span></div>
+            </div>
+            <div class="assistive-text assistive-text_right disabled">
+              <a href="#" class="recive-code-again link">Получить код повторно </a>
+              <span class="code-disable-timer b1">
+                  (через <span class="code-sec-counter">60</span> сек.)
+                </span>
             </div>
             <!-- .disabled for disable -->
             <button class="button enterance__submit-button">Войти</button>

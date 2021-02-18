@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/slickSlider.css"/>
+    <link rel="stylesheet" href="css/good-page/style.css"/>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+</header>
+<main class="main good-page">
+    <article class="breadcrumbs-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 breadcrumbs-box b1">
+                    <a class="breadcrumb" href="#">Мои устройства</a>
+                    <a class="breadcrumb current-page-crumb" href="#"
+                    >Daikin FTXB-C</a
+                    >
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <section class="section device-card good-card-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="good-full-card">
+                        <div
+                                class="good-pic"
+                                style="
+                    background-image: url(/images/other-pages/device-card-pic.jpg);
+                  "
+                        ></div>
+                        <div class="good-title">
+                            <div class="good-title-prev b1">Бытовая сплит-система</div>
+                            <div class="good-title-program h3">Daikin FTXB-C</div>
+                        </div>
+                        <div class="good-data-container">
+                            <div class="good-data-item good-status active">
+                                <div class="good-property">Серийный №</div>
+                                <div class="good-value">ABCD1234GHYUDlLSC</div>
+                            </div>
+                            <div class="good-data-item">
+                                <div class="good-property">Гарантийный №</div>
+                                <div class="good-value">ABCD1234GHYUDlLSC</div>
+                            </div>
+                            <div class="good-data-item">
+                                <div class="good-property">Начало эксплуатации</div>
+                                <div class="good-value">06.12.2020</div>
+                            </div>
+                            <div class="good-data-item">
+                                <div class="good-property">Гарантия</div>
+                                <div class="good-value">до 20.03.2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert-line wait b1">
+                        <div class="alert-line-pic"></div>
+                        <div class="alert-line-content">Укажите данные гарантии</div>
+                    </div>
+
+                    <div class="add-notice-block">
+                        <div class="input-container">
+                            <label for="#main-enterance-input" class="enterance-label"
+                            >Укажите короткое примечание</label
+                            >
+                            <div class="input-wrp">
+                                <input
+                                        id="main-enterance-input input-js"
+                                        type="text"
+                                        class="b1 enterance-input"
+                                        placeholder="Например, Кондиционер на кухне"
+                                />
+                                <div class="alert-box profile-edit-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- табы с подписками -->
+    <section class="sbr-tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabs-container">
+                        <h2 class="h2 page-title">Программы обслуживания</h2>
+                        <div class="tabs-control-box">
+                            <button
+                                    class="btn tab-item b1 active"
+                                    data-list-of="active subscribes"
+                            >
+                                Активные (<span class="active_subscribes_counter">5</span>)
+                            </button>
+
+                            <button
+                                    class="btn tab-item b1"
+                                    data-list-of="overdue subscribes"
+                            >
+                                Просроченные (<span class="overdue_subscribes_counter"
+                            >1</span
+                            >)
+                            </button>
+                        </div>
+                        <div class="tabs-content">
+                            <!-- component - card-box -->
+                            <div class="subscribe-cards-box need-resize db_subscribe-cards-box">
+                                <!-- component - card -->
+                                <div class="subscribe-card sbcr_comfort active">
+                                    <div class="card-head">
+                                        <div class="profile-logo">
+                                            <img
+                                                    src="/images/subscribe-card/my-comfort-plus.svg"
+                                                    alt="plus"
+                                            />
+                                        </div>
+                                        <div class="subscribe-status">
+                                            <div class="subscribe-indicator"></div>
+                                            <div class="status-description h6">Активна</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-data">
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Номер договора</div>
+                                            <div class="data-value" data-contract-id="DA-2020-11">
+                                                DA-2020-11
+                                            </div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Кондиционер</div>
+                                            <div class="data-value" data-machine-count="3">3</div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Действует до</div>
+                                            <div class="data-value" data-due-till="-">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-controls">
+                                        <a
+                                                href="#"
+                                                class="card-button card-manage button button_secondary"
+                                        >Управлять</a
+                                        >
+                                    </div>
+                                </div>
+                                <!-- component - card end-->
+                                <!-- component - card -->
+                                <div class="subscribe-card sbcr_comfort expires">
+                                    <div class="card-head">
+                                        <div class="profile-logo">
+                                            <img
+                                                    src="/images/subscribe-card/my-comfort-plus.svg"
+                                                    alt="plus"
+                                            />
+                                        </div>
+                                        <div class="subscribe-status">
+                                            <div class="subscribe-indicator"></div>
+                                            <div class="status-description h6">Истекает</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-data">
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Номер договора</div>
+                                            <div class="data-value" data-contract-id="DA-2020-11">
+                                                DA-2020-11
+                                            </div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Кондиционер</div>
+                                            <div class="data-value" data-machine-count="3">3</div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Действует до</div>
+                                            <div class="data-value" data-due-till="-">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-controls">
+                                        <a
+                                                href="#"
+                                                class="card-button card-manage button button_secondary additional-button_mobile"
+                                        >Управлять</a
+                                        >
+                                        <a href="#" class="card-button card-pay button"
+                                        >Продлить</a
+                                        >
+                                    </div>
+                                </div>
+                                <!-- component - card end-->
+                                <!-- component - card -->
+                                <div class="subscribe-card sbcr_comfort waiting">
+                                    <div class="card-head">
+                                        <div class="profile-logo">
+                                            <img
+                                                    src="/images/subscribe-card/my-comfort-plus.svg"
+                                                    alt="plus"
+                                            />
+                                        </div>
+                                        <div class="subscribe-status">
+                                            <div class="subscribe-indicator"></div>
+                                            <div class="status-description h6">
+                                                Ожидает оплаты
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-data">
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Номер договора</div>
+                                            <div class="data-value" data-contract-id="DA-2020-11">
+                                                DA-2020-11
+                                            </div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Кондиционер</div>
+                                            <div class="data-value" data-machine-count="3">3</div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Действует до</div>
+                                            <div class="data-value" data-due-till="-">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-controls">
+                                        <a
+                                                href="#"
+                                                class="card-button card-manage button button_secondary additional-button_mobile"
+                                        >Управлять</a
+                                        >
+                                        <a href="#" class="card-button card-pay button"
+                                        >Оплатить</a
+                                        >
+                                    </div>
+                                </div>
+                                <!-- component - card end-->
+                                <!-- component - card -->
+                                <div class="subscribe-card sbcr_comfort waiting">
+                                    <div class="card-head">
+                                        <div class="profile-logo">
+                                            <img
+                                                    src="/images/subscribe-card/my-comfort-plus.svg"
+                                                    alt="plus"
+                                            />
+                                        </div>
+                                        <div class="subscribe-status">
+                                            <div class="subscribe-indicator"></div>
+                                            <div class="status-description h6">
+                                                Ожидает активации
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-data">
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Номер договора</div>
+                                            <div class="data-value" data-contract-id="DA-2020-11">
+                                                DA-2020-11
+                                            </div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Кондиционер</div>
+                                            <div class="data-value" data-machine-count="3">3</div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Действует до</div>
+                                            <div class="data-value" data-due-till="-">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-controls">
+                                        <a
+                                                href="#"
+                                                class="card-button card-manage button button_secondary"
+                                        >Управлять</a
+                                        >
+                                        <a
+                                                href="#"
+                                                class="card-button card-pay button additional-button_mobile"
+                                        >Оплатить</a
+                                        >
+                                    </div>
+                                </div>
+                                <!-- component - card end-->
+                                <!-- component - card -->
+                                <div class="subscribe-card sbcr_comfort overdue">
+                                    <div class="card-head">
+                                        <div class="profile-logo">
+                                            <img
+                                                    src="/images/subscribe-card/my-comfort-plus.svg"
+                                                    alt="plus"
+                                            />
+                                        </div>
+                                        <div class="subscribe-status">
+                                            <div class="subscribe-indicator"></div>
+                                            <div class="status-description h6">Просрочена</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-data">
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Номер договора</div>
+                                            <div class="data-value" data-contract-id="DA-2020-11">
+                                                DA-2020-11
+                                            </div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Кондиционер</div>
+                                            <div class="data-value" data-machine-count="3">3</div>
+                                        </div>
+                                        <div class="card-data-item b2">
+                                            <div class="data-property">Действует до</div>
+                                            <div class="data-value" data-due-till="-">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-controls">
+                                        <a
+                                                href="#"
+                                                class="card-button card-manage button button_secondary"
+                                        >Переоформить</a
+                                        >
+                                    </div>
+                                </div>
+                                <!-- component - card end-->
+                            </div>
+                            <!-- component - card-box ending -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- вариант без активных подписок
+    <section class="sbr-without-active">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 page-title">Программы обслуживания</h2>
+
+                    <div class="subscribe-cards-box sbr-promo-box sbr-promo-box_dvc-page">
+                        <div class="sbr-promo-wrp">
+                            <div class="sbr-promo-card">
+                                <div
+                                        class="card-logo"
+                                        style="
+                        background-image: url(/images/subscribe-card/my-comfort-plus.svg);
+                      "
+                                ></div>
+                                <div class="card-caption b2">
+                                    Хотите, чтобы кондиционер служил долго?
+                                </div>
+                                <div class="card-cta b2">
+                                    Подключите кондиционер к службе дистанционного
+                                    мониторинга.
+                                </div>
+                                <div class="card-controls">
+                                    <button class="button button_secondary card-more-button">
+                                        Подробнее
+                                    </button>
+                                    <button class="button card-arrange">Оформить</button>
+                                </div>
+                                <div
+                                        class="sbr-promo-curtain"
+                                        style="
+                        background-image: url(/images/banners/Rectangle\ 52.jpg);
+                      "
+                                >
+                                    <div class="card-caption b2">
+                                        Хотите, чтобы кондиционер служил долго?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sbr-promo-wrp">
+                            <div class="sbr-promo-card">
+                                <div
+                                        class="card-logo"
+                                        style="
+                        background-image: url(/images/subscribe-card/my-comfort-plus.svg);
+                      "
+                                ></div>
+                                <div class="card-caption b2">
+                                    Хотите, чтобы кондиционер служил долго?
+                                </div>
+                                <div class="card-cta b2">
+                                    Подключите кондиционер к службе дистанционного
+                                    мониторинга.
+                                </div>
+                                <div class="card-controls">
+                                    <button class="button button_secondary card-more-button">
+                                        Подробнее
+                                    </button>
+                                    <button class="button card-arrange">Оформить</button>
+                                </div>
+                                <div
+                                        class="sbr-promo-curtain"
+                                        style="
+                        background-image: url(/images/banners/Rectangle\ 52.jpg);
+                      "
+                                >
+                                    <div class="card-caption b2">
+                                        Хотите, чтобы кондиционер служил долго?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sbr-promo-wrp">
+                            <div class="sbr-promo-card">
+                                <div
+                                        class="card-logo"
+                                        style="
+                        background-image: url(/images/subscribe-card/my-comfort-plus.svg);
+                      "
+                                ></div>
+                                <div class="card-caption b2">
+                                    Хотите, чтобы кондиционер служил долго?
+                                </div>
+                                <div class="card-cta b2">
+                                    Подключите кондиционер к службе дистанционного
+                                    мониторинга.
+                                </div>
+                                <div class="card-controls">
+                                    <button class="button button_secondary card-more-button">
+                                        Подробнее
+                                    </button>
+                                    <button class="button card-arrange">Оформить</button>
+                                </div>
+                                <div
+                                        class="sbr-promo-curtain"
+                                        style="
+                        background-image: url(/images/banners/Rectangle\ 52.jpg);
+                      "
+                                >
+                                    <div class="card-caption b2">
+                                        Хотите, чтобы кондиционер служил долго?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sbr-promo-wrp">
+                            <div class="sbr-promo-card">
+                                <div
+                                        class="card-logo"
+                                        style="
+                        background-image: url(/images/subscribe-card/my-comfort-plus.svg);
+                      "
+                                ></div>
+                                <div class="card-caption b2">
+                                    Хотите, чтобы кондиционер служил долго?
+                                </div>
+                                <div class="card-cta b2">
+                                    Подключите кондиционер к службе дистанционного
+                                    мониторинга.
+                                </div>
+                                <div class="card-controls">
+                                    <button class="button button_secondary card-more-button">
+                                        Подробнее
+                                    </button>
+                                    <button class="button card-arrange">Оформить</button>
+                                </div>
+                                <div
+                                        class="sbr-promo-curtain"
+                                        style="
+                        background-image: url(/images/banners/Rectangle\ 52.jpg);
+                      "
+                                >
+                                    <div class="card-caption b2">
+                                        Хотите, чтобы кондиционер служил долго?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <section class="actions-container section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 page-title">Действия</h2>
+                    <div class="mini-tile mini-tile-mobile-carusel">
+                        <div class="tile-item">
+                            <div
+                                    class="item-pic"
+                                    style="
+                      background-image: url(/images/mini-tile/free-service-icon.svg);
+                    "
+                            ></div>
+                            <div class="item-title h5">Бесплатное ТО</div>
+                        </div>
+                        <div class="tile-item grey">
+                            <div
+                                    class="item-pic"
+                                    style="background-image: url(/images/mini-tile/repairs.svg)"
+                            ></div>
+                            <div class="item-title h5">Заказать ремонт</div>
+                        </div>
+                        <div class="tile-item grey">
+                            <div
+                                    class="item-pic"
+                                    style="
+                      background-image: url(/images/mini-tile/edit-icon.svg);
+                    "
+                            ></div>
+                            <div class="item-title grey h5">Изменить подписку</div>
+                        </div>
+                        <div class="tile-item grey">
+                            <div
+                                    class="item-pic"
+                                    style="
+                      background-image: url(/images/mini-tile/prolong-icon.svg);
+                    "
+                            ></div>
+                            <div class="item-title h5">Продлить подписку</div>
+                        </div>
+                        <div class="tile-item grey">
+                            <div
+                                    class="item-pic"
+                                    style="
+                      background-image: url(/images/mini-tile/cancel-sbr.png);
+                    "
+                            ></div>
+                            <div class="item-title h5">Отменить подписку</div>
+                        </div>
+
+                        <div
+                                class="tile-item countdown-item cd-disable"
+                                data-cycle-days="3000"
+                                data-current-day="1900"
+                        >
+                            <div
+                                    class="item-pic"
+                                    style="
+                      background-image: url(/images/mini-tile/change-icon.svg);
+                    "
+                            ></div>
+                            <div class="tile-item-info-block">
+                                <div class="item-title h5">
+                                    Бесплатная замена
+                                    <span class="cut-in-mobile">устройства</span>
+                                </div>
+                                <div class="item-description b2">
+                                    Будет доступна через
+                                    <span class="item-counter">2523</span>
+                                    <span class="count-unit">дня</span>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-scale"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section remote-control">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 page-title">Мобильное управление</h2>
+                    <div class="good-full-card">
+                        <div
+                                class="good-pic"
+                                style="
+                    background-image: url(/images/other-pages/remote-conroller-image.jpg);
+                  "
+                        ></div>
+                        <div class="good-title">
+                            <div class="good-title-prev b1">
+                                Wi-Fi-контроллер для сплит-систем
+                            </div>
+                            <div class="good-title-program h3">DW01-B</div>
+                        </div>
+                        <div class="good-data-container">
+                            <div class="good-data-item good-status active">
+                                <div class="good-property">Серийный №</div>
+                                <div class="good-value">0000000000</div>
+                            </div>
+                            <div class="good-data-item">
+                                <div class="good-property">Версия прошивки</div>
+                                <div class="good-value">1.0.354.232</div>
+                            </div>
+                            <div class="good-data-item">
+                                <div class="good-property">Дата установки</div>
+                                <div class="good-value">06.12.2020</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remote-control-block">
+                        <div class="rc-line">
+                            <div class="rc-item rc-account">
+                                <div class="account-data-cta added">
+                                    <div class="title h5">
+                        <span
+                                class="current-account-login"
+                                style="display: contents"
+                        >
+                          mycloud@daichi.ru</span
+                        >
+                                    </div>
+                                    <div class="description b2">
+                                        Аккаунт привязан, доступно
+                                        <span class="remote-objects-available"> 2 </span>
+                                        объекта
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rc-item">
+                                <div class="input-container">
+                                    <label for="remote-control-select-obj">Объект</label>
+                                    <div class="input-wrp">
+                                        <div class="select b2" id="remote-control-select-obj">
+                                            <div
+                                                    class="select__backdrop"
+                                                    data-select="backdrop"
+                                            ></div>
+                                            <button
+                                                    type="button"
+                                                    class="select__trigger"
+                                                    data-select="trigger"
+                                            >
+                                                <span class="select-placeholder">Дом</span>
+                                            </button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__items">
+                                                    <li class="select__item" data-select="item">
+                                                        Volkswagen
+                                                    </li>
+                                                    <li class="select__item" data-select="item">
+                                                        Ford
+                                                    </li>
+                                                    <li class="select__item" data-select="item">
+                                                        Toyota
+                                                    </li>
+                                                    <li class="select__item" data-select="item">
+                                                        Nissan
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="assistive-text"></div>
+                                </div>
+                            </div>
+                            <div class="rc-item">
+                                <div class="input-container">
+                                    <label for="remote-control-select-obj">Помещение</label>
+                                    <div class="input-wrp">
+                                        <div class="select b2" id="remote-control-select-room">
+                                            <div
+                                                    class="select__backdrop"
+                                                    data-select="backdrop"
+                                            ></div>
+                                            <button
+                                                    type="button"
+                                                    class="select__trigger"
+                                                    data-select="trigger"
+                                            >
+                                                <span class="select-placeholder">кухня</span>
+                                            </button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__items">
+                                                    <li class="select__item" data-select="item">
+                                                        Volkswagen
+                                                    </li>
+                                                    <li class="select__item" data-select="item">
+                                                        Ford
+                                                    </li>
+                                                    <li class="select__item" data-select="item">
+                                                        Toyota
+                                                    </li>
+                                                    <li class="select__item" data-select="item">
+                                                        Nissan
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="assistive-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rc-line">
+                            <div class="mini-tile">
+                                <div class="tile-item grey">
+                                    <div
+                                            class="item-pic"
+                                            style="
+                          background-image: url(/images/mini-tile/repairs.svg);
+                        "
+                                    ></div>
+                                    <div class="item-title h5">Заказать ремонт</div>
+                                </div>
+                                <div class="tile-item grey">
+                                    <div
+                                            class="item-pic"
+                                            style="
+                          background-image: url(/images/mini-tile/edit-icon.svg);
+                        "
+                                    ></div>
+                                    <div class="item-title grey h5">Изменить подписку</div>
+                                </div>
+                                <div class="tile-item grey">
+                                    <div
+                                            class="item-pic"
+                                            style="
+                          background-image: url(/images/mini-tile/prolong-icon.svg);
+                        "
+                                    ></div>
+                                    <div class="item-title h5">Продлить подписку</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="adress-section section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 page-title">Адрес устройства</h2>
+                    <div class="adress-item">
+                        <div class="street-line">
+                            <div class="street-name h5">
+                                Лермонтовский проспект,
+                                <span class="house-number">8к1</span>
+                            </div>
+                            <div class="city-name b2">Москва</div>
+<!--                            <button class="direct-button"></button>-->
+                            <a href="#" data-id="address" class="call-modal link change-adress">Изменить</a>
+                        </div>
+                        <div class="adress-data-box">
+                            <div class="adress-data-title b2">Подъезд</div>
+                            <div class="adress-data-value b1">1</div>
+                        </div>
+                        <div class="adress-data-box">
+                            <div class="adress-data-title b2">Кв / Офис</div>
+                            <div class="adress-data-value b1">172</div>
+                        </div>
+                        <div class="adress-data-box">
+                            <div class="adress-data-title b2">Домофон</div>
+                            <div class="adress-data-value b1">172#8766</div>
+                        </div>
+                        <div class="adress-data-box">
+                            <div class="adress-data-title b2">Этаж</div>
+                            <div class="adress-data-value b1">10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section requests-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 page-title">Мои обращения</h2>
+                    <div class="requests-box">
+                        <div class="request-item h6">
+                            <div class="request-date-line">25.11.2020</div>
+                            <div class="request-line">
+                                <div class="request-descriptions">
+                                    <div class="request-name">
+                                        Подключение программы обслуживания «Климат онлайн»
+                                    </div>
+                                    <div class="request-device b2">Daikin FTXB-C</div>
+                                </div>
+                                <div class="request-controls">
+                                    <div class="request-cost">2000 руб.</div>
+                                    <div class="request-status b2">Запланировано</div>
+                                </div>
+                            </div>
+
+                            <div class="request-detail-modal popup">
+                                <div class="popup-content-c">
+
+                                    <button class="popup__exit-button"></button>
+                                    <div class="popup-title h2">
+                                        Подключение программы обслуживания «Мой комфорт Премиум» |
+                                        тариф 1 год
+                                    </div>
+                                    <div class="request-modal-progress-bar">
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done current">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-line wait ok b1">
+                                        <div class="alert-line-pic"></div>
+                                        <div class="alert-line-content">Оплачен</div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">
+                                            Устройства (<span class="devices_qnt">1</span>)
+                                        </div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="product-item">
+                                                    <div
+                                                            class="product-item-pic"
+                                                            style="
+                                background-image: url(/images/product-list/conditioner-1.jpg);
+                              "
+                                                    ></div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-name h5">
+                                                            Daichi DA70DQ1-B
+                                                        </div>
+                                                        <div class="product-item-data-string b2">
+                                                            <div class="product-item-data-value">
+                                                                ABCD1234HDKDKMSD
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-item-description b2">
+                                                            На даче
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Адрес</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="adress-item">
+                                                    <div class="street-line">
+                                                        <div class="street-name h5">
+                                                            Лермонтовский проспект,
+                                                            <span class="house-number">8к1</span>
+                                                        </div>
+                                                        <div class="city-name b2">Москва</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Подъезд</div>
+                                                        <div class="adress-data-value b1">1</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Кв / Офис</div>
+                                                        <div class="adress-data-value b1">172</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Домофон</div>
+                                                        <div class="adress-data-value b1">172#8766</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Этаж</div>
+                                                        <div class="adress-data-value b1">10</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Документы</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="document-item">
+                                                    <div class="document-pic"></div>
+                                                    <div class="document-info">
+                                                        <div class="document-name b2">
+                                                            Договор Оферты
+                                                            09876543212456789098754321234567890987654321234567890
+                                                        </div>
+                                                        <div class="document-data b3">
+                                                            <span class="document-size">10MB</span>,
+                                                            <span class="document-format">PDF</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="document-controls">
+                                                        <a
+                                                                download="#"
+                                                                href="#"
+                                                                class="document-download"
+                                                        ></a>
+                                                        <a href="#" class="document-preview"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-controller">
+                                        <div class="expense-item">
+                                            <div class="expense-descriptions">
+                                                <div class="expense-name h6">
+                                                    Подключение программы обслуживания «Мой комфорт
+                                                    Премиум» | тариф 1 год
+                                                </div>
+                                                <div class="expense-device b2">Daikin FTXB-C</div>
+                                            </div>
+                                            <div class="expense-cost h6">5000 руб.</div>
+                                        </div>
+
+                                        <div class="summary-line h4">
+                                            <span>К оплате</span>
+                                            <span class="final-cost">5000 руб.</span>
+                                        </div>
+                                        <button class="button invoice-order-button">
+                                            Оплатиить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="request-item h6">
+                            <div class="request-date-line">25.11.2020</div>
+                            <div class="request-line">
+                                <div class="request-descriptions">
+                                    <div class="request-name">Техническое обслуживание</div>
+                                    <div class="request-device b2">Daikin FTXB-C</div>
+                                </div>
+                                <div class="request-controls">
+                                    <div class="request-cost">2000 руб.</div>
+                                    <div class="request-status done b2">Выполнено</div>
+                                </div>
+                            </div>
+                            <div class="request-detail-modal popup">
+                                <div class="popup-content-c">
+
+                                    <button class="popup__exit-button"></button>
+                                    <div class="popup-title h2">
+                                        Подключение программы обслуживания «Мой комфорт Премиум» |
+                                        тариф 1 год
+                                    </div>
+                                    <div class="request-modal-progress-bar">
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done current">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-line wait ok b1">
+                                        <div class="alert-line-pic"></div>
+                                        <div class="alert-line-content">Оплачен</div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">
+                                            Устройства (<span class="devices_qnt">1</span>)
+                                        </div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="product-item">
+                                                    <div
+                                                            class="product-item-pic"
+                                                            style="
+                                background-image: url(/images/product-list/conditioner-1.jpg);
+                              "
+                                                    ></div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-name h5">
+                                                            Daichi DA70DQ1-B
+                                                        </div>
+                                                        <div class="product-item-data-string b2">
+                                                            <div class="product-item-data-value">
+                                                                ABCD1234HDKDKMSD
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-item-description b2">
+                                                            На даче
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Адрес</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="adress-item">
+                                                    <div class="street-line">
+                                                        <div class="street-name h5">
+                                                            Лермонтовский проспект,
+                                                            <span class="house-number">8к1</span>
+                                                        </div>
+                                                        <div class="city-name b2">Москва</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Подъезд</div>
+                                                        <div class="adress-data-value b1">1</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Кв / Офис</div>
+                                                        <div class="adress-data-value b1">172</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Домофон</div>
+                                                        <div class="adress-data-value b1">172#8766</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Этаж</div>
+                                                        <div class="adress-data-value b1">10</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Документы</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="document-item">
+                                                    <div class="document-pic"></div>
+                                                    <div class="document-info">
+                                                        <div class="document-name b2">
+                                                            Договор Оферты
+                                                            09876543212456789098754321234567890987654321234567890
+                                                        </div>
+                                                        <div class="document-data b3">
+                                                            <span class="document-size">10MB</span>,
+                                                            <span class="document-format">PDF</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="document-controls">
+                                                        <a
+                                                                download="#"
+                                                                href="#"
+                                                                class="document-download"
+                                                        ></a>
+                                                        <a href="#" class="document-preview"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-controller">
+                                        <div class="expense-item">
+                                            <div class="expense-descriptions">
+                                                <div class="expense-name h6">
+                                                    Подключение программы обслуживания «Мой комфорт
+                                                    Премиум» | тариф 1 год
+                                                </div>
+                                                <div class="expense-device b2">Daikin FTXB-C</div>
+                                            </div>
+                                            <div class="expense-cost h6">5000 руб.</div>
+                                        </div>
+
+                                        <div class="summary-line h4">
+                                            <span>К оплате</span>
+                                            <span class="final-cost">5000 руб.</span>
+                                        </div>
+                                        <button class="button invoice-order-button">
+                                            Оплатиить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="request-item h6">
+                            <div class="request-date-line">25.11.2020</div>
+                            <div class="request-line">
+                                <div class="request-descriptions">
+                                    <div class="request-name">
+                                        Подключение программы обслуживания «Климат онлайн»
+                                    </div>
+                                    <div class="request-device b2">Daikin FTXB-C</div>
+                                </div>
+                                <div class="request-controls">
+                                    <div class="request-cost">2000 руб.</div>
+                                    <div class="request-status b2">Запланировано</div>
+                                </div>
+                            </div>
+                            <div class="request-detail-modal popup">
+                                <div class="popup-content-c">
+
+                                    <button class="popup__exit-button"></button>
+                                    <div class="popup-title h2">
+                                        Подключение программы обслуживания «Мой комфорт Премиум» |
+                                        тариф 1 год
+                                    </div>
+                                    <div class="request-modal-progress-bar">
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done current">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-line wait ok b1">
+                                        <div class="alert-line-pic"></div>
+                                        <div class="alert-line-content">Оплачен</div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">
+                                            Устройства (<span class="devices_qnt">1</span>)
+                                        </div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="product-item">
+                                                    <div
+                                                            class="product-item-pic"
+                                                            style="
+                                background-image: url(/images/product-list/conditioner-1.jpg);
+                              "
+                                                    ></div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-name h5">
+                                                            Daichi DA70DQ1-B
+                                                        </div>
+                                                        <div class="product-item-data-string b2">
+                                                            <div class="product-item-data-value">
+                                                                ABCD1234HDKDKMSD
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-item-description b2">
+                                                            На даче
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Адрес</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="adress-item">
+                                                    <div class="street-line">
+                                                        <div class="street-name h5">
+                                                            Лермонтовский проспект,
+                                                            <span class="house-number">8к1</span>
+                                                        </div>
+                                                        <div class="city-name b2">Москва</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Подъезд</div>
+                                                        <div class="adress-data-value b1">1</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Кв / Офис</div>
+                                                        <div class="adress-data-value b1">172</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Домофон</div>
+                                                        <div class="adress-data-value b1">172#8766</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Этаж</div>
+                                                        <div class="adress-data-value b1">10</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Документы</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="document-item">
+                                                    <div class="document-pic"></div>
+                                                    <div class="document-info">
+                                                        <div class="document-name b2">
+                                                            Договор Оферты
+                                                            09876543212456789098754321234567890987654321234567890
+                                                        </div>
+                                                        <div class="document-data b3">
+                                                            <span class="document-size">10MB</span>,
+                                                            <span class="document-format">PDF</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="document-controls">
+                                                        <a
+                                                                download="#"
+                                                                href="#"
+                                                                class="document-download"
+                                                        ></a>
+                                                        <a href="#" class="document-preview"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-controller">
+                                        <div class="expense-item">
+                                            <div class="expense-descriptions">
+                                                <div class="expense-name h6">
+                                                    Подключение программы обслуживания «Мой комфорт
+                                                    Премиум» | тариф 1 год
+                                                </div>
+                                                <div class="expense-device b2">Daikin FTXB-C</div>
+                                            </div>
+                                            <div class="expense-cost h6">5000 руб.</div>
+                                        </div>
+
+                                        <div class="summary-line h4">
+                                            <span>К оплате</span>
+                                            <span class="final-cost">5000 руб.</span>
+                                        </div>
+                                        <button class="button invoice-order-button">
+                                            Оплатиить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="request-item h6">
+                            <div class="request-date-line">25.11.2020</div>
+                            <div class="request-line">
+                                <div class="request-descriptions">
+                                    <div class="request-name">
+                                        Подключение программы обслуживания «Климат онлайн»
+                                    </div>
+                                    <div class="request-device b2">Daikin FTXB-C</div>
+                                </div>
+                                <div class="request-controls">
+                                    <div class="request-cost">2000 руб.</div>
+                                    <div class="request-status b2">Запланировано</div>
+                                </div>
+                            </div>
+
+                            <div class="request-detail-modal popup">
+                                <div class="popup-content-c">
+
+                                    <button class="popup__exit-button"></button>
+                                    <div class="popup-title h2">
+                                        Подключение программы обслуживания «Мой комфорт Премиум» |
+                                        тариф 1 год
+                                    </div>
+                                    <div class="request-modal-progress-bar">
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point done current">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                        <div class="point">
+                                            <div class="point-line"></div>
+                                            <div class="point-dot">
+                                                <span class="point-name">status</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-line wait ok b1">
+                                        <div class="alert-line-pic"></div>
+                                        <div class="alert-line-content">Оплачен</div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">
+                                            Устройства (<span class="devices_qnt">1</span>)
+                                        </div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="product-item">
+                                                    <div
+                                                            class="product-item-pic"
+                                                            style="
+                                background-image: url(/images/product-list/conditioner-1.jpg);
+                              "
+                                                    ></div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-name h5">
+                                                            Daichi DA70DQ1-B
+                                                        </div>
+                                                        <div class="product-item-data-string b2">
+                                                            <div class="product-item-data-value">
+                                                                ABCD1234HDKDKMSD
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-item-description b2">
+                                                            На даче
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Адрес</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="adress-item">
+                                                    <div class="street-line">
+                                                        <div class="street-name h5">
+                                                            Лермонтовский проспект,
+                                                            <span class="house-number">8к1</span>
+                                                        </div>
+                                                        <div class="city-name b2">Москва</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Подъезд</div>
+                                                        <div class="adress-data-value b1">1</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Кв / Офис</div>
+                                                        <div class="adress-data-value b1">172</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Домофон</div>
+                                                        <div class="adress-data-value b1">172#8766</div>
+                                                    </div>
+                                                    <div class="adress-data-box">
+                                                        <div class="adress-data-title b2">Этаж</div>
+                                                        <div class="adress-data-value b1">10</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-dropdown-container">
+                                        <div class="modal-dropdown-title h4">Документы</div>
+                                        <div class="modal-dropdown-box">
+                                            <div class="modal-dropdown-content">
+                                                <div class="document-item">
+                                                    <div class="document-pic"></div>
+                                                    <div class="document-info">
+                                                        <div class="document-name b2">
+                                                            Договор Оферты
+                                                            09876543212456789098754321234567890987654321234567890
+                                                        </div>
+                                                        <div class="document-data b3">
+                                                            <span class="document-size">10MB</span>,
+                                                            <span class="document-format">PDF</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="document-controls">
+                                                        <a
+                                                                download="#"
+                                                                href="#"
+                                                                class="document-download"
+                                                        ></a>
+                                                        <a href="#" class="document-preview"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-controller">
+                                        <div class="expense-item">
+                                            <div class="expense-descriptions">
+                                                <div class="expense-name h6">
+                                                    Подключение программы обслуживания «Мой комфорт
+                                                    Премиум» | тариф 1 год
+                                                </div>
+                                                <div class="expense-device b2">Daikin FTXB-C</div>
+                                            </div>
+                                            <div class="expense-cost h6">5000 руб.</div>
+                                        </div>
+
+                                        <div class="summary-line h4">
+                                            <span>К оплате</span>
+                                            <span class="final-cost">5000 руб.</span>
+                                        </div>
+                                        <button class="button invoice-order-button">
+                                            Оплатиить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article id="address" class="popup adress-change-popup">
+        <div class="popup-content-c">
+            <div class="popup__exit-button"></div>
+            <div class="popup-content popup-content_info">
+                <h2 class="popup-title h2">Добавить/изменить адрес</h2>
+                <form action="post" class="adress-change-form">
+                    <div class="input-container inp-b">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Город*</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+
+                    <div class="input-container inp-b">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Улица*</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+
+                    <div class="input-container inp-sm">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Дом / Корпус*</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+
+                    <div class="input-container inp-sm">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Подъезд</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+
+                    <div class="input-container inp-sm n_mr">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Кв / Офис*</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+
+                    <div class="input-container inp-md">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Домофон</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+                    <div class="input-container inp-md">
+                        <label for="#main-enterance-input" class="enterance-label"
+                        >Этаж</label
+                        >
+                        <div class="input-wrp">
+                            <input
+                                    id="main-enterance-input input-js"
+                                    type="text"
+                                    class="b1 enterance-input"
+                                    placeholder="Не указано"
+                            />
+                            <div class="alert-box"></div>
+                        </div>
+                        <div class="ive-text"></div>
+                    </div>
+                    <button class="button button_secondary delete-adress-button">
+                        Удалить адрес
+                    </button>
+                    <button class="button save-adress-button">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </article>
+</main>
+<div class="blackout"></div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/maskedinput.min.js"></script>
+<script src="js/mini-tile-carusel.js"></script>
+<script src="js/products-list-mobile-slider.js"></script>
+<script src="js/select-input.js"></script>
+<script src="js/app.js"></script>
+</html>

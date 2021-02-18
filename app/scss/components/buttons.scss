@@ -47,6 +47,7 @@
   color: $lead;
   background-color: $light-text;
   border: 1px solid $stroke;
+  white-space: nowrap;
 
   &:hover {
     color: $primary;
