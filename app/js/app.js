@@ -203,7 +203,7 @@ $(document).on("click", ".request-item", (e) => {
 
     const request_item = $(e.currentTarget);
 
-    request_item.find(".popup").addClass("active");
+    request_item.children(".popup").addClass("active");
 });
 
 // modal dropdown

@@ -108,10 +108,11 @@
 }
 
 .subscribe-status {
-  max-width: 106px;
+  max-width: 126px;
   display: flex;
   align-items: center;
   height: 38px;
+  flex-shrink: 0;
 
   @include media-breakpoint-down(md) {
     max-width: 100%;
@@ -245,6 +246,21 @@
   &.overdue {
     .subscribe-indicator {
       background-color: $disabled;
+    }
+  }
+  &.blocked {
+    .subscribe-indicator {
+      background-color: $alert;
+    }
+  }
+  &.freezed {
+    .subscribe-indicator {
+      background-color: $btn-bg;
+    }
+  }
+  &.expired {
+    .subscribe-indicator {
+      background-color: #ff9900;
     }
   }
 }

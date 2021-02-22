@@ -44,6 +44,8 @@ html {
   overflow-y: auto;
   height: 100vh;
   padding-top: 100px;
+  padding-left: 0;
+  padding-right: 0;
   width: unset;
 
   @include media-breakpoint-down(sm) {
@@ -62,6 +64,10 @@ html {
       max-width: 100%;
       width: 100%;
       border-radius: 0;
+    }
+
+    @media(max-width: 767px) {
+      padding: 30px 15px;
     }
   }
 

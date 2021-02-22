@@ -66,37 +66,66 @@
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
+
+    @media(max-wdith: 767px) {
+      background-position: left center;
+    }
   }
   &-info {
     padding: 16px 0;
     line-height: 19px;
+    max-width: calc(100% - 137px);
 
     @include media-breakpoint-down(md) {
       padding: 0;
     }
+
+    @media(max-width: 1279px) {
+      max-width: 100%;
+    }
   }
+
+  &--cloud .product-item-info {
+    padding-right: 70px;
+
+    @media(max-width: 1279px) {
+      padding-right: 0;
+    }
+  }
+
+
   &-name {
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
     line-height: 18px;
 
     max-width: 100%;
     color: #444;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
+    //display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    //display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
 
     @include media-breakpoint-down(md) {
-      max-height: 33px;
-      height: 33px;
+      // max-height: 33px;
+      // height: 33px;
     }
 
     @include media-breakpoint-down(sm) {
       font-size: 13px;
       line-height: 15px;
-      max-height: 30px;
-      height: 30px;
+      // max-height: 30px;
+      // height: 30px;
     }
 
     @include media-breakpoint-down(xs) {
@@ -121,6 +150,7 @@
   }
   &-description {
     color: $minor;
+    margin-bottom: 6px;
 
     @include media-breakpoint-down(sm) {
       font-size: 11px;

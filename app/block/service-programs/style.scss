@@ -167,7 +167,7 @@ main.main {
   margin-right: -30px;
   margin-bottom: -15px;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   flex-wrap: wrap;
   line-height: 18px;
   width: 100%;
@@ -188,12 +188,28 @@ main.main {
 }
 
 .program-option {
+  position: relative;
   margin-right: 30px;
   margin-bottom: 15px;
-  flex: 1 0 calc(33% - 60px);
+  padding-left: 37px;
+  width: calc((100% - 60px) / 3);
 
-  &:last-child {
+  &:nth-child(3n) {
     margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+    background-image: url("/images/icons/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   @include media-breakpoint-down(md) {
@@ -202,6 +218,38 @@ main.main {
     width: 100%;
     max-width: 100%;
   }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+    
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.service-program-item--cloud .options-container {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 25px;
+  }
+
+}
+
+.service-program-item--cloud .note {
+  margin-top: 15px;
+
+  @include media-breakpoint-down(md) {
+    //margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    //margin-bottom: 25px;
+  }
+
 }
 
 .service-program-control-block {
