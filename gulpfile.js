@@ -32,6 +32,9 @@ const imagemin = require('gulp-imagemin');
 // Подключаем модуль gulp-newer
 const newer = require('gulp-newer');
 
+// Подключаем модуль gulp-replace
+const replace = require('gulp-replace');
+
 // Подключаем модуль del
 const del = require('del');
 
@@ -71,6 +74,7 @@ function styles() {
         .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
         .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
+        .pipe(replace('url(/images/', 'url(../images/'))
         .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
         .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
@@ -80,6 +84,7 @@ function stylesBlocks() {
         .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
         .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
+        .pipe(replace('url(/images/', 'url(../images/'))
         .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
         .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
