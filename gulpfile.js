@@ -35,6 +35,9 @@ const newer = require('gulp-newer');
 // Подключаем модуль gulp-replace
 const replace = require('gulp-replace');
 
+// Подключаем sourcemaps
+const sourcemaps = require('gulp-sourcemaps');
+
 // Подключаем модуль del
 const del = require('del');
 
@@ -89,6 +92,18 @@ function stylesBlocks() {
         .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
+function stylesAll() {
+    return src('app/' + preprocessor + '/style.' + preprocessor + '') // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
+        .pipe(sourcemaps.init())
+        .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
+        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
+        .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
+        .pipe(replace('url(/images/', 'url(../images/'))
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
+        .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
+}
+
 function images() {
     return src('app/images/src/**/*') // Берём все изображения из папки источника
         .pipe(newer('app/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
@@ -128,6 +143,8 @@ function startwatch() {
 
     watch('app/**/*.' + preprocessor, stylesBlocks);
 
+    watch('app/**/*.' + preprocessor, stylesAll);
+
     // Мониторим файлы HTML на изменения
     watch('app/**/*.html').on('change', browserSync.reload);
 
@@ -151,6 +168,9 @@ exports.styles = styles;
 // Экспортируем функцию stylesBlocks() в таск styles
 exports.stylesBlocks = stylesBlocks;
 
+// Экспортируем функцию stylesAll() в таск styles
+exports.stylesAll = stylesAll;
+
 // Экспорт функции images() в таск images
 exports.images = images;
 
@@ -158,10 +178,10 @@ exports.images = images;
 exports.cleanimg = cleanimg;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
-exports.build = series(cleandist, styles, stylesBlocks, scripts, scriptBlocks, images, buildcopy);
+exports.build = series(cleandist, styles, stylesBlocks, stylesAll, scripts, scriptBlocks, images, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(styles, scripts, scriptBlocks, stylesBlocks, browsersync, startwatch);
+exports.default = parallel(styles, scripts, scriptBlocks, stylesBlocks, stylesAll, browsersync, startwatch);
 
 
 

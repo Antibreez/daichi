@@ -32,6 +32,8 @@
 
   &:hover {
     background-color: #f6f6f6;
+    text-decoration: none;
+    border: 1px solid $stroke;
 
     .product-item-pic {
       background-color: $white;
@@ -67,7 +69,7 @@
       width: 100%;
     }
 
-    @media(max-wdith: 767px) {
+    @media(max-width: 767px) {
       background-position: left center;
     }
   }
@@ -156,6 +158,10 @@
       font-size: 11px;
       line-height: 16px;
     }
+  }
+
+  &-data-value {
+    color: #444;
   }
 }
 

@@ -21,6 +21,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-import-once": "^2.0.2",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {

@@ -136,6 +136,10 @@ article.db_unit {
   .subscribe-cards-box {
     margin: 0 -7px;
 
+    @media(min-width: 1280px) {
+      max-width: calc(100% + 14px) !important;
+    }
+
     .subscribe-card {
 
       @include media-breakpoint-down(md) {
@@ -243,14 +247,18 @@ article.db_unit {
   grid-area: servicePrograms;
 
   .sbr-promo-box_db {
-    width: 705px;
+    width: 705px !important;
 
     @include media-breakpoint-down(md) {
-      width: 100%;
+      width: 100% !important;
     }
 
     .sbr-promo-wrp {
       margin: 0 15px 15px 0;
+
+      &:nth-last-child(2) {
+        margin-right: 0;
+      }
 
       @include media-breakpoint-down(sm) {
         width: 170px;
@@ -545,11 +553,15 @@ article.db_unit {
 }
 
 .show-all {
+  display: flex;
+}
+
+.service-programs-section  .show-all {
   display: none;
 }
 
 .slick-initialized .slick-slide.show-all {
-  display: none;
+  display: flex;
 
   @include media-breakpoint-down(md) {
     display: flex;
@@ -567,7 +579,6 @@ article.db_unit {
     height: 100%;
   }
 }
-
 .show-all-bg {
   background: $white;
   width: 100%;

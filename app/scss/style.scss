@@ -1,0 +1,54 @@
+// fonts
+@import "../fonts/Gotham_Pro/stylesheet.css";
+
+// bootstrap
+@import "variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/grid";
+
+//vendor
+@import "../block/slickSlider.scss";
+
+//main
+@import "layout";
+@import "header";
+@import "footer";
+@import "components/inputs.scss";
+@import "components/buttons.scss";
+@import "components/mini-tile.scss";
+@import "components/search-bar.scss";
+@import "components/tabs-container.scss";
+@import "components/subscribe-cards.scss";
+@import "components/breadcrumbs.scss";
+@import "components/products-list.scss";
+@import "components/documents-block.scss";
+@import "components/popup&blackout.scss";
+@import "components/custom-grids.scss";
+@import "components/requests-box.scss";
+@import "components/modal-dropdown.scss";
+@import "components/adress-item.scss";
+@import "components/invoice-controller.scss";
+@import "components/banners.scss";
+@import "components/account-cta.scss";
+@import "components/alert-line.scss";
+@import "components/swiper-bundle.scss";
+
+
+
+//blocks
+@import "../block/menu-pa/menu-pa.scss";
+@import "../block/checkout/style.scss";
+@import "../block/dashboard/style.scss";
+@import "../block/datapicker/datapicker.scss";
+@import "../block/enterance-page/style.scss";
+@import "../block/good-page/style.scss";
+@import "../block/invoice-page/style.scss";
+@import "../block/manage_no-subscribes/style.scss";
+@import "../block/manage-subscribes/style.scss";
+@import "../block/my_devices/style.scss";
+@import "../block/my_profile/style.scss";
+@import "../block/my_requests/style.scss";
+@import "../block/service-programs/style.scss";
+
