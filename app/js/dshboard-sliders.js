@@ -6,16 +6,19 @@ let isMobileProd = window.innerWidth < 768;
 
 const productBox = document.querySelector('.my-devices-section .products-box');
 
-const showMoreProducts = document.querySelector('.my-devices-section .show-all').cloneNode(true);
+const showMoreProducts = document.querySelector('.my-devices-section .show-all') && document.querySelector('.my-devices-section .show-all').cloneNode(true);
 
-const wrapped = document.querySelector('.my-devices-section .products-box').cloneNode(true);
-const unwrapped = document.querySelector('.my-devices-section .products-box').cloneNode(false);
+const wrapped = document.querySelector('.my-devices-section .products-box') && document.querySelector('.my-devices-section .products-box').cloneNode(true);
+const unwrapped = document.querySelector('.my-devices-section .products-box') && document.querySelector('.my-devices-section .products-box').cloneNode(false);
 
-const parts = wrapped.querySelectorAll('.product-item');
-parts.forEach(function(item) {
-    unwrapped.appendChild(item.cloneNode(true));
-})
-unwrapped.appendChild(showMoreProducts.cloneNode(true));
+if (productBox) {
+    const parts = wrapped.querySelectorAll('.product-item');
+    parts.forEach(function(item) {
+        unwrapped.appendChild(item.cloneNode(true));
+    })
+    unwrapped.appendChild(showMoreProducts.cloneNode(true));
+}
+
 
 const productDeskOptions = {
     dots: false,
@@ -52,25 +55,27 @@ const productMobileOptions = {
     touchThreshold: 20
 }
 
-if (window.innerWidth < 1280) {
-    //$(".product-item").unwrap();
-    productBox.innerHTML = unwrapped.innerHTML;
-}
-
-if (isDesktopProd) {
-    $(".products-box-slider-js").slick(productDeskOptions);
-
-    $(".products-box-slider-js").slick('slickRemove', false);
-
-    //$(".products-box-slider-js").slick('unslick');
-}
-
-if (isTabletProd) {
-    $(".products-box-slider-js").slick(productTabletOptions);
-}
-
-if (isMobileProd) {
-    $(".products-box-slider-js").slick(productMobileOptions);
+if (productBox) {
+    if (window.innerWidth < 1280) {
+        //$(".product-item").unwrap();
+        productBox.innerHTML = unwrapped.innerHTML;
+    }
+    
+    if (isDesktopProd) {
+        $(".products-box-slider-js").slick(productDeskOptions);
+    
+        $(".products-box-slider-js").slick('slickRemove', false);
+    
+        //$(".products-box-slider-js").slick('unslick');
+    }
+    
+    if (isTabletProd) {
+        $(".products-box-slider-js").slick(productTabletOptions);
+    }
+    
+    if (isMobileProd) {
+        $(".products-box-slider-js").slick(productMobileOptions);
+    }
 }
 // $(".products-box-slider-js").slick({
 //     dots: false,
@@ -154,7 +159,7 @@ let isDesktop = window.innerWidth >= 1280;
 let isTablet = window.innerWidth < 1280 && window.innerWidth >= 768;
 let isMobile = window.innerWidth < 768;
 
-const showMore = document.querySelector('.my-subscribes-section .show-all').cloneNode(true);
+const showMore = document.querySelector('.my-subscribes-section .show-all') && document.querySelector('.my-subscribes-section .show-all').cloneNode(true);
 
 const deskOptions = {
     dots: false,
@@ -314,87 +319,91 @@ $(window).on('resize', function() {
     //PRODUCTS
     //===============
 
-    if (isDesktopProd && window.innerWidth < 1280 && window.innerWidth >= 768) {
-        //console.log('to TABLET');
-        isDesktopProd = false;
-        isTabletProd = true;
-        isMobileProd = false;
-
-        $(".products-box-slider-js").slick('unslick');
-
-        productBox.innerHTML = unwrapped.innerHTML;
-        
-        $(".products-box-slider-js").slick(productTabletOptions);
-
-        //$('.products-box-slider-js').slick('slickAdd', showMoreProducts, false);
+    if (productBox) {
+        if (isDesktopProd && window.innerWidth < 1280 && window.innerWidth >= 768) {
+            //console.log('to TABLET');
+            isDesktopProd = false;
+            isTabletProd = true;
+            isMobileProd = false;
+    
+            $(".products-box-slider-js").slick('unslick');
+    
+            productBox.innerHTML = unwrapped.innerHTML;
+            
+            $(".products-box-slider-js").slick(productTabletOptions);
+    
+            //$('.products-box-slider-js').slick('slickAdd', showMoreProducts, false);
+        }
+    
+        if (isDesktopProd && window.innerWidth < 768) {
+            //console.log('to MOBILE');
+            isDesktopProd = false;
+            isMobileProd = true;
+            isTabletProd = false;
+            
+            productBox.innerHTML = unwrapped.innerHTML;
+    
+            $(".products-box-slider-js").slick('unslick');
+    
+            $(".products-box-slider-js").slick(productMobileOptions);
+    
+            //$('.products-box-slider-js').slick('slickAdd', showMoreProducts, false);
+        }
+    
+        if (isTabletProd && window.innerWidth >= 1280) {
+            //console.log('to DESKTOP');
+            isDesktopProd = true;
+            isTabletProd = false;
+            isMobileProd = false;
+    
+            $(".products-box-slider-js").slick('unslick');
+            
+            productBox.innerHTML = wrapped.innerHTML;
+    
+            $(".products-box-slider-js").slick(productDeskOptions);
+    
+            $('.products-box-slider-js').slick('slickRemove', false);
+        }
+    
+        if (isTabletProd && window.innerWidth < 767) {
+            //console.log('to MOBILE');
+            isMobileProd = true;
+            isTabletProd = false;
+            isDesktopProd = false;
+    
+            $(".products-box-slider-js").slick('unslick');
+    
+            $(".products-box-slider-js").slick(productMobileOptions);
+        }
+    
+        if (isMobileProd && window.innerWidth >= 768 && window.innerWidth < 1280) {
+            //console.log('to TABLET');
+            isMobileProd = false;
+            isTabletProd = true;
+            isDesktopProd = false;
+    
+            $(".products-box-slider-js").slick('unslick');
+    
+            $(".products-box-slider-js").slick(productTabletOptions);
+        }
+    
+        if (isMobileProd && window.innerWidth >= 1280) {
+            //console.log('to DESKTOP');
+            isMobileProd = false;
+            isTabletProd = false;
+            isDesktopProd = true;
+    
+            $(".products-box-slider-js").slick('unslick');
+            
+            productBox.innerHTML = wrapped.innerHTML;
+    
+            $(".products-box-slider-js").slick(productDeskOptions);
+    
+            $('.products-box-slider-js').slick('slickRemove', false);
+        }
     }
 
-    if (isDesktopProd && window.innerWidth < 768) {
-        //console.log('to MOBILE');
-        isDesktopProd = false;
-        isMobileProd = true;
-        isTabletProd = false;
-        
-        productBox.innerHTML = unwrapped.innerHTML;
-
-        $(".products-box-slider-js").slick('unslick');
-
-        $(".products-box-slider-js").slick(productMobileOptions);
-
-        //$('.products-box-slider-js').slick('slickAdd', showMoreProducts, false);
-    }
-
-    if (isTabletProd && window.innerWidth >= 1280) {
-        //console.log('to DESKTOP');
-        isDesktopProd = true;
-        isTabletProd = false;
-        isMobileProd = false;
-
-        $(".products-box-slider-js").slick('unslick');
-        
-        productBox.innerHTML = wrapped.innerHTML;
-
-        $(".products-box-slider-js").slick(productDeskOptions);
-
-        $('.products-box-slider-js').slick('slickRemove', false);
-    }
-
-    if (isTabletProd && window.innerWidth < 767) {
-        //console.log('to MOBILE');
-        isMobileProd = true;
-        isTabletProd = false;
-        isDesktopProd = false;
-
-        $(".products-box-slider-js").slick('unslick');
-
-        $(".products-box-slider-js").slick(productMobileOptions);
-    }
-
-    if (isMobileProd && window.innerWidth >= 768 && window.innerWidth < 1280) {
-        //console.log('to TABLET');
-        isMobileProd = false;
-        isTabletProd = true;
-        isDesktopProd = false;
-
-        $(".products-box-slider-js").slick('unslick');
-
-        $(".products-box-slider-js").slick(productTabletOptions);
-    }
-
-    if (isMobileProd && window.innerWidth >= 1280) {
-        //console.log('to DESKTOP');
-        isMobileProd = false;
-        isTabletProd = false;
-        isDesktopProd = true;
-
-        $(".products-box-slider-js").slick('unslick');
-        
-        productBox.innerHTML = wrapped.innerHTML;
-
-        $(".products-box-slider-js").slick(productDeskOptions);
-
-        $('.products-box-slider-js').slick('slickRemove', false);
-    }
+    
 
     //===============
     //SUBSCRIBES
@@ -402,12 +411,22 @@ $(window).on('resize', function() {
     if (isDesktopSubscribe && window.innerWidth < 1280) {
         $(".sbr-promo-box_db").slick(subsOptions);
         isDesktopSubscribe = false;
-        console.log('subs to TAblet');
+        //console.log('subs to TAblet');
     }
 
     if (!isDesktopSubscribe && window.innerWidth >= 1280) {
         $(".sbr-promo-box_db").slick('unslick');
         isDesktopSubscribe = true;
-        console.log('subs to Desk');
+        //console.log('subs to Desk');
     }
 });
+
+if ($('.my-devices-section .products-box').length === 0) {
+    $('.my-devices-section .slider-controls').hide();
+    $('.my-devices-section .group-controller').hide();
+}
+
+if ($('.my-subscribes-section .subscribe-cards-box').length === 0) {
+    $('.my-subscribes-section .slider-controls').hide();
+    $('.my-subscribes-section .group-controller').hide();
+}
