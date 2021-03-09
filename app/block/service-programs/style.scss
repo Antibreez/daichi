@@ -8,15 +8,21 @@ main.main {
 
 .service-programs-page {
   .page-title {
+    text-align: left;
+    margin-bottom: 30px;
+    max-width: none;
+
     @include media-breakpoint-down(sm) {
       text-align: center;
       font-size: 27px;
       line-height: 33px;
+      margin-bottom: 15px;
     }
   }
 
   .page-subtitle {
     color: $minor;
+    text-align: left;
 
     @include media-breakpoint-down(sm) {
       text-align: center;

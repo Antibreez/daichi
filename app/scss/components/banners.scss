@@ -81,3 +81,11 @@
     line-height: 18px;
   }
 }
+
+.banner_2 .banner-description {
+  max-width: 400px;
+
+  @media(max-width: 767px) {
+    padding-right: 30px;
+  }
+}
