@@ -422,11 +422,11 @@ $(window).on('resize', function() {
 });
 
 if ($('.my-devices-section .products-box').length === 0) {
-    $('.my-devices-section .slider-controls').hide();
-    $('.my-devices-section .group-controller').hide();
+    $('.my-devices-section .slider-controls').css('visibility', 'hidden');
+    $('.my-devices-section .group-controller').css('visibility', 'hidden');
 }
 
 if ($('.my-subscribes-section .subscribe-cards-box').length === 0) {
-    $('.my-subscribes-section .slider-controls').hide();
-    $('.my-subscribes-section .group-controller').hide();
+    $('.my-subscribes-section .slider-controls').css('visibility', 'hidden');
+    $('.my-subscribes-section .group-controller').css('visibility', 'hidden');
 }

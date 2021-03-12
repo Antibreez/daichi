@@ -357,6 +357,35 @@ article.db_unit {
   }
 }
 
+.my-devices-section__register-block {
+  & .tile-item {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+
+  & .tile-item .item-title {
+    margin: 0 0 0 15px;
+  }
+}
+
+.my-devices-section__register {
+  padding: 42px 30px 30px;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  text-align: center;
+
+  & h1.page-title.h3 {
+    text-align: center;
+    margin: 30px 0 15px;
+  }
+
+  & .banner-button {
+    margin: 20px auto 0;
+    width: max-content;
+  }
+}
+
 .my-requests-section {
   grid-area: myRequests;
 }
