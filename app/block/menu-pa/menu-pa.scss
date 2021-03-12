@@ -17,8 +17,9 @@
 
 .menu-pa {
   width: 100%;
-  padding-top: 81px;
+  padding-top: 81px !important;
   background-color: #f6f6f6;
+  margin-bottom: 75px !important;
 
   &__container {
     width: 100%;
@@ -61,7 +62,7 @@
 
 @media(max-width: 1599px) {
   .menu-pa {
-    padding-top: 65px;
+    padding-top: 65px !important;
   }
 }
 
@@ -86,7 +87,7 @@
 
 @media(max-width: 959px) {
   .menu-pa {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 }
 

@@ -104,6 +104,13 @@ function stylesAll() {
         .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
+function stylesCloud() {
+    return src('app/css/style.min.css')
+        .pipe(replace('url(../img/', 'url(../images/'))
+        .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
+        .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
+}
+
 function images() {
     return src('app/images/src/**/*') // Берём все изображения из папки источника
         .pipe(newer('app/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
@@ -145,6 +152,8 @@ function startwatch() {
 
     watch('app/**/*.' + preprocessor, stylesAll);
 
+    watch('app/css/style.min.css', stylesCloud());
+
     // Мониторим файлы HTML на изменения
     watch('app/**/*.html').on('change', browserSync.reload);
 
@@ -171,6 +180,9 @@ exports.stylesBlocks = stylesBlocks;
 // Экспортируем функцию stylesAll() в таск styles
 exports.stylesAll = stylesAll;
 
+// Экспортируем функцию stylesCloud() в таск styles
+exports.stylesCloud = stylesCloud;
+
 // Экспорт функции images() в таск images
 exports.images = images;
 
@@ -178,10 +190,10 @@ exports.images = images;
 exports.cleanimg = cleanimg;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
-exports.build = series(cleandist, styles, stylesBlocks, stylesAll, scripts, scriptBlocks, images, buildcopy);
+exports.build = series(cleandist, styles, stylesBlocks, stylesAll, stylesCloud, scripts, scriptBlocks, images, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(styles, scripts, scriptBlocks, stylesBlocks, stylesAll, browsersync, startwatch);
+exports.default = parallel(styles, scripts, scriptBlocks, stylesBlocks, stylesAll, stylesCloud, browsersync, startwatch);
 
 
 

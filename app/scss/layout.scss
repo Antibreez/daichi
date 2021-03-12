@@ -12,6 +12,10 @@ img {
 
 a {
   border-bottom: unset;
+  
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .main {
