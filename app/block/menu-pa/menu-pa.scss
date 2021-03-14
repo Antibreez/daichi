@@ -93,6 +93,8 @@
 
 @media(max-width: 767px) {
   .menu-pa {
+    margin-top: 64px;
+    
     &__item {
       &:nth-child(n) {
         margin-right: 25px;

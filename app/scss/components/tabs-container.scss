@@ -21,6 +21,16 @@
   line-height: 23px;
   transition: color 0.25s ease;
   color: $minor;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  height: auto;
+  font-family: inherit;
+
+  &:hover {
+    background-color: transparent;
+    color: #00adef;
+  }
 
   &:last-child {
     margin-right: 0;
