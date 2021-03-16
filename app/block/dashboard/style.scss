@@ -237,8 +237,14 @@ article.db_unit {
     }
   }
 
+  .slick-list {
+    width: 100% !important;
+  }
+
   .slick-track {
     padding: 0 0 1px 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
