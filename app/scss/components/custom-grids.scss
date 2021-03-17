@@ -1,4 +1,4 @@
-.block-with-banners {
+.block-with-statements {
   display: flex;
 
   .main-content-wrp {
@@ -15,7 +15,7 @@
     }
   }
 
-  .banners-wrp {
+  .statements-wrp {
     margin-left: 60px;
     width: 420px;
     flex-shrink: 0;
@@ -24,7 +24,7 @@
       display: none;
     }
 
-    .banner{
+    .statement{
       margin-bottom: 50px;
 
       &:last-child{

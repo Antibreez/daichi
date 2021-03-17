@@ -1,53 +1,53 @@
-.banner {
+.statement {
   border-radius: 5px;
   width: 100%;
   border: 1px $stroke solid;
 }
 
-.banner_type-1 {
+.statement_type-1 {
   text-align: center;
 
-  .banner-pic {
+  .statement-pic {
     height: 160px;
     background: 50% 50% / cover;
   }
-  .banner-content {
+  .statement-content {
     padding: 30px;
   }
-  .banner-title {
+  .statement-title {
     line-height: 33px;
   }
-  .banner-description {
+  .statement-description {
     margin-top: 15px;
     line-height: 23px;
     color: $minor;
   }
-  .banner-button {
+  .statement-button {
     margin: 20px auto 0;
     max-width: 100%;
   }
 }
 
 
-.banner_type-2{
+.statement_type-2{
   padding: 30px;
   width: 100%;
   height: 320px;
   background: 50% 50%/cover;
   
 
-  .banner-head{
+  .statement-head{
     display: flex;
     align-items: center;
   }
-  .banner-logo{
+  .statement-logo{
     margin-right: 15px;
     height: 48px;
     width: 48px;
     background: 50% 50%/contain no-repeat;
   }
 
-  .banner-of{
+  .statement-of{
     color: $minor;
     line-height: 19px;
 
@@ -56,7 +56,7 @@
       line-height: 16px;
     }
   }
-  .banner-name{
+  .statement-name{
     line-height: 33px;
 
     @include media-breakpoint-down(sm){
@@ -65,7 +65,7 @@
     }
     
   }
-  .banner-description{
+  .statement-description{
     margin-top: 15px;
     color: $minor;
     line-height: 23px;
@@ -75,14 +75,14 @@
       line-height: 19px;
     }
   }
-  .banner-link{
+  .statement-link{
     display: block;
     margin-top: 20px;
     line-height: 18px;
   }
 }
 
-.banner_2 .banner-description {
+.statement_2 .statement-description {
   max-width: 400px;
 
   @media(max-width: 767px) {
