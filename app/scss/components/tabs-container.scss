@@ -44,6 +44,16 @@
     font-size: 13px;
     line-height: 19px;
   }
+
+  @media(max-width: 767px) {
+    margin-right: 0;
+    margin-left: 0 !important;
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .tab-item.active {

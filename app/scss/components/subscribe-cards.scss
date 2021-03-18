@@ -405,3 +405,118 @@
     display: none;
   }
 }
+
+.subscribe-cards-box__slider-container {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .sbr-promo-card {
+    width: 100%;
+    min-height: 286px;
+  }
+
+  .subscribe-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .sbr-promo-curtain {
+    span {
+      display: block;
+      max-width: 150px;
+      font-size: 13px;
+      line-height: 19px;
+      color: #444;
+    }
+  }
+
+  .sbr-promo-curtain--mobile {
+    background-size: auto 100%;
+    background-position: right center;
+  }
+
+  @media(max-width: 1279px) {
+    .sbr-promo-card {
+      min-height: 346px;
+    }
+
+    .sbr-promo-curtain {
+      height: 265px;
+      background-position: center center;
+      span {
+        display: none;
+      }
+    }
+
+    .sbr-promo-curtain--mobile {
+      background-size: auto 100%;
+      background-position: right center;
+    }
+  }
+
+  @media(max-width: 959px) {
+    .sbr-promo-curtain--mobile {
+      background-image: url("../images/dashboard/phone.jpg") !important;
+      background-size: cover;
+      background-position: center center;
+    }
+    .sbr-promo-curtain--climat-online {
+      background-image: url("../images/dashboard/girl.jpg") !important;
+      background-size: cover;
+      background-position: center center;
+    }
+    .sbr-promo-curtain--my-comfort {
+      background-image: url("../images/dashboard/room.jpg") !important;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+.subscribe-cards-box-device {
+  width: 100% !important;
+  position: relative;
+
+  .slider-controls {
+    position: absolute;
+    right: 0;
+    top: -15px;
+
+    @media(max-width: 1279px) {
+      display: flex;
+    }
+
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static !important;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.tab-content-subs {
+  padding-bottom: 50px;
+}
+
+@media(max-width: 767px) {
+  .subscribe-cards-box__slider-slide {
+    width: 170px !important;
+  }
+
+  .subscribe-cards-box__slider-container {
+    .sbr-promo-card {
+      min-height: 287px;
+    }
+
+    .sbr-promo-curtain {
+      height: 210px;
+    }
+  }
+}

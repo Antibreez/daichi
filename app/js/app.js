@@ -472,3 +472,37 @@ function setSliderWidth (selector) {
         $(selector).width(`${window.innerWidth - 15}px`)
     }
 }
+
+(function() {
+    $(window).on('load', function() {
+        const $slider = $('.subscribe-cards-box__slider-container');
+    
+        if (!$slider) {
+            return;
+        }
+
+        const swiper = new Swiper('.subscribe-cards-box__slider-container', {
+            mousewheel: true,
+            slidesPerView: 'auto',
+            freeMode: true,
+            watchOverflow: true,
+            spaceBetween: 5,
+            navigation: {
+              nextEl: '.subscribe-cards-box-device  .dvc-prev-btn',
+              prevEl: '.subscribe-cards-box-device  .dvc-next-btn',
+            },
+      
+            breakpoints: {
+              768: {
+                spaceBetween: 15,
+                slidesPerView: 3,
+              },
+              1280: {
+                spaceBetween: 15,
+                slidesPerView: 3,
+                freeMode: false,
+              }
+            }
+          });
+    })
+})();
