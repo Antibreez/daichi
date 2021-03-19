@@ -17,6 +17,39 @@ $(function () {
     //# sourceMappingURL=swiper-bundle.min.js.map
     //============================
 
+    (function() {
+        $(window).on('load', function() {
+            const $slider = $('.subscribe-cards-box__slider-container');
+        
+            if (!$slider) {
+                return;
+            }
+    
+            const swiper = new Swiper('.subscribe-cards-box__slider-container', {
+                mousewheel: true,
+                slidesPerView: 'auto',
+                freeMode: true,
+                watchOverflow: true,
+                spaceBetween: 5,
+                navigation: {
+                  nextEl: '.subscribe-cards-box-device  .dvc-prev-btn',
+                  prevEl: '.subscribe-cards-box-device  .dvc-next-btn',
+                },
+          
+                breakpoints: {
+                  768: {
+                    spaceBetween: 15,
+                    slidesPerView: 3,
+                  },
+                  1280: {
+                    spaceBetween: 15,
+                    slidesPerView: 3,
+                    freeMode: false,
+                  }
+                }
+              });
+        })
+    })();
     
     $(window).on('load', function () {
         const swiper = new Swiper('.menu-pa__container', {
@@ -33,6 +66,13 @@ $(function () {
         });
     });
 
+    $('.pick-devices .pick-item').on('click', function() {
+        $(this).toggleClass('active');
+        let num = $(this).closest('.pick-devices').find('.pick-item.active').length;
+        let text = num > 0 ? ' (' + num + ')' : '';
+
+        $(this).closest('.pick-devices').next().find('.devices-quantity').text(text);
+    })
 
 
     $('.js-mask-phone').mask('+7 (999) 999-99-99')
@@ -472,37 +512,3 @@ function setSliderWidth (selector) {
         $(selector).width(`${window.innerWidth - 15}px`)
     }
 }
-
-(function() {
-    $(window).on('load', function() {
-        const $slider = $('.subscribe-cards-box__slider-container');
-    
-        if (!$slider) {
-            return;
-        }
-
-        const swiper = new Swiper('.subscribe-cards-box__slider-container', {
-            mousewheel: true,
-            slidesPerView: 'auto',
-            freeMode: true,
-            watchOverflow: true,
-            spaceBetween: 5,
-            navigation: {
-              nextEl: '.subscribe-cards-box-device  .dvc-prev-btn',
-              prevEl: '.subscribe-cards-box-device  .dvc-next-btn',
-            },
-      
-            breakpoints: {
-              768: {
-                spaceBetween: 15,
-                slidesPerView: 3,
-              },
-              1280: {
-                spaceBetween: 15,
-                slidesPerView: 3,
-                freeMode: false,
-              }
-            }
-          });
-    })
-})();

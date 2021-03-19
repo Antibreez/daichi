@@ -120,8 +120,18 @@ button:focus {
     width: auto;
     line-height: 1;
   }
+
+  &:hover {
+    cursor: pointer;
+    background: #dadada url("/images/icons/direct-arrow-black.svg") 50% 50%/7px 10px no-repeat;
+  }
 }
 .delete-button{
   background-image: url("/images/icons/exit-icon.svg");
   background-size: 10px 10px;
+
+  &:hover {
+    background-image: url("/images/icons/exit-icon-black.svg");
+    background-size: 10px 10px;
+  }
 }

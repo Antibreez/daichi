@@ -71,7 +71,7 @@ main.main.checkout {
   display: flex;
   flex-wrap: wrap;
 }
-.option-item {
+.option-item, .pick-item {
   padding: 15px 39px 15px 15px;
   border-radius: 5px;
   border: 1px solid $stroke;
@@ -94,6 +94,35 @@ main.main.checkout {
     flex-basis: 100%;
   }
 }
+
+.pick-item {
+  width: calc(50% - 15px);
+  margin: 0 0 15px;
+  flex-grow: 0;
+  flex-basis: unset;
+
+  &:nth-child(2n + 1) {
+    margin-right: 15px;
+  }
+
+  &.active {
+
+    .option-checkmark {
+      border: none;
+      background-image: url("../images/icons/picked-icon.svg");
+    }
+  }
+
+  @media(max-width: 599px) {
+    width: 100%;
+
+    &:nth-child(2n + 1) {
+      margin-right: 0;
+    }
+  
+  }
+}
+
 .option-title {
   margin-bottom: 5px;
 }
