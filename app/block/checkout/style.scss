@@ -33,6 +33,10 @@ main.main.checkout {
 .ch-form-section {
   margin-bottom: 50px;
 
+  .cta-vers-card:hover {
+    background-color: #f6f6f6;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -47,6 +51,10 @@ main.main.checkout {
 
     .cta-vers-card {
       width: calc(50% - 7px);
+
+      &:hover {
+        background-color: #f6f6f6;
+      }
 
       @include media-breakpoint-down(sm) {
         width: 100%;
