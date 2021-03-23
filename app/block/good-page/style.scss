@@ -294,3 +294,52 @@ main.main {
     margin: 0 15px 15px 0;
   }
 }
+
+.device-actions {
+  padding-top: 50px;
+
+  &--no-title {
+    padding-top: 0;
+  }
+
+  &__item-link {
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+
+  @media(max-width: 1279px) {
+    &--no-title {
+      padding-top: 15px;
+    }
+  }
+
+  @media(max-width: 767px) {
+    max-width: 738px;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+
+    &--no-title {
+      padding-top: 0;
+    }
+
+    .device-actions__title {
+      max-width: 738px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .container,
+    .row,
+    .col-md-12 {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

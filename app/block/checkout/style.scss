@@ -34,7 +34,11 @@ main.main.checkout {
   margin-bottom: 50px;
 
   .cta-vers-card:hover {
-    background-color: #f6f6f6;
+    //background-color: #f6f6f6;
+      .direct-button {
+        background: #dadada url(../images/icons/direct-arrow-black.svg) 50% 50%/7px 10px no-repeat;
+        cursor: pointer;
+      }
   }
 
   &:last-child {
@@ -53,7 +57,11 @@ main.main.checkout {
       width: calc(50% - 7px);
 
       &:hover {
-        background-color: #f6f6f6;
+        //background-color: #f6f6f6;
+      .direct-button {
+        background: #dadada url(../images/icons/direct-arrow-black.svg) 50% 50%/7px 10px no-repeat;
+        cursor: pointer;
+      }
       }
 
       @include media-breakpoint-down(sm) {
@@ -271,6 +279,9 @@ main.main.checkout {
   .product-item {
     margin-bottom: 0;
     border-radius: 5px 5px 0 0;
+    &:hover {
+      background-color: #fff;
+    }
   }
   .product-additional-line {
     padding: 15px;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/external.css"/>
     <link rel="stylesheet" href="css/internal.css"/> 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body>
 <header class="header">
@@ -484,7 +485,7 @@
         </div>
     </section>
     -->
-    <section class="actions-container section">
+    <!-- <section class="actions-container section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -565,7 +566,145 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <div class="cloud-device__actions device-actions">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="device-actions__title info-block__main-title">Действия</h2>
+                    <ul class="device-actions__list">
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--service">
+                          Заказать ТО
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--repair" disabled>
+                          Заказать ремонт
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--freez">
+                          Заморозить подписку
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--delete">
+                          Больше не использую
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--return">
+                          Всё ещё использую
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--replacement" disabled>
+                          <span>Бесплатная замена устройства</span><br>
+                          <span>
+                            Будет доступна через&nbsp;
+                            <span class="device-actions__days-to-replacement">2523 дня</span>
+                          </span>
+                          <div class="device-actions__progressbar">
+                            <div class="device-actions__progressbar-current" style="width: 33%"></div>
+                          </div>
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--replacement">
+                          Бесплатная замена устройства
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--free-service" disabled>
+                          <span>Бесплатное ТО</span><br>
+                          <span>
+                            Будет доступно&nbsp;
+                            <span class="device-actions__free-service-date">06.12.2020</span>
+                          </span>
+                          <div class="device-actions__progressbar">
+                            <div class="device-actions__progressbar-current" style="width: 33%"></div>
+                          </div>
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--free-service">
+                          <span>Бесплатное ТО</span>
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--free-service">
+                          <span>Бесплатное ТО</span>
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--free-service">
+                          <span>Бесплатное ТО</span>
+                        </button>
+                      </li>
+                    </ul>
+            
+                    <!--Действия в виде слайдера для мобильного разрешения-->
+                    <div class="device-actions__slider-container  swiper-container">
+                      <div class="device-actions__slider-wrapper  swiper-wrapper">
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--service">
+                            Заказать ТО
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--repair" disabled>
+                            Заказать ремонт
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--freez">
+                            Заморозить подписку
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--delete">
+                            Больше не использую
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--return">
+                            Всё ещё использую
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--replacement" disabled>
+                            <span>Бесплатная замена</span>
+                            <div class="device-actions__progressbar">
+                              <div class="device-actions__progressbar-current" style="width: 33%"></div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--replacement">
+                            Бесплатная замена
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--free-service" disabled>
+                            <span>Бесплатное ТО</span>
+                            <div class="device-actions__progressbar">
+                              <div class="device-actions__progressbar-current" style="width: 33%"></div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                          <button href="#" class="device-actions__item-link  device-actions__item-link--free-service">
+                            <span>Бесплатное ТО</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="section remote-control">
         <div class="container">
@@ -694,42 +833,58 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rc-line">
-                            <div class="mini-tile">
-                                <div class="tile-item grey">
-                                    <div
-                                            class="item-pic"
-                                            style="
-                          background-image: url(/images/mini-tile/repairs.svg);
-                        "
-                                    ></div>
-                                    <div class="item-title h5">Заказать ремонт</div>
-                                </div>
-                                <div class="tile-item grey">
-                                    <div
-                                            class="item-pic"
-                                            style="
-                          background-image: url(/images/mini-tile/edit-icon.svg);
-                        "
-                                    ></div>
-                                    <div class="item-title grey h5">Изменить подписку</div>
-                                </div>
-                                <div class="tile-item grey">
-                                    <div
-                                            class="item-pic"
-                                            style="
-                          background-image: url(/images/mini-tile/prolong-icon.svg);
-                        "
-                                    ></div>
-                                    <div class="item-title h5">Продлить подписку</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="cloud-device__actions device-actions device-actions--no-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="device-actions__list">
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--control">
+                          Управлять в приложении
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--alert">
+                          Контроллер не работает
+                        </button>
+                      </li>
+                      <li class="device-actions__item">
+                        <button href="#" class="device-actions__item-link  device-actions__item-link--delete">
+                          Больше не использую
+                        </button>
+                      </li>
+                    </ul>
+            
+                    <!--Действия в виде слайдера для мобильного разрешения-->
+                    <div class="device-actions__slider-container  swiper-container">
+                      <div class="device-actions__slider-wrapper  swiper-wrapper">
+                        <div class="device-actions__slide  swiper-slide">
+                            <button href="#" class="device-actions__item-link  device-actions__item-link--control">
+                              Управлять в приложении
+                            </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                            <button href="#" class="device-actions__item-link  device-actions__item-link--alert">
+                              Контроллер не работает
+                            </button>
+                        </div>
+                        <div class="device-actions__slide  swiper-slide">
+                            <button href="#" class="device-actions__item-link  device-actions__item-link--delete">
+                              Больше не использую
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="adress-section section">
         <div class="container">
@@ -1604,9 +1759,11 @@
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/maskedinput.min.js"></script>
 <script src="js/mini-tile-carusel.js"></script>
 <script src="js/products-list-mobile-slider.js"></script>
 <script src="js/select-input.js"></script>
 <script src="js/app.js"></script>
+<script src="js/main.min.js"></script>
 </html>

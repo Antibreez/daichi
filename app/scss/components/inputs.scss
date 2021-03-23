@@ -1,3 +1,12 @@
+button {
+  color: inherit;
+  
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
+
 .input-container {
   width: 100%;
   margin-bottom: 15px;
@@ -109,7 +118,15 @@
     input,
     .select__trigger {
       border-color: $primary;
+      background-color: #fff;
     }
+  }
+}
+
+.select__trigger {
+  &:hover,
+  &:focus {
+    background-color: #fff;
   }
 }
 
@@ -268,7 +285,8 @@
   overflow-y: auto;
   border-radius: 5px;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
-  z-index: 1;
+  z-index: 10;
+  background-color: #fff;
 }
 
 .select_show .select__dropdown {

@@ -15,7 +15,10 @@
     }
 
     &:hover {
-        background: #f6f6f6;
+        //background: #f6f6f6;
+        .direct-button {
+            background: #dadada url(../images/icons/direct-arrow-black.svg) 50% 50%/7px 10px no-repeat;
+        }
     }
 
     .title {
@@ -25,6 +28,12 @@
             font-size: 13px;
             line-height: 15px;
         }
+    }
+}
+
+.call-modal {
+    &:hover {
+        cursor: pointer;
     }
 }
 

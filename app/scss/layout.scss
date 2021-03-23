@@ -135,9 +135,17 @@ a {
   font-size: 11px;
 }
 
-.page-title {
+h1.page-title,
+h2.page-title {
+  font-size: 31px;
   line-height: 37px;
   margin-bottom: 25px;
+
+  @media(max-width: 1023px) {
+    font-size: 31px;
+    line-height: 37px;
+    margin-bottom: 25px;
+  }
 
   @include media-breakpoint-down(sm) {
     font-size: 27px;
@@ -146,10 +154,12 @@ a {
   }
 }
 
-h1.page-title {
+h1.page-title,
+h2.page-title {
   text-align: left;
   max-width: none;
   margin: 0 0 30px;
+  color: #444;
   
   @media(max-width: 767px) {
     margin-bottom: 15px;
