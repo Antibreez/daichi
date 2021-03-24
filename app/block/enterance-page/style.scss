@@ -11,7 +11,6 @@
 
   @include media-breakpoint-down(md) {
     height: auto;
-    min-height: calc(100vh - 80px);
   }
 
   @include media-breakpoint-down(xs) {
@@ -26,10 +25,12 @@
 
   @media(max-width: 1599px) {
     margin-top: 65px;
+    min-height: calc(100vh - 65px);
   }
 
   @media(max-width: 959px) {
     margin-top: 50px;
+    min-height: calc(100vh - 50px);
   }
 }
 
