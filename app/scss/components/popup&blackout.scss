@@ -189,7 +189,7 @@ html {
     height: 100%;
     padding-bottom: 0;
     max-height: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 145px;
     overflow-y: auto;
     // display: flex;
     // flex-direction: column;
@@ -213,11 +213,11 @@ html {
     max-height: none !important;
   }
 
-  .find-qr-popup {
-    .popup-content {
-      padding-bottom: 170px;
-    }
-  }
+  // .find-qr-popup {
+  //   .popup-content {
+  //     padding-bottom: 170px;
+  //   }
+  // }
 
   .qr-scanner-modal {
     .popup-content-c {
