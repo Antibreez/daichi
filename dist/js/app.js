@@ -294,12 +294,14 @@ $(document).on("click", ".modal-dropdown-title", (e) => {
 });
 
 $(document).on("mouseover", ".alert-box", (e) => {
-    const alertBox = $(e.currentTarget);
-
-    alertBox
-        .closest(".input-container")
-        .find(".input-alert-window")
-        .addClass("input-alert-window_visible");
+    if (window.innerWidth > 767) {
+        const alertBox = $(e.currentTarget);
+    
+        alertBox
+            .closest(".input-container")
+            .find(".input-alert-window")
+            .addClass("input-alert-window_visible");
+    }
 });
 
 $(document).on("mouseleave", ".alert-box", (e) => {
@@ -485,20 +487,20 @@ function addMobDateBg() {
     }
 }
 
-function changeModalHeightOnMobile() {
-    if (window.innerWidth < 768) {
-        $('.popup').each(function () {
-            const bannerHeight = $(this).find('.popup-decorative-picture').length != 0 ?
-                $(this).find('.popup-decorative-picture').height() : 0;
-            const btnsHeight = $(this).find('.modal-controls').length != 0 ?
-                $(this).find('.modal-controls').height() : 0;
-            const height = window.innerHeight - bannerHeight - btnsHeight
+// function changeModalHeightOnMobile() {
+//     if (window.innerWidth < 768) {
+//         $('.popup').each(function () {
+//             const bannerHeight = $(this).find('.popup-decorative-picture').length != 0 ?
+//                 $(this).find('.popup-decorative-picture').height() : 0;
+//             const btnsHeight = $(this).find('.modal-controls').length != 0 ?
+//                 $(this).find('.modal-controls').height() : 0;
+//             const height = window.innerHeight - bannerHeight - btnsHeight
 
-            $(this).css('max-height', `${window.innerHeight}px`)
-            $(this).find('.popup-content').css('max-height', `${height}px`)
-        })
-    }
-}
+//             $(this).css('max-height', `${window.innerHeight}px`)
+//             $(this).find('.popup-content').css('max-height', `${height}px`)
+//         })
+//     }
+// }
 
 $(function () {
     setSliderWidth('.need-resize')

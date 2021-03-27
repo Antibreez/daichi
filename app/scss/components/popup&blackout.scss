@@ -116,6 +116,7 @@ html {
   border: none;
   outline: transparent;
   flex-shrink: 0;
+  z-index: 100;
 
   &:active,
   &:focus {
@@ -198,10 +199,17 @@ html {
     // }
   }
 
+  .popup-decorative-picture {
+    width: 100vw;
+    transform: translate(-15px, -30px);
+  }
+
   .popup-content {
     overflow-y: unset;
     //flex-grow: 1;
     padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
     max-height: none !important;
   }
 
@@ -251,10 +259,15 @@ html {
     }
   }
 
-  .modal-controls {
+  div.modal-controls {
     position: fixed;
     display: none;
+    padding-left: 15px;
+    padding-right: 15px;
 
+    .button {
+      width: 100%;
+    }
   }
 
   .popup.active .modal-controls {
