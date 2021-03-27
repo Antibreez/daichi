@@ -213,6 +213,12 @@ html {
     max-height: none !important;
   }
 
+  .find-qr-popup {
+    .popup-content {
+      padding-bottom: 170px;
+    }
+  }
+
   .qr-scanner-modal {
     .popup-content-c {
       padding: 0;
