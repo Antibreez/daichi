@@ -475,9 +475,9 @@ $(document).on('click', '.change-phone-modal', function (e) {
     $(`#${$(this).data('id')}`).addClass('active')
 })
 
-$(document).on('scroll', changeModalHeightOnMobile)
-$(document).on('resize', changeModalHeightOnMobile)
-changeModalHeightOnMobile()
+// $(document).on('scroll', changeModalHeightOnMobile)
+// $(document).on('resize', changeModalHeightOnMobile)
+// changeModalHeightOnMobile()
 
 function addMobDateBg() {
     if (window.innerWidth < 768 && $('.mob-datePicker-bg').length < 1 && $('.datepicker.active').length != 0) {
@@ -487,20 +487,20 @@ function addMobDateBg() {
     }
 }
 
-// function changeModalHeightOnMobile() {
-//     if (window.innerWidth < 768) {
-//         $('.popup').each(function () {
-//             const bannerHeight = $(this).find('.popup-decorative-picture').length != 0 ?
-//                 $(this).find('.popup-decorative-picture').height() : 0;
-//             const btnsHeight = $(this).find('.modal-controls').length != 0 ?
-//                 $(this).find('.modal-controls').height() : 0;
-//             const height = window.innerHeight - bannerHeight - btnsHeight
+function changeModalHeightOnMobile() {
+    if (window.innerWidth < 768) {
+        $('.popup').each(function () {
+            const bannerHeight = $(this).find('.popup-decorative-picture').length != 0 ?
+                $(this).find('.popup-decorative-picture').height() : 0;
+            const btnsHeight = $(this).find('.modal-controls').length != 0 ?
+                $(this).find('.modal-controls').height() : 0;
+            const height = window.innerHeight - bannerHeight - btnsHeight
 
-//             $(this).css('max-height', `${window.innerHeight}px`)
-//             $(this).find('.popup-content').css('max-height', `${height}px`)
-//         })
-//     }
-// }
+            $(this).css('max-height', `${window.innerHeight}px`)
+            $(this).find('.popup-content').css('max-height', `${height}px`)
+        })
+    }
+}
 
 $(function () {
     setSliderWidth('.need-resize')
