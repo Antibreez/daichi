@@ -36,7 +36,8 @@ button:focus {
     outline: transparent;
   }
 
-  &.disabled {
+  &.disabled,
+  &:disabled {
     background-color: $disabled;
     pointer-events: none;
   }

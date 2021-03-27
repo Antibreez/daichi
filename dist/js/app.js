@@ -48,8 +48,6 @@ $(function () {
               });
         })
     })();
-
-    console.log(Swiper);
     
     $(window).on('load', function () {
         const swiper = new Swiper('.menu-pa__container', {
@@ -158,38 +156,39 @@ $(function () {
 
     setSliderWidth('.need-resize')
 
-    if(window.innerWidth < 768){
-        $(".db_subscribe-cards-box").slick({
-            dots: false,
-            speed: 300,
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            prevArrow: ".sbr-prev-btn",
-            nextArrow: ".sbr-next-btn",
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                        arrows: false,
-                        variableWidth: true,
-                        slidesToShow: 3,
-                        infinite: false,
-                    },
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        swipeToSlide: true,
-                        touchThreshold: 10,
-                        variableWidth: true,
-                        slidesToShow: 2,
-                        infinite: true,
-                    },
-                },
-            ],
-        });
-    }
+    // if (window.innerWidth < 768) {
+
+    //     $(".db_subscribe-cards-box").slick({
+    //         dots: false,
+    //         speed: 300,
+    //         infinite: true,
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1,
+    //         prevArrow: ".sbr-prev-btn",
+    //         nextArrow: ".sbr-next-btn",
+    //         responsive: [
+    //             {
+    //                 breakpoint: 1280,
+    //                 settings: {
+    //                     arrows: false,
+    //                     variableWidth: true,
+    //                     slidesToShow: 3,
+    //                     infinite: false,
+    //                 },
+    //             },
+    //             {
+    //                 breakpoint: 768,
+    //                 settings: {
+    //                     swipeToSlide: true,
+    //                     touchThreshold: 10,
+    //                     variableWidth: true,
+    //                     slidesToShow: 2,
+    //                     infinite: true,
+    //                 },
+    //             },
+    //         ],
+    //     });
+    // }
 });
 
 // const versInput = $(".enterance-input");
@@ -368,32 +367,34 @@ $(document).on("click", ".find-qr-js", (e) => {
 });
 
 $(document).on("click", ".qr-scanner-trigger", (e) => {
-    $(".qr-scanner-modal").addClass("active");
+    if (window.innerWidth < 768) {
+        $(".qr-scanner-modal").addClass("active");
+    
+        QrScanner.hasCamera()
+            .then(
+                (res) => {
+                    if (res !== true) throw Error("Not camera");
+                    console.log("decoded qr code:", "result", res);
+                    let videoElement = document.querySelector(".js-video-box");
+                    window.qrScanner = new QrScanner(videoElement, (result) => {
+                        console.log("decoded qr code:", result);
+                        $(".warranty-qr-inner").val(result);
+                        qrScanner.stop();
+                        $(".qr-scanner-modal").removeClass("active");
+                    });
+                    window.qrScanner.start();
+                },
+                (err) => {
+                    console.log(err);
+                }
+            )
+            .catch((error) => {
+                console.log(error);
+                text.innerHTML = error.message;
+            });
+    }
 
-    QrScanner.hasCamera()
-        .then(
-            (res) => {
-                if (res !== true) throw Error("Not camera");
-                console.log("decoded qr code:", "result", res);
-                let videoElement = document.querySelector(".js-video-box");
-                window.qrScanner = new QrScanner(videoElement, (result) => {
-                    console.log("decoded qr code:", result);
-                    $(".warranty-qr-inner").val(result);
-                    qrScanner.stop();
-                    $(".qr-scanner-modal").removeClass("active");
-                });
-                window.qrScanner.start();
-            },
-            (err) => {
-                console.log(err);
-            }
-        )
-        .catch((error) => {
-            console.log(error);
-            text.innerHTML = error.message;
-        });
-
-    window.qrScanner.start();
+    //window.qrScanner.start();
 });
 
 $(document).on('input', '.file-input-js', function (e) {

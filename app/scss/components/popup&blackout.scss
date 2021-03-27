@@ -180,4 +180,87 @@ html {
   }
 }
 
+@media(max-width: 767px) {
+  .popup {
+    max-height: none !important;
+  }
+  .popup .popup-content-c {
+    height: 100%;
+    padding-bottom: 0;
+    max-height: 100%;
+    padding-bottom: 145px;
+    overflow-y: auto;
+    // display: flex;
+    // flex-direction: column;
+
+    // & > * {
+    //   flex-shrink: 0;
+    // }
+  }
+
+  .popup-content {
+    overflow-y: unset;
+    //flex-grow: 1;
+    padding-bottom: 20px;
+    max-height: none !important;
+  }
+
+  .qr-scanner-modal {
+    .popup-content-c {
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+
+      .qr-tip {
+        display: none;
+      }
+    }
+
+    .qr-part {
+      height: 100%;
+    }
+
+    .camera-layout {
+      height: 100%;
+    }
+
+    &::before {
+      content: "QR код расположен на боковой панели корпуса внешнего или внутреннего блока кондиционера";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      max-width: 375px;
+      padding: 280px 15px 0;
+      background-image: url("../images/qr-border.png");
+      background-size: 230px 230px;
+      background-repeat: no-repeat;
+      background-position: top center;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+      display: none;
+      font-size: 13px;
+      line-height: 19px;
+      color: #fff;
+      text-align: center;
+      mix-blend-mode: hard-light;
+    }
+
+    &.active::before {
+      display: block;
+    }
+  }
+
+  .modal-controls {
+    position: fixed;
+    display: none;
+
+  }
+
+  .popup.active .modal-controls {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 

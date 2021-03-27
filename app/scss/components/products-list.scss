@@ -5,6 +5,14 @@
 
 }
 
+.product-item__alert-message {
+  display: none;
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ff0000;
+}
+
 .product-item {
   margin: 0 15px 15px 0;
   padding: 15px;
@@ -15,6 +23,17 @@
   align-items: center;
   position: relative;
   transition: .25s ease;
+
+  &--error {
+    border-color: #ff0000;
+    & + .product-item__alert-message {
+      display: block;
+    }
+
+    &:hover {
+      border-color: #ff0000 !important;
+    }
+  }
 
   @include media-breakpoint-down(md) {
     padding: 20px;
