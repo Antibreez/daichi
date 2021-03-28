@@ -378,22 +378,18 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                     if (res !== true) throw Error("Not camera");
                     console.log("decoded qr code:", "result", res);
                     let videoElement = document.querySelector(".js-video-box");
-
-                    try {
-                        window.qrScanner = new QrScanner(videoElement, (result) => {
-                            console.log("decoded qr code:", result);
+                    window.qrScanner = new QrScanner(videoElement, (result) => {
+                        //console.log("decoded qr code:", result);
+                        try {
                             $(".warranty-qr-inner").val(result);
-                            qrScanner.stop();
-                            $(".qr-scanner-modal").removeClass("active");
-                        });
-                    } catch (e) {
+                        } catch (e) {
+
+                        }
                         
-                    }
-
-
+                        qrScanner.stop();
+                        $(".qr-scanner-modal").removeClass("active");
+                    });
                     window.qrScanner.start();
-                        
-                    
                 },
                 (err) => {
                     console.log(err);
