@@ -409,7 +409,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                     html5QrCode.stop();
                     $(".qr-scanner-modal").removeClass("active");
                 }
-                const config = { fps: 10, qrbox: 250, aspectRatio: 0.5625 };
+                const config = { fps: 10, qrbox: 250, aspectRatio: 0.5 };
 
                 $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
                     html5QrCode.stop();

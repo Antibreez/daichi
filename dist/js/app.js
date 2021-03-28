@@ -370,7 +370,7 @@ $(document).on("click", ".find-qr-js", (e) => {
 
 $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
-        //$(".qr-scanner-modal").addClass("active");
+        // $(".qr-scanner-modal").addClass("active");
     
         // QrScanner.hasCamera()
         //     .then(
@@ -409,15 +409,18 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                     html5QrCode.stop();
                     $(".qr-scanner-modal").removeClass("active");
                 }
-                const config = { fps: 10, qrbox: 250, aspectRatio: 0.5625 };
-
-                //document.querySelector('.js-video-box video').style.minHeight = '800px';
+                const config = { fps: 10, qrbox: 250, aspectRatio: 0.5 };
 
                 $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
                     html5QrCode.stop();
                 });
 
                 html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+
+                //console.log(document.querySelector('#js-video-box').firstChild);
+
+                // document.querySelector('#js-video-box video').setAttribute('disablepictureinpicture', '');
+                // document.querySelector('#js-video-box video').setAttribute('playsinline', '');
               }
          }).catch((err) => {
               console.log(err);
