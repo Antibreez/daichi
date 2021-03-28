@@ -249,7 +249,7 @@ html {
 
     video {
       min-height: 800px;
-      object-fit: fill !important;
+      object-fit: cover !important;
     }
 
     &::before {
