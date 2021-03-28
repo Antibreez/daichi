@@ -372,19 +372,17 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
         $(".qr-scanner-modal").addClass("active");
     
-        
+        let videoElement = document.querySelector(".js-video-box");
         window.qrScanner = new QrScanner(videoElement, (result) => {
             //alert(result);
             //console.log("decoded qr code:", result);
-            try {
+            
                 $(".warranty-qr-inner").val(result);
-            } catch (e) {
-
-            }
             
             qrScanner.stop();
             $(".qr-scanner-modal").removeClass("active");
         });
+
         window.qrScanner.start();
 
 
