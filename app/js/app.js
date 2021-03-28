@@ -372,34 +372,55 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
         $(".qr-scanner-modal").addClass("active");
     
-        QrScanner.hasCamera()
-            .then(
-                (res) => {
-                    if (res !== true) throw Error("Not camera");
-                    console.log("decoded qr code:", "result", res);
-                    let videoElement = document.querySelector(".js-video-box");
-                    window.qrScanner = new QrScanner(videoElement, (result) => {
-                        alert(result);
-                        //console.log("decoded qr code:", result);
-                        try {
-                            $(".warranty-qr-inner").val(result);
-                        } catch (e) {
+        
+        window.qrScanner = new QrScanner(videoElement, (result) => {
+            //alert(result);
+            //console.log("decoded qr code:", result);
+            try {
+                $(".warranty-qr-inner").val(result);
+            } catch (e) {
 
-                        }
+            }
+            
+            qrScanner.stop();
+            $(".qr-scanner-modal").removeClass("active");
+        });
+        window.qrScanner.start();
+
+
+
+
+            // QrScanner.hasCamera()
+            // .then(
+            //     (res) => {
+            //         if (res !== true) throw Error("Not camera");
+            //         console.log("decoded qr code:", "result", res);
+            //         let videoElement = document.querySelector(".js-video-box");
+            //         window.qrScanner = new QrScanner(videoElement, (result) => {
+            //             alert(result);
+            //             //console.log("decoded qr code:", result);
+            //             try {
+            //                 $(".warranty-qr-inner").val(result);
+            //             } catch (e) {
+
+            //             }
                         
-                        qrScanner.stop();
-                        $(".qr-scanner-modal").removeClass("active");
-                    });
-                    window.qrScanner.start();
-                },
-                (err) => {
-                    console.log(err);
-                }
-            )
-            .catch((error) => {
-                alert(error);
-                text.innerHTML = error.message;
-            });
+            //             qrScanner.stop();
+            //             $(".qr-scanner-modal").removeClass("active");
+            //         });
+            //         window.qrScanner.start();
+            //     },
+            //     (err) => {
+            //         alert(err);
+            //     }
+            // )
+            // .catch((error) => {
+            //     alert(error);
+            //     text.innerHTML = error.message;
+            // });
+
+
+
 
     //     Html5Qrcode.getCameras().then((devices) => {
     //         $(".qr-scanner-modal").addClass("active");

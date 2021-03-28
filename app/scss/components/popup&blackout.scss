@@ -219,6 +219,10 @@ html {
   //   }
   // }
 
+  .qr-scanner-trigger {
+    z-index: 100;
+  }
+
   .qr-scanner-modal {
     .popup-content-c {
       padding: 0;
