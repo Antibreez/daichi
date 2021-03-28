@@ -385,15 +385,12 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
         Instascan.Camera.getCameras().then(function (cameras) {
 
           if (cameras.length > 0) {
-            alert(cameras[0].name);
-            alert(cameras[1].name);
-            alert(cameras[2].name);
-            scanner.start(cameras[1]);
+            scanner.start(cameras[cameras.length - 1]);
           } else {
             console.error('No cameras found.');
           }
         }).catch(function (e) {
-          console.error(e);
+          alert.error(e);
         });
 
         $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
