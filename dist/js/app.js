@@ -411,6 +411,8 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                 }
                 const config = { fps: 10, qrbox: 250, aspectRatio: 0.5625 };
 
+                //document.querySelector('.js-video-box video').style.minHeight = '800px';
+
                 $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
                     html5QrCode.stop();
                 });
