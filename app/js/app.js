@@ -379,6 +379,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                     console.log("decoded qr code:", "result", res);
                     let videoElement = document.querySelector(".js-video-box");
                     window.qrScanner = new QrScanner(videoElement, (result) => {
+                        alert(result);
                         //console.log("decoded qr code:", result);
                         try {
                             $(".warranty-qr-inner").val(result);
@@ -396,7 +397,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                 }
             )
             .catch((error) => {
-                console.log(error);
+                alert(error);
                 text.innerHTML = error.message;
             });
 
