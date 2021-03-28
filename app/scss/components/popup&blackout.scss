@@ -246,6 +246,11 @@ html {
 
   #js-video-box {
     min-height: 100%;
+
+    video {
+      min-height: 800px;
+    }
+
     &::before {
       content: "QR код расположен на боковой панели корпуса внешнего или внутреннего блока кондиционера";
       position: absolute;
