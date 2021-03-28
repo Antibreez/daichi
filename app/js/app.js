@@ -368,32 +368,54 @@ $(document).on("click", ".find-qr-js", (e) => {
     blackout_on();
 });
 
+console.log(Html5QrcodeScanner);
+
 $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
         $(".qr-scanner-modal").addClass("active");
     
-        QrScanner.hasCamera()
-            .then(
-                (res) => {
-                    if (res !== true) throw Error("Not camera");
-                    console.log("decoded qr code:", "result", res);
-                    let videoElement = document.querySelector(".js-video-box");
-                    window.qrScanner = new QrScanner(videoElement, (result) => {
-                        console.log("decoded qr code:", result);
-                        $(".warranty-qr-inner").val(result);
-                        qrScanner.stop();
-                        $(".qr-scanner-modal").removeClass("active");
-                    });
-                    window.qrScanner.start();
-                },
-                (err) => {
-                    console.log(err);
-                }
-            )
-            .catch((error) => {
-                console.log(error);
-                text.innerHTML = error.message;
-            });
+        // QrScanner.hasCamera()
+        //     .then(
+        //         (res) => {
+        //             if (res !== true) throw Error("Not camera");
+        //             console.log("decoded qr code:", "result", res);
+        //             let videoElement = document.querySelector(".js-video-box");
+        //             window.qrScanner = new QrScanner(videoElement, (result) => {
+        //                 console.log("decoded qr code:", result);
+        //                 $(".warranty-qr-inner").val(result);
+        //                 qrScanner.stop();
+        //                 $(".qr-scanner-modal").removeClass("active");
+        //             });
+        //             window.qrScanner.start();
+        //         },
+        //         (err) => {
+        //             console.log(err);
+        //         }
+        //     )
+        //     .catch((error) => {
+        //         console.log(error);
+        //         text.innerHTML = error.message;
+        //     });
+
+        Html5Qrcode.getCameras().then(devices => {
+            /**
+              * devices would be an array of objects of type:
+              * { id: "id", label: "label" }
+              
+             */
+             if (devices && devices.length) {
+                 console.log(devices);
+                var cameraId = devices[0].id;
+                  // .. use this to start scanning.
+                const html5QrCode = new Html5Qrcode("#js-video-box");
+                const qrCodeSuccessCallback = message => { alert(message) }
+                const config = { fps: 10, qrbox: 250 };
+
+                html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback);
+              }
+         }).catch(err => {
+              console.log('no cameras');
+      });
     }
 
     //window.qrScanner.start();
