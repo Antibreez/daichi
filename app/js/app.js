@@ -372,18 +372,30 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
         $(".qr-scanner-modal").addClass("active");
     
-        let videoElement = document.querySelector(".js-video-box");
-        window.qrScanner = new QrScanner(videoElement, (result) => {
-            //alert(result);
-            //console.log("decoded qr code:", result);
-            
-                $(".warranty-qr-inner").val(result);
-            
-            qrScanner.stop();
+        
+
+
+        let scanner = new Instascan.Scanner({ video: document.getElementById('preview-box') });
+        scanner.addListener('scan', function (content) {
+            $(".warranty-qr-inner").val(content);
+                        
+            scanner.stop();
             $(".qr-scanner-modal").removeClass("active");
         });
+        Instascan.Camera.getCameras().then(function (cameras) {
+          if (cameras.length > 0) {
+            scanner.start(cameras[0]);
+          } else {
+            console.error('No cameras found.');
+          }
+        }).catch(function (e) {
+          console.error(e);
+        });
 
-        window.qrScanner.start();
+        $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+            scanner.stop();
+        });
+
 
 
 
@@ -395,15 +407,11 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
             //         console.log("decoded qr code:", "result", res);
             //         let videoElement = document.querySelector(".js-video-box");
             //         window.qrScanner = new QrScanner(videoElement, (result) => {
-            //             alert(result);
+            //             //alert(result);
             //             //console.log("decoded qr code:", result);
-            //             try {
             //                 $(".warranty-qr-inner").val(result);
-            //             } catch (e) {
-
-            //             }
                         
-            //             qrScanner.stop();
+            //             window.qrScanner.stop();
             //             $(".qr-scanner-modal").removeClass("active");
             //         });
             //         window.qrScanner.start();
@@ -415,6 +423,12 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
             // .catch((error) => {
             //     alert(error);
             //     text.innerHTML = error.message;
+            // });
+
+            
+
+            // $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+            //     window.qrScanner.stop();
             // });
 
 

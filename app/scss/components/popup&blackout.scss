@@ -221,6 +221,10 @@ html {
 
   .qr-scanner-trigger {
     z-index: 100;
+    width: 44px;
+    height: 44px;
+    padding: 20px;
+    background-size: 24px 24px;
   }
 
   .qr-scanner-modal {
@@ -246,18 +250,6 @@ html {
     #qr-shaded-region {
       border-color: transparent !important;
     }
-  }
-
-  #js-video-box {
-    height: 100%;
-
-    video {
-      height: 100%;
-      width: 100% !important;
-      overflow: hidden;
-
-      //object-fit: cover !important;
-    }
 
     &::before {
       content: "QR код расположен на боковой панели корпуса внешнего или внутреннего блока кондиционера";
@@ -268,6 +260,10 @@ html {
       max-width: 375px;
       padding: 340px 15px 0;
       transform: translate(-50%, -50%);
+      background-image: url("../images/qr-border.png");
+      background-size: 230px 230px;
+      background-repeat: no-repeat;
+      background-position: top center;
       z-index: 100;
       display: none;
       font-size: 13px;
@@ -276,13 +272,27 @@ html {
       text-align: center;
       mix-blend-mode: hard-light;
     }
-  }
 
-  .qr-scanner-modal.active {
-    #js-video-box::before {
+    &.active::before {
       display: block;
     }
   }
+
+  #preview-box {
+    height: 100%;
+  }
+
+  // #js-video-box {
+  //   height: 100%;
+
+  //   video {
+  //     height: 100%;
+  //     width: 100% !important;
+  //     overflow: hidden;
+
+  //     //object-fit: cover !important;
+  //   }
+  // }
 
   div.modal-controls {
     position: fixed;
