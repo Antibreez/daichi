@@ -370,61 +370,61 @@ $(document).on("click", ".find-qr-js", (e) => {
 
 $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
-        // $(".qr-scanner-modal").addClass("active");
+        $(".qr-scanner-modal").addClass("active");
     
-        // QrScanner.hasCamera()
-        //     .then(
-        //         (res) => {
-        //             if (res !== true) throw Error("Not camera");
-        //             console.log("decoded qr code:", "result", res);
-        //             let videoElement = document.querySelector(".js-video-box");
-        //             window.qrScanner = new QrScanner(videoElement, (result) => {
-        //                 console.log("decoded qr code:", result);
-        //                 $(".warranty-qr-inner").val(result);
-        //                 qrScanner.stop();
-        //                 $(".qr-scanner-modal").removeClass("active");
-        //             });
-        //             window.qrScanner.start();
-        //         },
-        //         (err) => {
-        //             console.log(err);
-        //         }
-        //     )
-        //     .catch((error) => {
-        //         console.log(error);
-        //         text.innerHTML = error.message;
-        //     });
-
-        Html5Qrcode.getCameras().then((devices) => {
-            $(".qr-scanner-modal").addClass("active");
-            
-            
-
-             if (devices && devices.length) {
-                var cameraId = devices[0].id;
-                  // .. use this to start scanning.
-                const html5QrCode = new Html5Qrcode("js-video-box");
-                const qrCodeSuccessCallback = message => { 
-                    $(".warranty-qr-inner").val(message);
-                    html5QrCode.stop();
-                    $(".qr-scanner-modal").removeClass("active");
+        QrScanner.hasCamera()
+            .then(
+                (res) => {
+                    if (res !== true) throw Error("Not camera");
+                    console.log("decoded qr code:", "result", res);
+                    let videoElement = document.querySelector(".js-video-box");
+                    window.qrScanner = new QrScanner(videoElement, (result) => {
+                        console.log("decoded qr code:", result);
+                        $(".warranty-qr-inner").val(result);
+                        qrScanner.stop();
+                        $(".qr-scanner-modal").removeClass("active");
+                    });
+                    window.qrScanner.start();
+                },
+                (err) => {
+                    console.log(err);
                 }
-                const config = { fps: 10, qrbox: 250, aspectRatio: 0.5 };
+            )
+            .catch((error) => {
+                console.log(error);
+                text.innerHTML = error.message;
+            });
 
-                $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
-                    html5QrCode.stop();
-                });
+    //     Html5Qrcode.getCameras().then((devices) => {
+    //         $(".qr-scanner-modal").addClass("active");
+            
+            
 
-                html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+    //          if (devices && devices.length) {
+    //             var cameraId = devices[0].id;
+    //               // .. use this to start scanning.
+    //             const html5QrCode = new Html5Qrcode("js-video-box");
+    //             const qrCodeSuccessCallback = message => { 
+    //                 $(".warranty-qr-inner").val(message);
+    //                 html5QrCode.stop();
+    //                 $(".qr-scanner-modal").removeClass("active");
+    //             }
+    //             const config = { fps: 10, qrbox: 250, aspectRatio: 0.5 };
 
-                //console.log(document.querySelector('#js-video-box').firstChild);
+    //             $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+    //                 html5QrCode.stop();
+    //             });
 
-                // document.querySelector('#js-video-box video').setAttribute('disablepictureinpicture', '');
-                // document.querySelector('#js-video-box video').setAttribute('playsinline', '');
-              }
-         }).catch((err) => {
-              console.log(err);
-      });
+    //             html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+
+    //             //console.log(document.querySelector('#js-video-box').firstChild);
+
+    //             // document.querySelector('#js-video-box video').setAttribute('disablepictureinpicture', '');
+    //             // document.querySelector('#js-video-box video').setAttribute('playsinline', '');
+    //           }
+    //      }).catch((err) => {
+    //           console.log(err);
+    //   });
     }
 
     //window.qrScanner.start();
