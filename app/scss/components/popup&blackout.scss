@@ -232,24 +232,27 @@ html {
 
     .qr-part {
       height: 100%;
+      background-color: #000;
     }
 
     .camera-layout {
       height: 100%;
     }
+    
+    #qr-shaded-region {
+      border-color: transparent !important;
+    }
+  }
 
+  #js-video-box {
     &::before {
       content: "QR код расположен на боковой панели корпуса внешнего или внутреннего блока кондиционера";
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       width: 100%;
       max-width: 375px;
-      padding: 280px 15px 0;
-      background-image: url("../images/qr-border.png");
-      background-size: 230px 230px;
-      background-repeat: no-repeat;
-      background-position: top center;
+      padding: 340px 15px 0;
       transform: translate(-50%, -50%);
       z-index: 100;
       display: none;
@@ -259,8 +262,10 @@ html {
       text-align: center;
       mix-blend-mode: hard-light;
     }
+  }
 
-    &.active::before {
+  .qr-scanner-modal.active {
+    #js-video-box::before {
       display: block;
     }
   }

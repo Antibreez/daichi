@@ -368,11 +368,9 @@ $(document).on("click", ".find-qr-js", (e) => {
     blackout_on();
 });
 
-console.log(Html5QrcodeScanner);
-
 $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
-        $(".qr-scanner-modal").addClass("active");
+        //$(".qr-scanner-modal").addClass("active");
     
         // QrScanner.hasCamera()
         //     .then(
@@ -397,24 +395,30 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
         //         text.innerHTML = error.message;
         //     });
 
-        Html5Qrcode.getCameras().then(devices => {
-            /**
-              * devices would be an array of objects of type:
-              * { id: "id", label: "label" }
-              
-             */
+        Html5Qrcode.getCameras().then((devices) => {
+            $(".qr-scanner-modal").addClass("active");
+            
+            
+
              if (devices && devices.length) {
-                 console.log(devices);
                 var cameraId = devices[0].id;
                   // .. use this to start scanning.
-                const html5QrCode = new Html5Qrcode("#js-video-box");
-                const qrCodeSuccessCallback = message => { alert(message) }
-                const config = { fps: 10, qrbox: 250 };
+                const html5QrCode = new Html5Qrcode("js-video-box");
+                const qrCodeSuccessCallback = message => { 
+                    $(".warranty-qr-inner").val(message);
+                    html5QrCode.stop();
+                    $(".qr-scanner-modal").removeClass("active");
+                }
+                const config = { fps: 10, qrbox: 250, aspectRatio: 0.5625 };
 
-                html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback);
+                $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+                    html5QrCode.stop();
+                });
+
+                html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
               }
-         }).catch(err => {
-              console.log('no cameras');
+         }).catch((err) => {
+              console.log(err);
       });
     }
 
