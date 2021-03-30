@@ -194,6 +194,7 @@
   border-radius: 50%;
   background: url("/images/icons/alert_critical.svg") 50% 50%/ 23px 23px no-repeat;
   cursor: pointer;
+  z-index: 2;
 
   &:hover {
     .product-message-box {
@@ -206,7 +207,7 @@
   position: absolute;
   border-radius: 5px;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
-  top: -96px;
+  top: -10px;
   right: 7px;
   width: 350px;
   padding: 15px;
@@ -216,10 +217,18 @@
   transition: opacity 0.25s ease;
   font-size: 15px;
   line-height: 23px;
+  transform: translateY(-100%);
+  color: #444;
+
+  span {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
 
   @include media-breakpoint-down(md) {
     width: 225px;
-    top: -120px;
   }
 }
 

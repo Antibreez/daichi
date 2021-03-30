@@ -372,33 +372,68 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
         $(".qr-scanner-modal").addClass("active");
     
-        QrScanner.hasCamera()
+        
+
+
+        // let scanner = new Instascan.Scanner({ video: document.getElementById('preview-box') });
+        // scanner.addListener('scan', function (content) {
+        //     $(".warranty-qr-inner").val(content);
+                        
+        //     scanner.stop();
+        //     $(".qr-scanner-modal").removeClass("active");
+        // });
+        // Instascan.Camera.getCameras().then(function (cameras) {
+
+        //   if (cameras.length > 0) {
+        //     scanner.start(cameras[cameras.length - 1]);
+        //   } else {
+        //     console.error('No cameras found.');
+        //   }
+        // }).catch(function (e) {
+        //   alert.error(e);
+        // });
+
+        // $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+        //     scanner.stop();
+        // });
+
+
+
+
+
+            QrScanner.hasCamera()
             .then(
                 (res) => {
                     if (res !== true) throw Error("Not camera");
                     console.log("decoded qr code:", "result", res);
                     let videoElement = document.querySelector(".js-video-box");
                     window.qrScanner = new QrScanner(videoElement, (result) => {
+                        //alert(result);
                         //console.log("decoded qr code:", result);
-                        try {
                             $(".warranty-qr-inner").val(result);
-                        } catch (e) {
-
-                        }
                         
-                        qrScanner.stop();
+                        window.qrScanner.stop();
                         $(".qr-scanner-modal").removeClass("active");
                     });
                     window.qrScanner.start();
                 },
                 (err) => {
-                    console.log(err);
+                    alert(err);
                 }
             )
             .catch((error) => {
-                console.log(error);
+                alert(error);
                 text.innerHTML = error.message;
             });
+
+            
+
+            $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+                window.qrScanner.stop();
+            });
+
+
+
 
     //     Html5Qrcode.getCameras().then((devices) => {
     //         $(".qr-scanner-modal").addClass("active");
