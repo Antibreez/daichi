@@ -1,0 +1,66 @@
+.cloud-contract {
+    padding: 100px 0;
+    font-size: 15px;
+    line-height: 23px;
+
+    ul {
+        margin: 0;
+    }
+
+    p {
+        margin: 15px 0;
+    }
+
+    p {
+        text-indent: 30px;
+    }
+
+    &__title {
+        margin: 0 0 50px;
+        text-align: center;
+    }
+
+    &__main-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: main-list;
+    }
+
+    &__main-item {
+        margin-bottom: 50px;
+    }
+
+    &__main-title {
+        margin: 0 0 30px;
+        text-align: center;
+    }
+
+    &__main-title {
+        &::before {
+            content: counter(main-list)". ";
+            counter-increment: main-list;
+        }
+    }
+
+    &__dash-list {
+        padding: 0 0 0 30px;
+        list-style: none;
+
+        li::before {
+            content: "– ";
+        }
+    }
+
+    &__dotted-list {
+        list-style: disc;
+        padding: 0 0 0 30px;
+        list-style-position: inside;
+    }
+
+    &__circle-list {
+        list-style: circle;
+        padding: 0 0 0 30px;
+        list-style-position: inside;
+    }
+}
