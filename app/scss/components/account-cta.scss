@@ -35,6 +35,8 @@
     &:hover {
         cursor: pointer;
     }
+
+    user-select:none;
 }
 
 .account-data-cta.disabled {
