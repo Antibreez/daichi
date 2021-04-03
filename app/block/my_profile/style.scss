@@ -26,6 +26,14 @@
 main.main_my-profile {
   .page-title {
     margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 57px;
+
+    @media(max-width: 767px) {
+      font-size: 27px;
+      line-height: 33px;
+      text-align: center;
+    }
   }
 }
 

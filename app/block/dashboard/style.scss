@@ -396,6 +396,18 @@ article.db_unit {
   grid-area: myRequests;
 }
 
+.my-requests-section__empty-message {
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  color: #888;
+
+  @media(max-width: 767px) {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
 .statement_1 {
   grid-area: statement1;
 }

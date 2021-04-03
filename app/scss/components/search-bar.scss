@@ -51,7 +51,9 @@
         background-color: #fff;
       }
     }
+
   }
+
   &:focus-within {
     .search-field {
       background-color: white;
@@ -123,11 +125,13 @@ input.search-field {
   transform: translateY(-50%);
   right: 17px;
   width: 17px;
-  height: 17px;
+  height: 40px;
+  min-height: auto;
   transition: opacity 0.25s ease;
   background: url("/images/icons/search-remoove.svg") 50% 50% / contain
     no-repeat;
   opacity: 0;
+  background-color: transparent !important;
 }
 
 .search-bar.inputed-mobile {

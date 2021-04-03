@@ -11,6 +11,12 @@ button {
   }
 }
 
+
+
+.assistive-text + .assistive-text.assistive-text_right {
+  margin-top: -18px;
+}
+
 .input-container {
   width: 100%;
   margin-bottom: 15px;
@@ -36,6 +42,9 @@ button {
   .assistive-text_right {
     display: flex;
     justify-content: flex-end;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
   }
 
   input {

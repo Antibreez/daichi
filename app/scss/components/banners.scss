@@ -67,7 +67,7 @@
   }
   .statement-description{
     margin-top: 15px;
-    color: $minor;
+    color: #444;
     line-height: 23px;
 
     @include media-breakpoint-down(sm){
@@ -82,7 +82,8 @@
   }
 }
 
-.statement_2 .statement-description {
+.statement_2 .statement-description,
+.statement .statement-description {
   max-width: 400px;
 
   @media(max-width: 767px) {
