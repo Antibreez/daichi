@@ -368,106 +368,182 @@ $(document).on("click", ".find-qr-js", (e) => {
     blackout_on();
 });
 
+
+/////////////////////////
+
+
+var jbScanner;
+
+function onQRCodeScanned(scannedText)
+            {
+                var scannedTextMemo = document.querySelector(".warranty-qr-inner");
+                if(scannedTextMemo)
+                {
+                    scannedTextMemo.value = scannedText;
+                    $(".qr-scanner-modal").removeClass("active");
+                }
+                // var scannedTextMemoHist = document.getElementById("scannedTextMemoHist");
+                // if(scannedTextMemoHist)
+                // {
+                //     scannedTextMemoHist.value = scannedTextMemoHist.value + '\n' + scannedText;
+                // }
+            }
+
+
+            function provideVideo()
+            {
+                var n = navigator;
+        
+                if (n.mediaDevices && n.mediaDevices.getUserMedia)
+                {
+                  return n.mediaDevices.getUserMedia({
+                    video: {
+                      facingMode: "environment"
+                    },
+                    audio: false
+                  });
+                } 
+                
+                return Promise.reject('Your browser does not support getUserMedia');
+            }
+
+
+            function provideVideoQQ()
+            {
+                return navigator.mediaDevices.enumerateDevices()
+                .then(function(devices) {
+                    var exCameras = [];
+                    devices.forEach(function(device) {
+                    if (device.kind === 'videoinput') {
+                    exCameras.push(device.deviceId)
+                    }
+                });
+                    
+                    return Promise.resolve(exCameras);
+                }).then(function(ids){
+                    if(ids.length === 0)
+                    {
+                    return Promise.reject('Could not find a webcam');
+                    }
+                    
+                    return navigator.mediaDevices.getUserMedia({
+                        video: {
+                        'optional': [{
+                            'sourceId': ids.length === 1 ? ids[0] : ids[1]//this way QQ browser opens the rear camera
+                            }]
+                        }
+                    });        
+                });                
+            }
+
+
+            // function JsQRScannerReady()
+            // {
+            //     //create a new scanner passing to it a callback function that will be invoked when
+            //     //the scanner succesfully scan a QR code
+            //     jbScanner = new JsQRScanner(onQRCodeScanned);
+
+            //     console.log('aaaaaaaaaaaaaaaaaaaaaa');
+
+            //     //var jbScanner = new JsQRScanner(onQRCodeScanned, provideVideo);
+            //     //reduce the size of analyzed image to increase performance on mobile devices
+            //     jbScanner.setSnapImageMaxSize(300);
+            //     var scannerParentElement = document.getElementById("js-video-box");
+            //     if(scannerParentElement)
+            //     {
+            //         //append the jbScanner to an existing DOM element
+            //         jbScanner.appendTo(scannerParentElement);
+            //     }        
+            // }
+
+
+            //////////////////////////////////////
+
+
+
+
+
+
+
+
 $(document).on("click", ".qr-scanner-trigger", (e) => {
     if (window.innerWidth < 768) {
-        $(".qr-scanner-modal").addClass("active");
+        //$(".qr-scanner-modal").addClass("active");
+
+
+
+
+
+            // QrScanner.hasCamera()
+            // .then(
+            //     (res) => {
+            //         if (res !== true) throw Error("Not camera");
+            //         console.log("decoded qr code:", "result", res);
+            //         let videoElement = document.querySelector(".js-video-box");
+            //         window.qrScanner = new QrScanner(videoElement, (result) => {
+            //             //alert(result);
+            //             //console.log("decoded qr code:", result);
+            //                 $(".warranty-qr-inner").val(result);
+                        
+            //             window.qrScanner.stop();
+            //             $(".qr-scanner-modal").removeClass("active");
+            //         });
+            //         window.qrScanner.start();
+            //     },
+            //     (err) => {
+            //         alert(err);
+            //     }
+            // )
+            // .catch((error) => {
+            //     alert(error);
+            //     text.innerHTML = error.message;
+            // });
+
+            
+
+            // $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+            //     window.qrScanner.stop();
+            // });
+
+
+            //////////////////////////////////
+
+            
+            $(".qr-scanner-modal").addClass("active");
+
+            if (jbScanner) {
+                jbScanner.resumeScanning();
+            } else {
+                jbScanner = new JsQRScanner(onQRCodeScanned);
+                jbScanner.setSnapImageMaxSize(300);
+                var scannerParentElement = document.getElementById("js-video-box");
+                if(scannerParentElement)
+                {
+                    //append the jbScanner to an existing DOM element
+                    jbScanner.appendTo(scannerParentElement);
+                }       
+                console.log('new');
+            }
+
+                
+    console.log(jbScanner.isActive());
+    console.log(jbScanner.isScanning());
+                console.log('aaaaaaaaaaaaaaaaaaaaaa');
+
+                //var jbScanner = new JsQRScanner(onQRCodeScanned, provideVideo);
+                //reduce the size of analyzed image to increase performance on mobile devices 
+            
+           
     
-        
-
-
-        // let scanner = new Instascan.Scanner({ video: document.getElementById('preview-box') });
-        // scanner.addListener('scan', function (content) {
-        //     $(".warranty-qr-inner").val(content);
-                        
-        //     scanner.stop();
-        //     $(".qr-scanner-modal").removeClass("active");
-        // });
-        // Instascan.Camera.getCameras().then(function (cameras) {
-
-        //   if (cameras.length > 0) {
-        //     scanner.start(cameras[cameras.length - 1]);
-        //   } else {
-        //     console.error('No cameras found.');
-        //   }
-        // }).catch(function (e) {
-        //   alert.error(e);
-        // });
-
-        // $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
-        //     scanner.stop();
-        // });
-
-
-
-
-
-            QrScanner.hasCamera()
-            .then(
-                (res) => {
-                    if (res !== true) throw Error("Not camera");
-                    console.log("decoded qr code:", "result", res);
-                    let videoElement = document.querySelector(".js-video-box");
-                    window.qrScanner = new QrScanner(videoElement, (result) => {
-                        //alert(result);
-                        //console.log("decoded qr code:", result);
-                            $(".warranty-qr-inner").val(result);
-                        
-                        window.qrScanner.stop();
-                        $(".qr-scanner-modal").removeClass("active");
-                    });
-                    window.qrScanner.start();
-                },
-                (err) => {
-                    alert(err);
-                }
-            )
-            .catch((error) => {
-                alert(error);
-                text.innerHTML = error.message;
-            });
-
-            
-
-            $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
-                window.qrScanner.stop();
-            });
-
-
-
-
-    //     Html5Qrcode.getCameras().then((devices) => {
-    //         $(".qr-scanner-modal").addClass("active");
-            
-            
-
-    //          if (devices && devices.length) {
-    //             var cameraId = devices[0].id;
-    //               // .. use this to start scanning.
-    //             const html5QrCode = new Html5Qrcode("js-video-box");
-    //             const qrCodeSuccessCallback = message => { 
-    //                 $(".warranty-qr-inner").val(message);
-    //                 html5QrCode.stop();
-    //                 $(".qr-scanner-modal").removeClass("active");
-    //             }
-    //             const config = { fps: 10, qrbox: 250, aspectRatio: 0.5 };
-
-    //             $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
-    //                 html5QrCode.stop();
-    //             });
-
-    //             html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
-
-    //             //console.log(document.querySelector('#js-video-box').firstChild);
-
-    //             // document.querySelector('#js-video-box video').setAttribute('disablepictureinpicture', '');
-    //             // document.querySelector('#js-video-box video').setAttribute('playsinline', '');
-    //           }
-    //      }).catch((err) => {
-    //           console.log(err);
-    //   });
     }
 
-    //window.qrScanner.start();
+});
+
+$(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
+    jbScanner.stopScanning();
+    console.log('stop');
+    console.log(jbScanner.isActive());
+    console.log(jbScanner.isScanning());
 });
 
 $(document).on('input', '.file-input-js', function (e) {
