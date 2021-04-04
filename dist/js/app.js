@@ -523,13 +523,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
                     //append the jbScanner to an existing DOM element
                     jbScanner.appendTo(scannerParentElement);
                 }       
-                console.log('new');
             }
-
-                
-    console.log(jbScanner.isActive());
-    console.log(jbScanner.isScanning());
-                console.log('aaaaaaaaaaaaaaaaaaaaaa');
 
                 //var jbScanner = new JsQRScanner(onQRCodeScanned, provideVideo);
                 //reduce the size of analyzed image to increase performance on mobile devices 
@@ -542,9 +536,6 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
 
 $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
     jbScanner.stopScanning();
-    console.log('stop');
-    console.log(jbScanner.isActive());
-    console.log(jbScanner.isScanning());
 });
 
 $(document).on('input', '.file-input-js', function (e) {
