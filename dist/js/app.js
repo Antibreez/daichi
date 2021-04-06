@@ -570,29 +570,29 @@ $(document).on('click', '.mob-datePicker-bg', function () {
     $(this).remove()
 })
 
-$(document).on('click', '.search-clear', function (e) {
-    e.stopPropagation();
-    if (window.innerWidth >= 768)
-        $(this).siblings('.search-field').focus()
-    else {
-        $(this).siblings('.search-field').blur()
-        $('.search-dropdown').hide()
-    }
+// $(document).on('click', '.search-clear', function (e) {
+//     e.stopPropagation();
+//     if (window.innerWidth >= 768)
+//         $(this).siblings('.search-field').focus()
+//     else {
+//         $(this).siblings('.search-field').blur()
+//         $('.search-dropdown').hide()
+//     }
 
-    $(this).prev().val('')
-})
+//     $(this).prev().val('')
+// })
 
-$(document).on('blur', '.search-field', function () {
-    setTimeout(function () {
-        $('.search-dropdown').hide()
-        $('.search-mobile-is-active').removeClass('search-mobile-is-active')
-    }, 100)
-})
+// $(document).on('blur', '.search-field', function () {
+//     setTimeout(function () {
+//         $('.search-dropdown').hide()
+//         $('.search-mobile-is-active').removeClass('search-mobile-is-active')
+//     }, 100)
+// })
 
-$(document).on('focus', '.search-field', function () {
-    $('.search-dropdown').show()
-    $(this).closest('.search-bar').addClass('search-mobile-is-active')
-})
+// $(document).on('focus', '.search-field', function () {
+//     $('.search-dropdown').show()
+//     $(this).closest('.search-bar').addClass('search-mobile-is-active')
+// })
 
 $(document).on('click', '.call-modal', function (e) {
     e.preventDefault()

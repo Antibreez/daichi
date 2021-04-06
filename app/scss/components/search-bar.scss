@@ -59,14 +59,14 @@
       background-color: white;
       border-color: $stroke;
     }
-    .search-dropdown {
-      opacity: 1;
-      transform: translateY(100%);
+    // .search-dropdown {
+    //   opacity: 1;
+    //   transform: translateY(100%);
 
-      @include media-breakpoint-down(sm) {
-        transform: unset;
-      }
-    }
+    //   @include media-breakpoint-down(sm) {
+    //     transform: unset;
+    //   }
+    // }
     // .prompts-box{
     //  transform: unset;
     // }
