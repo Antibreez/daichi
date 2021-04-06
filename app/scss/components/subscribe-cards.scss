@@ -27,6 +27,13 @@
   margin-bottom: 15px;
   margin-right: 15px;
 
+  color: unset;
+
+  &:hover {
+    color: unset;
+    border: 1px $stroke solid;
+  }
+
   &:hover {
     background-color: $bg;
 
@@ -92,7 +99,7 @@
     object-fit: contain;
 
     @include media-breakpoint-down(md) {
-      object-fit: none;
+      //object-fit: none;
       width: auto;
     }
   }
