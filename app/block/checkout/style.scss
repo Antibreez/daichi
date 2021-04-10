@@ -33,7 +33,7 @@ main.main.checkout {
 .ch-form-section {
   margin-bottom: 50px;
 
-  .cta-vers-card:hover {
+  .cta-vers-card:not(.disabled):hover {
     //background-color: #f6f6f6;
       .direct-button {
         background: #dadada url(../images/icons/direct-arrow-black.svg) 50% 50%/7px 10px no-repeat;
@@ -56,7 +56,7 @@ main.main.checkout {
     .cta-vers-card {
       width: calc(50% - 7px);
 
-      &:hover {
+      &:not(.disabled):hover {
         //background-color: #f6f6f6;
       .direct-button {
         background: #dadada url(../images/icons/direct-arrow-black.svg) 50% 50%/7px 10px no-repeat;
@@ -318,6 +318,30 @@ main.main.checkout {
         border-radius: unset;
       }
     }
+  }
+}
+
+.cta-vers-card.disabled {
+  position: relative;
+  border: 1px solid #dadada;
+  cursor: default;
+  pointer-events: none;
+
+  * {
+    color: #dadada;
+  }
+
+  .direct-button {
+    opacity: 0.6;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 

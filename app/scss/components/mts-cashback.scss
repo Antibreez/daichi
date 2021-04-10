@@ -1,0 +1,67 @@
+.mts-cashback {
+  margin: 50px 0 25px;
+
+  &__content {
+    min-height: 320px;
+    padding: 30px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    background-image: url("../images/mts-cashback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 19px;
+    margin: 0 0 15px;
+  }
+
+  &__desc {
+    margin: 0 0 20px;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 300;
+    color: #444;
+    max-width: 500px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 14px 40px 16px;
+    color: #fff;
+    background-color: #E30613;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    &:hover {
+      color: #fff;
+      background-color: #af030f;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .mts-cashback {
+    margin-top: 25px;
+    
+    &__content {
+      background-image: url("../images/mts-cashback-big.jpg");
+    }
+
+    &__desc {
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    &__link {
+      width: 238px;
+      padding: 16px 20px;
+      font-size:  13px;
+      line-height: 13px;
+    }
+  }
+}

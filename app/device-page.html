@@ -98,6 +98,32 @@
         </div>
     </section>
 
+
+    <!--Блок с тарифными планами-->
+    <section class="tariff-plan">
+        <div class="tariff-plan__wrapper wrapper">
+            <h2 class="tariff-plan__title">Оплатите подписку для управления кондиционером!</h2>
+            <div class="tariff-plan__items">
+                <div class="tariff-plan__item  tariff-plan__item--1">
+                    <h3 class="tariff-plan__item-title">Подписка на&nbsp;1&nbsp;год</h3>
+                    <p class="tariff-plan__item-desc">
+                        Оплатите стоимость подписки и&nbsp;получите доступ к&nbsp;управлению кондиционером на 365 дней.
+                    </p>
+                    <p class="tariff-plan__item-price">2 799 руб. <span>/&nbsp;в&nbsp;год</span></p>
+                    <a href="#" class="tariff-plan__item-link button">Перейти к оплате</a>
+                </div>
+                <div class="tariff-plan__item  tariff-plan__item--2">
+                    <h3 class="tariff-plan__item-title">Бессрочный доступ</h3>
+                    <p class="tariff-plan__item-desc">
+                        Оплатите единовременно и&nbsp;получите безлимитный доступ к&nbsp;управлению устройством
+                    </p>
+                    <p class="tariff-plan__item-price">11 196 руб.</p>
+                    <a href="#" class="tariff-plan__item-link button">Перейти к оплате</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- табы с подписками -->
     <section class="sbr-tabs">
         <div class="container">
@@ -932,6 +958,40 @@
         </div>
     </section>
 
+    <section class="adress-section section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 page-title">Адрес устройства</h2>
+                    
+                    <div class="ch-form-section ch-form-section__flex">
+                        <div class="cta-vers-card call-modal" data-id="select-address">
+                            <div class="direct-button"></div>
+                            <div class="cta-vers-title h5">
+                                Выбрать из моих адресов
+                            </div>
+                            <div class="cta-vers-description b2">
+                                Уже указывали информацию
+                                в личном кабинете
+                            </div>
+                        </div>
+                        <div class="cta-vers-card call-modal" data-id="address">
+                            <div class="direct-button"></div>
+                            <div class="cta-vers-title h5">
+                                Указать новый адрес
+                            </div>
+                            <div class="cta-vers-description b2">
+                                Не указывал ранее или хочу доставку по новому адресу
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="section requests-section">
         <div class="container">
             <div class="row">
@@ -1756,6 +1816,117 @@
             </div>
         </div>
     </article>
+    
+<article id="select-address" class="popup">
+    <div class="popup-content-c">
+        <div class="popup__exit-button"></div>
+        <div class="popup-content popup-content_info">
+            <h2 class="popup-title h2">Выберите адресс</h2>
+
+            <div class="modal-text-block b1">
+                Выберите адрес расположения устройства. По указанному адресу Инженерный центр «Даичи» будет производить ТО и ремонтные работы.
+            </div>
+
+            <form action="post">
+                <div class="pick-up-point">
+                    <div class="switch-box">
+                        <div class="adress-item option-item select">
+                            <div class="street-line">
+                                <div class="street-name h5">
+                                    Лермонтовский проспект,
+                                    <span class="house-number">8к1</span>
+                                </div>
+                                <div class="city-name b2">Москва</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Подъезд</div>
+                                <div class="adress-data-value b1">1</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Кв / Офис</div>
+                                <div class="adress-data-value b1">172</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Домофон</div>
+                                <div class="adress-data-value b1">172#8766</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Этаж</div>
+                                <div class="adress-data-value b1">10</div>
+                            </div>
+                            <div class="option-checkmark">
+                                <div class="ch-option-indicator-active"></div>
+                            </div>
+                            <input type="radio" hidden="" name="radio-3">
+                        </div>
+                        <div class="adress-item option-item">
+                            <div class="street-line">
+                                <div class="street-name h5">
+                                    Лермонтовский проспект,
+                                    <span class="house-number">8к1</span>
+                                </div>
+                                <div class="city-name b2">Москва</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Подъезд</div>
+                                <div class="adress-data-value b1">1</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Кв / Офис</div>
+                                <div class="adress-data-value b1">172</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Домофон</div>
+                                <div class="adress-data-value b1">172#8766</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Этаж</div>
+                                <div class="adress-data-value b1">10</div>
+                            </div>
+                            <div class="option-checkmark">
+                                <div class="ch-option-indicator-active"></div>
+                            </div>
+                            <input type="radio" hidden="" name="radio-3">
+                        </div>
+                        <div class="adress-item option-item">
+                            <div class="street-line">
+                                <div class="street-name h5">
+                                    Лермонтовский проспект,
+                                    <span class="house-number">8к1</span>
+                                </div>
+                                <div class="city-name b2">Москва</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Подъезд</div>
+                                <div class="adress-data-value b1">1</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Кв / Офис</div>
+                                <div class="adress-data-value b1">172</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Домофон</div>
+                                <div class="adress-data-value b1">172#8766</div>
+                            </div>
+                            <div class="adress-data-box">
+                                <div class="adress-data-title b2">Этаж</div>
+                                <div class="adress-data-value b1">10</div>
+                            </div>
+                            <div class="option-checkmark">
+                                <div class="ch-option-indicator-active"></div>
+                            </div>
+                            <input type="radio" hidden="" name="radio-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-controls">
+                    <button class="button save-adress-button">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</article>
+
 </main>
 <div class="blackout"></div>
 <footer class="footer">
