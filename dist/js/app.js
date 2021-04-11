@@ -368,6 +368,40 @@ $(document).on("click", ".find-qr-js", (e) => {
     blackout_on();
 });
 
+$(document).on("click", ".select-multi-js", (e) => {
+    if (!$(e.target).hasClass('card-pay')) {
+        $(".select-multi").addClass("active");
+        blackout_on();
+    }
+});
+
+$(document).on("click", ".card-pay", (e) => {
+    $(".select-tariff").addClass("active");
+    blackout_on();
+});
+
+$(document).on("click", ".subscribe-card", (e) => {
+   if ($(e.target).hasClass('card-pay')) {
+       e.preventDefault();
+   }
+});
+
+
+
+$(document).on("click", ".request-success .request-modal__btn", (e) => {
+    $(".request-success").removeClass("js-show");
+});
+
+$(document).on("click", ".request-success .modal__close", (e) => {
+    $(".request-success").removeClass("js-show");
+});
+
+$(document).on("click", ".request-success .modal__overlay", (e) => {
+    if ($(e.target).hasClass('modal__overlay')) {
+        $(".request-success").removeClass("js-show");
+    }
+});
+
 
 /////////////////////////
 

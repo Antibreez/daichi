@@ -1,0 +1,18 @@
+.subscription-modal {
+  &__note {
+    margin: 0 0 30px;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 300;
+    color: #ff0000;
+  }
+}
+
+@media(max-width: 767px) {
+  .subscription-modal {
+    &__note {
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+}

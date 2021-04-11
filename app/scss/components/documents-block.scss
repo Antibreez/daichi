@@ -30,6 +30,10 @@
     width: 48px;
     background: url("/images/icons/PDF.svg") 50% 50% / contain no-repeat;
 
+    &--common {
+      background-image: url("../images/common-file.svg");
+    }
+
     @include media-breakpoint-down(sm) {
       height: 36px;
       width: 36px;

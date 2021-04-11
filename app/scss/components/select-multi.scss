@@ -1,0 +1,75 @@
+.select-multi {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    width: calc((100% - 15px) / 2);
+
+    &:nth-child(n) {
+      margin-right: 0;
+    }
+
+    &:not(:nth-child(2n)) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid #eee;
+    }
+  }
+
+  
+  .cloud-info-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+
+    &__img-block {
+      height: auto;
+      max-height: 90px;
+      width: auto;
+      max-width: 150px;
+      justify-content: flex-start;
+    }
+
+    &__content {
+      padding-left: 0;
+      padding-top: 20px;
+      width: 100%;
+    }
+
+    &__name {
+      min-height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .select-multi {
+    .popup-content {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    &__item {
+      margin-bottom: 5px;
+      width: calc((100% - 5px) / 2);
+  
+      &:nth-child(n) {
+        margin-right: 0;
+      }
+  
+      &:not(:nth-child(2n)) {
+        margin-right: 5px;
+      }
+    }
+  }
+}

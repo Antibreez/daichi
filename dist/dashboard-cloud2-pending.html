@@ -143,20 +143,12 @@
                 <div class="cloud-card__info-3">
                   <p class="info-block__title">Состав подписки:</p>
                   <p class="info-block__desc">
-                    <span>Подписка на облачный кондиционер 2&nbsp;999&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
-                    <button class="info-block__help  subscription-modal-trigger"></button>
+                    <span>Подписка на 1 год 2&nbsp;799&nbsp;руб.&nbsp;/ в&nbsp;год</span>
+                    <button class="info-block__help" data-trigger="subscription-one-year"></button>
                   </p>
                   <p class="info-block__desc">
-                    <span>Программа обслуживания “Мой комфорт” 3&nbsp;000&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
-                    <button class="info-block__help  my-comfort-modal-trigger"></button>
-                  </p>
-                  <p class="info-block__desc">
-                    <span>Программа обслуживания “Мой комфорт +” 3&nbsp;000&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
-                    <button class="info-block__help  my-comfort-plus-modal-trigger"></button>
-                  </p>
-                  <p class="info-block__desc">
-                    <span>Программа обслуживания “Мой комфорт Премиум” 3&nbsp;000&nbsp;руб.&nbsp;/&nbsp;в&nbsp;год</span>
-                    <button class="info-block__help  my-comfort-premium-modal-trigger"></button>
+                    <span>Бессрочный доступ 19&nbsp;199&nbsp;руб.</span>
+                    <button class="info-block__help" data-trigger="indefenite"></button>
                   </p>
                 </div>
               </div>
@@ -371,7 +363,7 @@
                 </a>
               </li>
               <li class="device-actions__item">
-                <a href="#" class="device-actions__item-link  device-actions__item-link--alert">
+                <a class="device-actions__item-link  device-actions__item-link--alert" data-trigger="new-request">
                   <span>Обратиться в службу поддержки</span>
                   <span>Контроллер не работает</span>
                 </a>
@@ -655,6 +647,148 @@
                   Перейти к оплате договора
                 </a>
               </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!--Модальное окно ежегодной оплаты-->
+        <section class="subscription-modal  modal" data-modal="subscription-one-year">
+          <div class="modal__overlay">
+
+            <div class="modal__body">
+              <div class="subscription-modal__bg-block"></div>
+              <button type="button" class="modal__close"></button>
+              <h1 class="modal__title">
+                Климат по подписке на условиях ежегодной оплаты
+              </h1>
+              <ul class="subscription-modal__stages">
+                <li class="subscription-modal__stages-item">
+                  <span>1</span>
+                  Оплачиваете стоимость оборудования
+                </li>
+                <li class="subscription-modal__stages-item">
+                  <span>2</span>
+                  Устанавливаете кондиционер и подключаете к облачному сервису
+                </li>
+                <li class="subscription-modal__stages-item">
+                  <span>3</span>
+                  Платите фиксированный ежегодный платёж или покупаете бессрочную подписку и получаете доступ к управлению кондиционером
+                </li>
+              </ul>
+
+              <p class="subscription-modal__note">
+                Работает только при наличии подключения к Wi-Fi и оплаченной подписки.
+              </p>
+
+              <ul class="subscription-modal__toggle-list">
+                <li class="subscription-modal__toggle-item">
+                  <div class="subscription-modal__toggle-item-btn">
+                    <span class="info-block__toggle-icon"></span>
+                    Что входит в подписку?
+                  </div>
+                  <div class="subscription-modal__toggle-content">
+                    <ul class="subscription-modal__toggle-content-list">
+                      <li class="subscription-modal__toggle-content-item">
+                        Управление с помощью пульта, смартфона (iOS или Android) или ПК
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Онлайн мониторинг и диагностика неисправностей Облачного кондиционера и служба оповещения клиента
+
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Консультационная служба по вопросам работы кондиционера
+
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Расширенная гарантия +1 год
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="subscription-modal__toggle-item">
+                  <div class="subscription-modal__toggle-item-btn">
+                    <span class="info-block__toggle-icon"></span>
+                    Как вносить платежи?
+                  </div>
+                  <div class="subscription-modal__toggle-content">
+                    <p class="subscription-modal__toggle-content-text">
+                      Оплата подписки происходит в личном кабинете клиента.
+                      Для активации необходимо оплатить тариф «Подписка на 1 год‎» или тариф 
+                      «Бессрочный доступ».<br><br>
+
+                      При выборе тарифа «Подписка на 1 год‎» через 365 дней использования необходимо снова оплатить подписку для продления доступа к управлению устройством. Приложение напомнит  за 30, 15 и 7 дней, что пришла пора оплатить новый период.<br><br>
+
+                      При выборе тарифа «Бессрочный доступ» услуга предоставляется на весь срок жизненного цикла кондиционера.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </section>
+
+        <!--Модальное окно ежегодной оплаты-->
+        <section class="subscription-modal  modal" data-modal="indefenite">
+          <div class="modal__overlay">
+
+            <div class="modal__body">
+              <div class="subscription-modal__bg-block"></div>
+              <button type="button" class="modal__close"></button>
+              <h1 class="modal__title">
+                Бессрочный доступ к умному климату!
+              </h1>
+              <ul class="subscription-modal__stages">
+                <li class="subscription-modal__stages-item">
+                  <span>1</span>
+                  Оплачиваете стоимость оборудования
+                </li>
+                <li class="subscription-modal__stages-item">
+                  <span>2</span>
+                  Устанавливаете кондиционер и подключаете к облачному сервису
+                </li>
+                <li class="subscription-modal__stages-item">
+                  <span>3</span>
+                  Получаете бессрочный доступ к управлению кондиционером
+                </li>
+              </ul>
+
+              <p class="subscription-modal__note">
+                Работает только при наличии подключения к интернету через Wi&#8209;Fi.
+              </p>
+
+              <ul class="subscription-modal__toggle-list">
+                <li class="subscription-modal__toggle-item">
+                  <div class="subscription-modal__toggle-item-btn">
+                    <span class="info-block__toggle-icon"></span>
+                    Что входит в состав услуги?
+                  </div>
+                  <div class="subscription-modal__toggle-content">
+                    <ul class="subscription-modal__toggle-content-list">
+                      <li class="subscription-modal__toggle-content-item">
+                        Бессрочный доступ к управлению устройством
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Управление с помощью пульта, смартфона (iOS или Android) или ПК
+
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Онлайн мониторинг и диагностика неисправностей Облачного кондиционера и служба оповещения клиента
+
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Консультационная служба по вопросам работы кондиционера
+
+                      </li>
+                      <li class="subscription-modal__toggle-content-item">
+                        Расширенная гарантия +1 год
+
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
 
             </div>
           </div>
@@ -1139,6 +1273,79 @@
                 </div>
             </div>
         </article>
+
+        
+
+      <!--Модальное окно обращения-->
+      <section class="modal request-modal" data-modal="new-request">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+           <form>
+              <button type="button" class="modal__close"></button>
+              <h1 class="modal__title">
+                Обратиться в службу поддержки
+              </h1>
+              <p class="modal__desc">
+                Специалист «Даичи» всегда с Вами на связи. В случае возникновения неполадок в работе устройства напишите нам.
+              </p>
+
+              <div class="request-modal__message-block">
+                <label class="request-modal__message-label" for="request-modal">Ваше обращение</label>
+                <textarea class="request-modal__message" id="reuqest-modal" name="request-message">
+  
+                </textarea>
+              </div>
+
+              
+
+              <div class="request-modal__file  input-file">
+                <label class="input-file__label">
+                  <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="contract-scan" class="input-file__input  visually-hidden">
+                  <span>Приложите фото, чтобы лучше описать проблему</spa>
+                </label>
+                <div class="input-file__file-load  file-load">
+                  <div class="file-load__info">
+                    <p class="file-load__name">Файл 1</p>
+                  </div>
+                  <button type="button" class="file-load__clear">
+                    <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z" />
+                      <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="request-modal__btn-block">
+                <button type="button" class="not-use-modal__btn  btn-primary">Отправить</button>
+              </div>
+           </form>
+
+          </div>
+        </div>
+      </section>
+
+      <!--Модальное окно, обращение зарегистрировано-->
+      <section class="modal request-success js-show" data-modal="request-success">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+              <button type="button" class="modal__close"></button>
+              <h1 class="modal__title">
+                Ваше обращение зарегистрировано!
+              </h1>
+              <p class="modal__desc">
+                Наши специалисты обязательно свяжустя с Вами в ближайшее время.
+              </p>
+
+              <div class="request-modal__btn-block">
+                <button type="button" class="request-modal__btn  btn-primary">Ок</button>
+              </div>
+
+          </div>
+        </div>
+      </section>
   </main>
   <div class="blackout"></div>
 

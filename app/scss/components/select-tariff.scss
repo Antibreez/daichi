@@ -1,0 +1,23 @@
+.select-tariff {
+  .tariff-plan__items {
+    margin-top: 30px;
+  }
+
+  .tariff-plan__item {
+    width: calc((100% - 15px) / 2);
+  }
+}
+
+@media(max-width: 767px) {
+  .select-tariff {
+    .tariff-plan__item {
+      width: 100%;
+    }
+
+    .popup-content {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+  }
+}

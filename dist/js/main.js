@@ -274,6 +274,18 @@
 })();
 
 (function () {
+  var triggers = document.querySelectorAll('[data-trigger]');
+  triggers.forEach(function (item) {
+    var name = item.getAttribute('data-trigger');
+    var modal = document.querySelector('[data-modal=' + name + ']');
+
+    if (modal) {
+      new Modal(item, modal);
+    }
+  });
+})();
+
+(function () {
   var contractBtn = document.querySelector('.contract-modal-trigger');
   var modalContract = document.querySelector('.contract-modal');
   $('.contract-modal__toggle-btn').on('click', function () {

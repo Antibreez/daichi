@@ -1,0 +1,34 @@
+.request-modal {
+  &__message-block {
+    margin-bottom: 25px;
+  }
+
+  &__message-label {
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 5px;
+  }
+
+  &__message {
+    height: 116px;
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  &__file {
+    margin-bottom: 50px;
+  }
+
+  &__btn-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal__title {
+    padding-right: 40px;
+  }
+}
