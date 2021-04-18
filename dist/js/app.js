@@ -407,6 +407,7 @@ $(document).on("click", ".request-success .modal__overlay", (e) => {
 
 
 var jbScanner;
+var scannerParentElement = document.getElementById("js-video-box");
 
 function onQRCodeScanned(scannedText)
             {
@@ -416,6 +417,7 @@ function onQRCodeScanned(scannedText)
                     scannedTextMemo.value = scannedText;
                     $(".qr-scanner-modal").removeClass("active");
                     jbScanner.stopScanning();
+                    jbScanner.removeFrom(scannerParentElement);
                 }
                 // var scannedTextMemoHist = document.getElementById("scannedTextMemoHist");
                 // if(scannedTextMemoHist)
@@ -546,18 +548,16 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
             
             $(".qr-scanner-modal").addClass("active");
 
-            if (jbScanner) {
-                jbScanner.resumeScanning();
-            } else {
+            
                 jbScanner = new JsQRScanner(onQRCodeScanned);
                 jbScanner.setSnapImageMaxSize(300);
-                var scannerParentElement = document.getElementById("js-video-box");
                 if(scannerParentElement)
                 {
                     //append the jbScanner to an existing DOM element
+                    scannerParentElement.innerHTML = '';
                     jbScanner.appendTo(scannerParentElement);
                 }       
-            }
+            
 
                 //var jbScanner = new JsQRScanner(onQRCodeScanned, provideVideo);
                 //reduce the size of analyzed image to increase performance on mobile devices 
@@ -570,6 +570,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
 
 $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
     jbScanner.stopScanning();
+    jbScanner.removeFrom(scannerParentElement);
 });
 
 $(document).on('input', '.file-input-js', function (e) {
