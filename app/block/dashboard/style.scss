@@ -248,6 +248,33 @@ article.db_unit {
   }
 }
 
+.subscribe-cards-box {
+  .profile-logo--cloud {
+    position: relative;
+    width: 100%;
+    
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 68px;
+      height: 48px;
+    }
+  }
+  
+  @include media-breakpoint-down(sm) {
+
+    .profile-logo--cloud {
+      
+      & img {
+        width: 51px !important;
+        height: 36px !important;
+      }
+    }
+  }
+}
+
 //
 .service-programs-section {
   grid-area: servicePrograms;
