@@ -551,6 +551,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
             
                 jbScanner = new JsQRScanner(onQRCodeScanned);
                 jbScanner.setSnapImageMaxSize(300);
+                jbScanner.setScanInterval(400);
                 if(scannerParentElement)
                 {
                     //append the jbScanner to an existing DOM element
