@@ -416,7 +416,7 @@ function onQRCodeScanned(scannedText)
                 {
                     scannedTextMemo.value = scannedText;
                     $(".qr-scanner-modal").removeClass("active");
-                    jbScanner.stopScanning();
+                    //jbScanner.stopScanning();
                     jbScanner.removeFrom(scannerParentElement);
                 }
                 // var scannedTextMemoHist = document.getElementById("scannedTextMemoHist");
@@ -569,7 +569,7 @@ $(document).on("click", ".qr-scanner-trigger", (e) => {
 });
 
 $(document).on("click", ".qr-scanner-modal .popup__exit-button", (e) => {
-    jbScanner.stopScanning();
+    //jbScanner.stopScanning();
     jbScanner.removeFrom(scannerParentElement);
 });
 
