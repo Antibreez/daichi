@@ -34,6 +34,7 @@ button:focus {
   
   &:focus {
     outline: transparent;
+    color: #fff;
   }
 
   &.disabled,
@@ -64,6 +65,10 @@ button:focus {
     background-color: $primary-btn-active;
     border-color: $primary-btn-active;
     background-color: $light-text;
+  }
+
+  &:focus {
+    color: #444;
   }
 
   &.disabled {
