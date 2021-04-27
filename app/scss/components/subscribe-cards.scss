@@ -171,6 +171,7 @@
   word-wrap: none;
   white-space: nowrap;
   line-height: 19px;
+  min-height: 19px;
 
   .data-value {
     overflow: hidden;
@@ -190,11 +191,13 @@
     flex-direction: column;
     justify-content: unset;
     align-items: flex-start;
+    min-height: 38px;
   }
 
   @include media-breakpoint-down(sm) {
     font-size: 11px;
     line-height: 16px;
+    min-height: 32px;
   }
 }
 
