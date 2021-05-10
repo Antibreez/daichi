@@ -17,6 +17,10 @@
     border: 1px solid #eee;
     border-radius: 5px;
     resize: none;
+
+    &.error {
+      border-color: red;
+    }
   }
 
   &__file {
@@ -26,6 +30,13 @@
   &__btn-block {
     display: flex;
     justify-content: center;
+  }
+
+  &__alert-message {
+    margin: 10px 0 0;
+    font-size: 13px;
+    line-height: 19px;
+    color: red;
   }
 
   .modal__title {

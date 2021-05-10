@@ -148,6 +148,12 @@ button {
   position: relative;
   min-height: 48px;
   width: 100%;
+
+  .product-alert-box {
+    top: 6px;
+    right: 10px;
+    //transform: translateY(-50%);
+  }
 }
 
 .alert-box {

@@ -55,16 +55,16 @@
 // modals
 
 .request-detail-modal {
-  max-width: 690px;
+  //max-width: 690px;
   cursor: auto;
 
-  .popup-content-c {
-    padding: 30px;
+  // .popup-content-c {
+  //   padding: 30px;
 
-    @media(max-width: 767px) {
-      padding: 30px 15px;
-    }
-  }
+  //   @media(max-width: 767px) {
+  //     padding: 30px 15px;
+  //   }
+  // }
 
   @media(max-width: 767px) {
     max-width: none;
@@ -101,11 +101,17 @@
       display: none;
     }
     .point-name {
+      font-size: 13px;
       width: 130px;
       transform: translateX(calc(-50% + 6px));
       text-align: center;
       right: auto;
       left: 0;
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 11px;
+        line-height: 13px;
+      }
     }
   }
 
