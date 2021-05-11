@@ -107,11 +107,6 @@
       text-align: center;
       right: auto;
       left: 0;
-      
-      @include media-breakpoint-down(sm) {
-        font-size: 11px;
-        line-height: 13px;
-      }
     }
   }
 
@@ -184,6 +179,12 @@
   right: 0;
   transform: translateX(calc(-50% + 22px));
   color: $minor;
+  font-size: 13px;
+      
+  @include media-breakpoint-down(sm) {
+    font-size: 11px;
+    line-height: 13px;
+  }
 }
 
 .point.current {

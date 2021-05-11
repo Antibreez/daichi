@@ -97,3 +97,17 @@
     margin-top: 10px;
   }
 }
+
+.save-adress-button {
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+  }
+}
+
+.adress-change-form .button.delete-adress-button {
+  margin-right: 0;
+  
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+}
