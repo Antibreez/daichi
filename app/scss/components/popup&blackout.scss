@@ -316,4 +316,42 @@ html {
   }
 }
 
+.popup-content[name="DeviceSupportModal"] {
+  padding-top: 30px;
+}
 
+@media(max-width: 767px) {
+   .popup-content[name="DeviceSupportModal"] {
+      padding: 0;
+    }
+
+    .popup-content[name="DeviceSupportModal"] .modal__title {
+        padding-right: 50px;
+        margin-bottom: 19px;
+    }
+
+    .popup-content[name="DeviceSupportModal"] .modal__desc {
+        margin-bottom: 25px;
+    } 
+}
+
+
+
+.popup-content[name="AddressModal"] {
+  padding-top: 30px;
+}
+
+@media(max-width: 767px) {
+   .popup-content[name="AddressModal"] {
+      padding: 0;
+    }
+
+    .popup-content[name="AddressModal"] .modal__title {
+        padding-right: 50px;
+        margin-bottom: 19px;
+    }
+
+    .popup-content[name="AddressModal"] .modal__desc {
+        margin-bottom: 25px;
+    } 
+}
