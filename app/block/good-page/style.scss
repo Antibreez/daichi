@@ -304,7 +304,9 @@ main.main {
   }
 
   &__item-link {
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       transform: scale(1.07);
     }
   }
