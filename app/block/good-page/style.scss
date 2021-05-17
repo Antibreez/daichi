@@ -304,6 +304,8 @@ main.main {
   }
 
   &__item-link {
+    transition: transform 0.2s !important;
+
     &:hover,
     &:active,
     &:focus {
