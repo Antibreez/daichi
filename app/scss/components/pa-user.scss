@@ -105,6 +105,33 @@ p.cloud-card__status {
   }
 }
 
+div.cloud-device__actions {
+  margin-bottom: 75px;
+}
+
+section.mts-cashback {
+  margin: 0 0 75px;
+}
+
+div.cloud-device__device-connection {
+  margin: 0 0 75px;
+}
+
+section.adress-section.section {
+  padding-top: 0;
+  margin: 0 0 75px;
+}
+
+div.cloud-device__documents {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 0 75px;
+}
+
+div.cloud-device__messages {
+  margin: 0 0 75px;
+}
+
 @media(max-width: 767px) {
   .cloud-device__history-table {
 
@@ -120,5 +147,32 @@ p.cloud-card__status {
       width: 29%;
     }
 
+  }
+
+  div.cloud-device__actions {
+    margin-bottom: 50px;
+  }
+  
+  section.mts-cashback {
+    margin: 0 0 50px;
+  }
+  
+  div.cloud-device__device-connection {
+    margin: 0 0 50px;
+  }
+  
+  section.adress-section.section {
+    padding-top: 0;
+    margin: 0 0 50px;
+  }
+  
+  div.cloud-device__documents {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 0 50px;
+  }
+  
+  div.cloud-device__messages {
+    margin: 0 0 50px;
   }
 }
