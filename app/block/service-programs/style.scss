@@ -17,6 +17,9 @@ main.main {
       font-size: 27px;
       line-height: 33px;
       margin-bottom: 15px;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -28,6 +31,17 @@ main.main {
       text-align: center;
       font-size: 13px;
       line-height: 19px;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .service-programs-container {
+    @include media-breakpoint-down(sm) {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -271,8 +285,8 @@ main.main {
   }
 
   @include media-breakpoint-down(xs) {
-    margin-right: -15px;
-    margin-bottom: -15px;
+    //margin-right: -15px;
+    //margin-bottom: -15px;
   }
 }
 
@@ -284,11 +298,16 @@ main.main {
   }
   @include media-breakpoint-down(xs) {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
   button {
     margin-right: 15px;
     white-space: nowrap;
+
+    &:last-child {
+      margin: 0;
+    }
 
     @include media-breakpoint-down(md) {
       flex-grow: 1;
@@ -296,6 +315,8 @@ main.main {
 
     @include media-breakpoint-down(xs) {
       margin-bottom: 15px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
@@ -333,6 +354,20 @@ main.main {
 
 // popup componentns
 
+.service-programs-popup.popup {
+  .popup-content-c {
+    max-width: 1110px;
+
+    @include media-breakpoint-down(md) {
+      max-width: 705px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: none;
+    }
+  }
+}
+
 .service-popup-container {
   display: flex;
   margin-right: -15px;
@@ -354,6 +389,13 @@ main.main {
 
   &.slick-slider .slick-track {
     display: flex;
+  }
+
+  .slick-dots {
+    li {
+      list-style: none;
+      margin: 0;
+    }
   }
 }
 
