@@ -690,3 +690,29 @@ function setSliderWidth (selector) {
         $(selector).width(`${window.innerWidth - 15}px`)
     }
 }
+
+$(window).on('load', function () {
+    const paymentSwiper = new Swiper('.payment-options__slider-container', {
+        scrollbar: {
+          el: '.payment-options__scrollbar',
+          hide: true,
+          draggable: true,
+          hide: false,
+          dragSize: 24
+        },
+    });
+
+    paymentSwiper.on('slideChange', function() {
+        $('.payment-options__slider').removeClass('one-year two-year three-year');
+        
+        this.activeIndex === 0
+        ? $('.payment-options__slider').addClass('one-year')
+        : this.activeIndex === 1
+        ? $('.payment-options__slider').addClass('two-year')
+        : $('.payment-options__slider').addClass('three-year')
+    })
+});
+
+$('.promocode-activation-input').mask("999-999-999");
+
+

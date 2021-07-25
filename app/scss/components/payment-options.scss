@@ -1,0 +1,227 @@
+.payment-options {
+  max-width: 100vw;
+  padding-top: 50px;
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  &__item {
+    width: calc((100% - 60px) / 3);
+  }
+
+  &__card {
+    min-height: 340px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+
+    &--slide {
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    &-title {
+      margin: 0 0 15px;
+      font-size: 19px;
+      line-height: 23px;
+      font-weight: 400;
+      color: #444;
+    }
+
+    &-desc {
+      margin: 0 0 auto;
+      font-size: 15px;
+      line-height: 23px;
+      font-weight: 300;
+      color: #444;
+    }
+
+    &-price {
+      margin: 0 0 30px;
+      font-size: 27px;
+      line-height: 33px;
+      font-weight: 300;
+      color: #444;
+    }
+
+    &--unlimit {
+      background-image: url("../images/unlimit.jpg");
+    }
+
+    &--promocode {
+      background-image: url("../images/bg-demo-3.jpg");
+      background-size: 100% 100%;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+
+    .payment-options__slider-bg {
+      transition: opacity 1s;
+    }
+
+    &.one-year {
+      .payment-options__slider-bg {
+        &.bg-1 {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.two-year {
+      .payment-options__slider-bg {
+        &.bg-2 {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.three-year {
+      .payment-options__slider-bg {
+        &.bg-3 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+
+    &.bg-1 {
+      background-image: url("../images/sub-1-year.jpg");
+    }
+
+    &.bg-2 {
+      background-image: url("../images/sub-2-year.jpg");
+    }
+
+    &.bg-3 {
+      background-image: url("../images/sub-3-year.jpg");
+    }
+  }
+
+  &__scrollbar-wrapper {
+    position: absolute;
+    top: 144px;
+    left: 8%;
+    width: 84%;
+    z-index: 100;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  &__scrollbar {
+    position: absolute;
+    top: 10px;
+    height: 4px;
+    background-color: #dadada;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .swiper-scrollbar-drag {
+      height: 24px;
+      width: 24px;
+      min-width: 24px;
+      top: -10px;
+      border-radius: 50%;
+      background-color: #00ADEF;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 500px;
+        height: 4px;
+        background-color: #00ADEF;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__slider-container {
+    width: 100%;
+  }
+}
+
+@media(max-width: 1279px) {
+  .payment-options {
+    &__item {
+      &:first-child,
+      &:nth-child(2) {
+        margin-bottom: 30px;
+        width: calc((100% - 30px) / 2);
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+      }
+    }
+
+    &__card {
+      &--promocode {
+        min-height: auto;
+
+        .payment-options__card-desc {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .payment-options {
+    padding-top: 25px;
+    
+    &__item {
+      &:nth-child(n) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__card {
+      &-desc {
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      &--unlimit {
+        min-height: auto;
+
+        .payment-options__card-desc {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
