@@ -403,6 +403,22 @@ $(document).on("click", ".request-success .modal__overlay", (e) => {
 });
 
 
+
+$(document).on("click", ".modal-promocode-success .modal__close", (e) => {
+    $(".modal-promocode-success").removeClass("js-show");
+});
+
+$(document).on("click", ".modal-promocode-success .modal__overlay", (e) => {
+    if ($(e.target).hasClass('modal__overlay')) {
+        $(".modal-promocode-success").removeClass("js-show");
+    }
+});
+
+$(document).on("click", ".modal-promocode-success__ok", (e) => {
+    $(".modal-promocode-success").removeClass("js-show");
+});
+
+
 /////////////////////////
 
 

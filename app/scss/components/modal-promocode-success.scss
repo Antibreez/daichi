@@ -1,0 +1,42 @@
+.modal-promocode-success {
+    &__img {
+        text-align: center;
+        margin: 0 0 30px;
+
+        img {
+            width: 253px;
+            height: 253px;
+        }
+    }
+
+    &__ok {
+        min-width: 250px;
+    }
+
+    .modal__title,
+    .modal__desc {
+        text-align: center;
+    }
+}
+
+@media(max-width: 767px) {
+    .modal-promocode-success {
+        &__ok {
+            width: 100%;
+        }
+
+        .modal__body {
+            padding-bottom: 50px;
+            display: flex;
+        
+            form {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        
+          .request-modal__btn-block {
+            margin-top: auto;
+          }
+    }
+}

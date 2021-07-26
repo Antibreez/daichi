@@ -15,6 +15,7 @@
 @import "layout";
 @import "header";
 @import "footer";
+@import "components/modal.scss";
 @import "components/inputs.scss";
 @import "components/buttons.scss";
 @import "components/mini-tile.scss";
@@ -48,6 +49,7 @@
 @import "components/request-modal.scss";
 @import "components/request-success.scss";
 @import "components/payment-options.scss";
+@import "components/modal-promocode-success.scss";
 
 //blocks
 @import "../block/menu-pa/menu-pa.scss";

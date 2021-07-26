@@ -1425,7 +1425,7 @@
       </section>
 
       <!--Модальное окно ввода промокода-->
-      <section class="modal request-modal" data-modal="promocode-activation">
+      <section class="modal request-modal  request-modal--promocode" data-modal="promocode-activation">
         <div class="modal__overlay">
 
           <div class="modal__body">
@@ -1446,13 +1446,40 @@
               </div>
 
               <div class="request-modal__btn-block">
-                <button type="button" class="not-use-modal__btn  btn-primary">Активировать промокод</button>
+                <button type="button" class="btn-primary">Активировать промокод</button>
               </div>
            </form>
 
           </div>
         </div>
       </section>
+
+      <!--Модальное окно ввода промокода-->
+      <section class="modal modal-promocode-success  js-show">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+           <form>
+              <button type="button" class="modal__close"></button>
+              <div class="modal-promocode-success__img">
+                <img src="images/promocode-success.svg" alt="Промокод">
+              </div>
+              <h1 class="modal__title">
+                Промокод успешно активирован!
+              </h1>
+              <p class="modal__desc">
+                Поздравляем, вы активировали тариф “Подписка на 1 год” по промокоду 0000-0000-0000
+              </p>
+
+              <div class="request-modal__btn-block">
+                <button type="button" class="modal-promocode-success__ok  btn-primary">Ок</button>
+              </div>
+           </form>
+
+          </div>
+        </div>
+      </section>
+
   </main>
   <div class="blackout"></div>
 
