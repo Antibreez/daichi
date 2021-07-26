@@ -63,6 +63,10 @@
   
     .request-modal__btn-block {
       margin-top: auto;
+
+      button {
+        width: 100%;
+      }
     }
   }
 }

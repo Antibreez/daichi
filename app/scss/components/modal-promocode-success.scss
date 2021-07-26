@@ -13,6 +13,10 @@
         min-width: 250px;
     }
 
+    &__code {
+        white-space: nowrap;
+    }
+
     .modal__title,
     .modal__desc {
         text-align: center;
