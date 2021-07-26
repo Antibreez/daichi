@@ -709,6 +709,7 @@ function setSliderWidth (selector) {
 
 $(window).on('load', function () {
     const paymentSwiper = new Swiper('.payment-options__slider-container', {
+        slidesPerView: 1,
         scrollbar: {
           el: '.payment-options__scrollbar',
           hide: true,
