@@ -154,9 +154,9 @@
       }
     }
 
-  //   &:hover {
-  //     cursor: pointer;
-  //   }
+    &:hover {
+      cursor: pointer;
+    }
 
     .swiper-scrollbar-drag {
       height: 24px;
@@ -165,20 +165,20 @@
       border-radius: 50%;
       background-color: #00ADEF;
 
-  //     &:hover {
-  //       cursor: pointer;
-  //     }
+      &:hover {
+        cursor: pointer;
+      }
 
-  //     &::before {
-  //       content: "";
-  //       position: absolute;
-  //       top: 10px;
-  //       right: 0;
-  //       width: 500px;
-  //       height: 4px;
-  //       background-color: #00ADEF;
-  //       pointer-events: none;
-  //     }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 500px;
+        height: 4px;
+        background-color: #00ADEF;
+        pointer-events: none;
+      }
     }
   }
 
