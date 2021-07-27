@@ -729,10 +729,10 @@ $(window).on('load', function () {
 
                 var observer = new MutationObserver(function(mutations) {
                     mutations.forEach(function(mutationRecord) {
-                        const x = drag.style.transform.split('(')[1].split(',')[0];
+                        const x = +drag.style.transform.split('(')[1].split(',')[0].split('px')[0];
                         const duration = drag.style['transition-duration'];
                         
-                        line.style.width = x;
+                        line.style.width = x + 12 + 'px';
                         line.style['transition-duration'] = duration;
                     });    
                 });
