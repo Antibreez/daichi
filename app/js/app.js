@@ -725,16 +725,16 @@ $(window).on('load', function () {
                 const line = document.createElement('div');
                 line.classList.add('swiper-scrollbar-drag__line');
 
-                Object.assign(line.style, {
-                    position: 'absolute',
-                    top: '10px',
-                    right: '24px',
-                    width: '500px',
-                    height: '4px',
-                    backgroundColor: '#000',
-                    pointerEvents: 'none',
-                    zIndex: '1',
-                })
+                // Object.assign(line.style, {
+                //     position: 'absolute',
+                //     top: '10px',
+                //     right: '24px',
+                //     width: '500px',
+                //     height: '4px',
+                //     backgroundColor: '#000',
+                //     pointerEvents: 'none',
+                //     zIndex: '1',
+                // })
 
                 drag.appendChild(line);
             }
