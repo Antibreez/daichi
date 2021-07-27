@@ -717,6 +717,17 @@ $(window).on('load', function () {
           hide: false,
           dragSize: 24
         },
+
+        on: {
+            afterInit: function() {
+                
+                const drag = document.querySelector('.swiper-scrollbar-drag');
+                const line = document.createElement('div');
+                line.classList.add('swiper-scrollbar-drag__line');
+
+                drag.appendChild(line);
+            }
+        }
     });
 
     paymentSwiper.on('slideChange', function() {
