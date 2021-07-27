@@ -721,9 +721,23 @@ $(window).on('load', function () {
         on: {
             afterInit: function() {
                 
-                const drag = document.querySelector('.swiper-scrollbar-drag');
+                const wrapper = document.querySelector('.payment-options__scrollbar-wrapper');
+                const drag = document.querySelector('.payment-options__scrollbar-wrapper .swiper-scrollbar-drag');
                 const line = document.createElement('div');
-                line.classList.add('swiper-scrollbar-drag__line');
+                line.classList.add('payment-options__scrollbar-line');
+                drag.insertAdjacentElement('afterend', line);
+
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutationRecord) {
+                        const x = drag.style.transform.split('(')[1].split(',')[0];
+                        const duration = drag.style['transition-duration'];
+                        
+                        line.style.width = x;
+                        line.style['transition-duration'] = duration;
+                    });    
+                });
+
+                observer.observe(drag, { attributes : true, attributeFilter : ['style'] });
 
                 // Object.assign(line.style, {
                 //     position: 'absolute',
@@ -735,8 +749,6 @@ $(window).on('load', function () {
                 //     pointerEvents: 'none',
                 //     zIndex: '1',
                 // })
-
-                drag.appendChild(line);
             }
         }
     });
