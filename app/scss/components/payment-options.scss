@@ -164,20 +164,21 @@
       min-width: 24px;
       border-radius: 50%;
       background-color: #00ADEF;
+      z-index: 100;
 
       &:hover {
         cursor: pointer;
       }
 
-      &__line {
-        position: absolute;
-        top: 10px;
-        right: 0;
-        width: 500px;
-        height: 4px;
-        background-color: #00ADEF;
-        pointer-events: none;
-      }
+      // &__line {
+      //   position: absolute;
+      //   top: 10px;
+      //   right: 0;
+      //   width: 500px;
+      //   height: 4px;
+      //   background-color: #00ADEF;
+      //   pointer-events: none;
+      // }
     }
   }
 
