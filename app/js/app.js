@@ -250,6 +250,7 @@ $(document).on("click", ".popup__exit-button", function (e) {
 });
 
 $(document).on("click", ".blackout", (e) => {
+    console.log('click');
     blackout_off();
     if (!blackout.hasClass('blackout_active-datePicker')) {
         $(".popup").removeClass("active");

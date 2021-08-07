@@ -166,3 +166,47 @@ main.main_my-profile {
     font-size: 13px;
   }
 }
+
+.profile-delete {
+  width: 100%;
+  margin: 50px 0 0;
+
+  button {
+    width: 100%;
+  }
+}
+
+.profile-delete-popup {
+  .modal-controls {
+    button {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &:last-child {
+        margin-left: 15px;
+      }
+      
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .profile-delete-popup {
+    .popup-content {
+      padding-top: 0;
+    }
+
+    .modal-title {
+      padding-right: 50px;
+    }
+
+    .modal-controls {
+      button {
+        &:last-child {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@ html {
   &_active {
     opacity: 0.25;
     pointer-events: unset;
+    z-index: 25;
   }
 
   &_active-datePicker {

@@ -359,3 +359,38 @@
   margin-bottom: 10px;
 }
 
+.profile-restore-popup {
+  .modal-controls {
+    button {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &:last-child {
+        margin-left: 15px;
+      }
+      
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .profile-restore-popup {
+    .popup-content {
+      padding-top: 0;
+    }
+
+    .modal-title {
+      padding-right: 50px;
+    }
+
+    .modal-controls {
+      button {
+        &:last-child {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+

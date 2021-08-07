@@ -194,6 +194,12 @@
                                 </button>
                             </div>
                         </form>
+
+                        <div class="profile-delete">
+                            <button class="button  button_secondary  call-modal" data-id="delete-account">
+                                Удалить аккаунт
+                            </button>
+                        </div>
                     </div>
                     <div class="statements-wrp">
                         <!-- component  -->
@@ -708,6 +714,24 @@
                             <div class="modal-controls">
                                 <button class="button button-save">Сохранить</button>
                             </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="delete-account" class="popup  profile-delete-popup">
+                    <div class="popup-content-c">
+                        <button class="popup__exit-button"></button>
+                        <div class="popup-content">
+                            <form>
+                                <h2 class="modal-title h2">Вы уверены?</h2>
+                                <div class="modal-text-block b1">
+                                    Вы потеряете все данные Вашего аккаунта, а также доступ к добавленным устройствам. Восстановить аккаунт можно в течение 30 дней после удаления.
+                                </div>
+                                <div class="modal-controls">
+                                    <button class="button  button_secondary  profile-delete-cancel">Не удалять</button>
+                                    <button class="button  profile-delete-confirm">Подтвердить удаление</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </article>
